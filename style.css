@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto Mono;
 }
 
 :root {
@@ -9,7 +10,6 @@
 
 body {
     background-color: rgba(180, 206, 206, 0.988);
-    font-family: 'Roboto Mono', sans-serif;
 }
 
 
@@ -63,6 +63,12 @@ main img {
     gap: 30px;
     margin-top: 30px;
 }
+.desktop__left p {
+    text-align: center;
+    font-size: 9px;
+    width: 60px;
+    /* font-family: Roboto Mono; */
+}
 .computer {
     display: flex;
     align-items: center;
@@ -70,18 +76,11 @@ main img {
     width: 90px;
     height: 90px;
 }
-.comp__btn p {
-    text-align: center;
-    font-size: 9px;
-    width: 60px;
-    
-}
-
 
 /* Computer Modal Section*/
 
 .comp__modal {
-    /* display: none; */
+    /* display: none; */ /* off: Keeps computer modal open*/
     position: fixed;
     z-index: 1;
     right: 200px;
@@ -94,6 +93,7 @@ main img {
     -webkit-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     -moz-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
+    overflow-y: auto; /* displays scroll when content exceeds set height */
     
 }
 
@@ -104,7 +104,6 @@ main img {
 .comp__intro {
     margin: 15px;
     height: 350px;
-    border-style: solid;
     width: 360px;
 }
 
@@ -136,6 +135,8 @@ main img {
     float: left;
     margin: 3px;
     cursor: pointer;
+    box-shadow: 1px 1px 1px 0px rgba(86,86,86,1);
+    
 }
 
 .titleBar p {
@@ -143,12 +144,20 @@ main img {
     font-size: 15px;
 }
 
+.langIcons img{
+    width: 50px;
+    border: none;
+}
 
 
 
 /* TODO: create close and open function for modal */
+/* Close and Open buttons*/
 .closeBtn {
     background-color: rgb(207, 91, 91);
+}
+.closeBtn:hover{
+    cursor: pointer;
 }
 
 .minBtn {
@@ -164,4 +173,7 @@ main img {
     height: 50px;
     background-color: transparent;
     border: none;
+}
+.comp__btn:hover {
+    cursor: pointer;
 }
