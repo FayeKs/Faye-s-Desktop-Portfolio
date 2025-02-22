@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr:rgba(234, 234, 234, 1) ;
+    --border-clr: rgba(86, 86, 86, 1);
+}
+
+body {
+    background-color: rgba(180, 206, 206, 0.988);
+}
+
+
+
+
+/*NavBar Section */
+
+nav {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: rgba(86, 86, 86, 1);
+    height: 30px;
+    background-color:var(--primary-clr);
+    font-size: 14px;
+}
+
+.navList  {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    
+}
+
+.navList li {
+    float: left;
+    padding: 5px;
+    
+}
+
+.navList li a {
+    text-decoration: none;
+}
+
+.nav__right {
+    float: right;
+    padding: 5px;
+    margin: 0;
+}
+
+/* Main sDesktop Section */
+main img {
+    width: 50px;
+}
+
+.desktop__left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+    
+}
+
+
+/* Computer Modal */
+.comp__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.comp__modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    right: 200px;
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-color: var(--border-clr);
+    background-color: var(--primary-clr);
+    -webkit-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
+    -moz-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
+    box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
+
+}
+
+.titleBar {
+    height: 20px;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+}
+
+.titleBar button {
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    margin: 0;
+}
