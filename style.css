@@ -15,7 +15,9 @@ body {
 
 
 
-/* Desktop NavBar Section */
+
+
+/* Desktop Navbar Section */
 
 nav {
     border-style: solid;
@@ -50,7 +52,13 @@ nav {
     margin: 0;
 }
 
-/* Main Desktop Section */
+
+
+
+
+
+/* Desktop Left Section */
+
 main img {
     width: 50px;
 }
@@ -77,16 +85,54 @@ main img {
     height: 90px;
 }
 
+
+
+
+
+
+/* TaskBar Section */
+
+.taskBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    bottom: 0;
+}
+
+.taskbar__Icons {
+    display: flex;
+    align-items: center;width: 200px;
+    justify-content: center;
+    background-color: var(--primary-clr);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: var(--border-clr);
+    width: 300px;
+    padding: 5px;
+
+}
+.taskBar img{
+    width: 30px;
+    /* display: none; */ /* off: keeps computer taskbar icon showing on refresh*/
+}
+
+
+
+
+
+
 /* Computer Modal Section*/
 
 .comp__modal {
-    /* display: none; */ /* off: Keeps computer modal open*/
+    /* display: none; */ /* off: Keeps computer modal open on refresh*/
     position: fixed;
     z-index: 1;
     right: 200px;
-    top: 150px;
+    top: 100px;
     width: 400px;
-    height: 400px;
+    height: 350px;
     border-style: solid;
     border-color: var(--border-clr);
     background-color: var(--primary-clr);
@@ -114,6 +160,9 @@ main img {
     border-color: var(--border-clr);
     border-width: 2px;
 }
+
+
+
 
 
 /* Computer Modal -- Title Bar Section */
