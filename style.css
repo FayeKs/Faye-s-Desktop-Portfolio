@@ -119,13 +119,19 @@ main img {
 /* Computer Modal -- Title Bar Section */
 
 .titleBar {
+    width: 381px;
+    background-color: var(--primary-clr);
     height: 22px;
+    margin-top: -15px;
     border-style: solid;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-width: 2px;
     text-align: center;
+    position: fixed;
+    overflow: hidden;
+    
 }
 
 .titleBar button {
