@@ -20,7 +20,9 @@
                 <li><a href="">home</a></li>
 
                 
-            <p class="nav__right">clock</p>
+            <div class="nav__right">
+               <div id="cpuWidget"></div>
+            </div>
                
             </ul>
         </nav>
@@ -61,7 +63,7 @@
             <div class="comp__content">
                 <div class="titleBar">
                     <button class="closeBtn" id="closeBtn"></button>
-                    <button class="minBtn"></button>
+                    <button class="minBtn" id="minBtn"></button>
                     <p>about me</p>
                 </div>
 
@@ -85,7 +87,7 @@
 <!--Taskbar Section-->
         <div class="taskBar">
             <div class="taskbar__Icons">
-                <img src="/assets/icons/icons8-old-computer-80 (1).png" id="compTaskbar">
+                <button id="compTaskbar" class="comp__Taskbar"><img src="/assets/icons/icons8-old-computer-80 (1).png" ></button>
                 <img src="/assets/icons/icons8-folder-40.png" alt="">
             </div>
         </div>
