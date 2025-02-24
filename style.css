@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     font-family: Roboto Mono;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -10,8 +12,8 @@
 
 body {
     background-color: rgba(180, 206, 206, 0.988);
+    min-height: 100vh;
 }
-
 
 
 
@@ -47,9 +49,19 @@ nav {
 }
 
 .nav__right {
+    display: flex;
+    align-items: start;
+    justify-content: start;
     float: right;
     padding: 5px;
     margin: 0;
+    width: 150px;
+}
+
+.nav__right img {
+    margin-top: -3px; /* fixes battery icon placement*/
+    margin-left: 10px;
+    width: 25px;
 }
 
 
@@ -70,13 +82,13 @@ main img {
     flex-direction: column;
     gap: 30px;
     margin-top: 30px;
+    width: 200px;
 }
 .desktop__left p {
     text-align: center;
     font-size: 9px;
-    width: 60px;
-    /* font-family: Roboto Mono; */
 }
+
 .computer {
     display: flex;
     align-items: center;
@@ -96,13 +108,15 @@ main img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 .taskbar__Icons {
     display: flex;
-    align-items: center;width: 200px;
+    align-items: center;
+    width: 200px;
     justify-content: center;
     background-color: var(--primary-clr);
     border-style: solid;
@@ -111,14 +125,11 @@ main img {
     border-color: var(--border-clr);
     margin: 0;
     height: 40px;
-    width: 300px;
-    padding: px;
 
 }
 .taskBar img{
     width: 30px;
     padding: 3px;
-    margin-top: 5px;
 }
 
 .comp__Taskbar {
@@ -140,23 +151,24 @@ border: none;
 .comp__modal {
     /* display: none; */ /* off: Keeps computer modal open on refresh*/
     position: fixed;
-    z-index: 1;
-    right: 200px;
-    top: 100px;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 350px;
     border-style: solid;
     border-color: var(--border-clr);
     background-color: var(--primary-clr);
-    -webkit-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
-    -moz-box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     overflow-y: auto; /* displays scroll when content exceeds set height */
     
 }
 
 .comp__content {
+    z-index: 9999;
     font-size: 12px;
+    height: auto;
 }
 
 .comp__intro {
@@ -197,7 +209,7 @@ border: none;
 
 .titleBar button {
     height: 15px;
-    width: 10px;
+    width: 15px;
     border-radius: 50%;
     float: left;
     margin: 3px;
@@ -220,12 +232,13 @@ border: none;
 
 /* TODO: create close and open function for modal */
 /* Close and Open buttons*/
+.closeBtn:hover, .minBtn:hover, .comp__btn:hover{
+    cursor: pointer;
+}
 .closeBtn {
     background-color: rgb(207, 91, 91);
 }
-.closeBtn:hover{
-    cursor: pointer;
-}
+
 
 .minBtn {
     background-color: rgb(209, 209, 146);
@@ -240,7 +253,4 @@ border: none;
     height: 50px;
     background-color: transparent;
     border: none;
-}
-.comp__btn:hover {
-    cursor: pointer;
 }

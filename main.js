@@ -32,12 +32,18 @@ compTaskbar.onclick = function(){
 
 
 
-// CPU usage widget function //
+//CPU usage widget function //
 
 
 function updateCPUUsage(){
-    const cpuUsage = (Math.random() * (5- 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
-    document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%;`
+    
+    const cpuUsage = (Math.random() * (7- 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
+    document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%`
 }
 
 setInterval(updateCPUUsage, 1000); // updates every second //
+
+
+// navbar time widget function //
+
+//TODO: navbar time function //
