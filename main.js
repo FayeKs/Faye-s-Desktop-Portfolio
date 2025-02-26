@@ -46,4 +46,9 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 // navbar time widget function //
 
-//TODO: navbar time function //
+
+let now = new Date();
+let currenTime = now.toLocaleDateString('en-US', { hour: '2-digit', minute: '2-digit'});
+
+document.getElementById("navTime").textContent = `${currenTime}`;
+

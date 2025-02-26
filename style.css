@@ -7,11 +7,13 @@
 
 :root {
     --primary-clr:rgba(234, 234, 234, 1) ;
+    /* --primary-clr: rgb(255, 210, 217); */
     --border-clr: rgba(86, 86, 86, 1);
 }
 
 body {
     background-color: rgba(180, 206, 206, 0.988);
+    /* background: url(/assets/images/Untitled\ design\ \(1\).png); */
     min-height: 100vh;
 }
 
@@ -22,9 +24,9 @@ body {
 /* Desktop Navbar Section */
 
 nav {
+    
     border-style: solid;
     border-width: 2px;
-    border-radius: 5px;
     border-color: rgba(86, 86, 86, 1);
     height: 30px;
     background-color:var(--primary-clr);
@@ -159,7 +161,7 @@ border: none;
     height: 350px;
     border-style: solid;
     border-color: var(--border-clr);
-    background-color: var(--primary-clr);
+    background-color: rgb(252, 242, 242);
     box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     overflow-y: auto; /* displays scroll when content exceeds set height */
     
@@ -173,12 +175,23 @@ border: none;
 
 .comp__intro {
     margin: 15px;
-    height: 350px;
+    height: 200px;
     width: 360px;
 }
 
+.comp__contact {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    text-align: left;
+    height: 200px;
+    float: left;
+    width: 150px;
+}
+
 .comp__content img {
-    width: 100px;
+    float: left;
+    width: 40%;
     margin: 15px;
     border-style: solid;
     border-color: var(--border-clr);
