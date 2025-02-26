@@ -1,6 +1,6 @@
 // open, close, minimize button functions, taskbar icons funtion //
 
-const closeBtn = document.getElementById("closeBtn")
+const compCloseBtn = document.getElementById("compCloseBtn")
 const minBtn = document.getElementById("minBtn")
 
 const compModal = document.getElementById("compModal");
@@ -14,7 +14,7 @@ compBtn.onclick = function() {
     compTaskbar.style.display = "block";
 }
 //close computer modal button, hide taskbar icon//
-closeBtn.onclick = function() {
+compCloseBtn.onclick = function() {
     compModal.style.display = "none"; 
     compTaskbar.style.display = "none";
 }
@@ -31,6 +31,31 @@ compTaskbar.onclick = function(){
 
 
 
+const projectsModal = document.getElementById("projectsModal");
+const projectsBtn =document.getElementById("projectsBtn");
+const projectsCloseBtn = document.getElementById("projectsCloseBtn");
+
+// open projects modal button//
+projectsBtn.onclick = function () {
+    projectsModal.style.display = "block"
+}
+
+projectsCloseBtn.onclick = function(){
+    projectsModal.style.display = "none";
+}
+
+
+// modal overlap function //
+
+
+projectsModal.onclick = function(){
+    projectsModal.style.zIndex = 9999;
+    compModal.style.zIndex = 1;
+}
+compModal.onclick = function() {
+    compModal.style.zIndex = 9999;
+    projectsModal.style.zIndex = 1;
+}
 
 //CPU usage widget function //
 

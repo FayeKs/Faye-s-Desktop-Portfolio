@@ -11,27 +11,30 @@
 </head>
 <body>
     <!--TODO: mobile design/ media queries-->
-    <!--NavBar Section-->
+    <!--FIXME: nav ul/div-->
     
-    <!--TODO: add modals-->
-    <!--Desktop Section-->
+<!--Desktop Section-->
     <main class="desktop">
+<!--NavBar Section-->
         <header>
-            <!--TODO: add the correct nav list and time elements-->
+            
             <nav>
                 <ul class="navList">
                     <li id="navTime"></li>
                     
     
                     
-                <div class="nav__right">
-                   <div id="cpuWidget"></div>
-                   <img src="/assets/icons/icons8-battery-30.png" alt="">
-                </div>
+                    <div class="nav__right">
+                        <div id="cpuWidget"></div>
+                        <img src="/assets/icons/icons8-battery-30.png" alt="">
+                    </div>
                    
                 </ul>
             </nav>
           </header>
+
+<!--Desktop Left Section-->
+
         <div class="desktop__left">
 
             <div class="computer">
@@ -42,8 +45,10 @@
             </div>
 
            <div class="projects"> 
-            <img src="/assets/icons/icons8-folder-40.png" alt="">
-            <p>Projects</p>
+                <button id="projectsBtn" class="projects__btn">
+                    <img src="/assets/icons/icons8-folder-40.png" alt="">
+                    <p>Projects</p>
+                </button>    
             </div>
             
             <div class="calculator">
@@ -58,12 +63,16 @@
             </div>
         </div>
 
-        <!-- Modals Section-->
+
+<!-- Modals Section-->
+
+
+<!--My Commputer Modal Section-->
 
         <div id="compModal" class="comp__modal">
             <div class="comp__content">
                 <div class="titleBar">
-                    <button class="closeBtn" id="closeBtn"></button>
+                    <button class="closeBtn" id="compCloseBtn"></button>
                     <button class="minBtn" id="minBtn"></button>
                     <p>about me</p>
                 </div>
@@ -94,13 +103,32 @@
                 </div> 
          </div>
         </div>
+
+
+<!--Projects Folder Modal Section-->
+
+        <div id="projectsModal" class="projects__modal">
+            <div class="projects__content">
+                <div class="titleBar">
+                    <button class="closeBtn" id="projectsCloseBtn"></button>
+                    <button class="minBtn" id="minBtn"></button>
+                    <p>/Projects</p>
+                </div>
+                here
+            </div>
+
+            
+        </div>
+
+
+
+        <!--Taskbar Section-->
         <div class="taskBar">
             <div class="taskbar__Icons">
                 <button id="compTaskbar" class="comp__Taskbar"><img src="/assets/icons/icons8-old-computer-80 (1).png" ></button>
                 <img src="/assets/icons/icons8-folder-40.png" alt="">
            </div>
     </main>
-<!--Taskbar Section-->
     </div>
     </div>
     
