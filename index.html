@@ -12,6 +12,7 @@
 <body>
     <!--TODO: mobile design/ media queries-->
     <!--FIXME: nav ul/div-->
+    <!--TODO: add brightness range to taskbar-->
     
 <!--Desktop Section-->
     <main class="desktop">
@@ -27,14 +28,20 @@
                     <div class="nav__right">
                         <div id="cpuWidget"></div>
                         <img src="/assets/icons/icons8-battery-30.png" alt="">
+                        <img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 20px;">
                     </div>
-                   
+
+                    
+                    
                 </ul>
             </nav>
-          </header>
-
-<!--Desktop Left Section-->
-
+        </header>
+        
+        <div class="nav__popup" id="navPopup">
+            brightness
+        </div>
+        <!--Desktop Left Section-->
+        
         <div class="desktop__left">
 
             <div class="computer">
@@ -111,10 +118,26 @@
             <div class="projects__content">
                 <div class="titleBar">
                     <button class="closeBtn" id="projectsCloseBtn"></button>
-                    <button class="minBtn" id="minBtn"></button>
+                    <button class="minBtn" id="projectMinBtn"></button>
                     <p>/Projects</p>
                 </div>
-                here
+                <div>
+                    <button>
+                        Desktop Portfolio
+                    </button>
+                    <button>
+                        The Paradox Exchange
+                    </button>
+                    <button>
+                        Blog
+                    </button>
+                    <button>
+                        Weather app
+                    </button>
+                    <button>
+                        E-commerce store
+                    </button>
+                </div>
             </div>
 
             
@@ -122,10 +145,11 @@
 
 
 
-        <!--Taskbar Section-->
+<!--Taskbar Section-->
         <div class="taskBar">
             <div class="taskbar__Icons">
-                <button id="compTaskbar" class="comp__Taskbar"><img src="/assets/icons/icons8-old-computer-80 (1).png" ></button>
+                <button id="compTaskbar" class="comp__taskbar"><img src="/assets/icons/icons8-old-computer-80 (1).png" ></button>
+                <button id="projectsTaskbar" class="projects__taskbar"><img src="/assets/icons/icons8-folder-40.png" alt=""></button>
                 <img src="/assets/icons/icons8-folder-40.png" alt="">
            </div>
     </main>

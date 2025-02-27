@@ -1,3 +1,27 @@
+// navbar popup function //
+const navPopup = document.getElementById("navPopup");
+const navArrow =document.getElementById("navArrow")
+
+
+navArrow.addEventListener("mouseover", function(e){
+    navPopup.style.display = "block";
+});
+
+navPopup.addEventListener("mouseover", function(e){
+    navPopup.style.display = "block";
+})
+
+navPopup.addEventListener("mouseout", function(e){
+    navPopup.style.display = "none";
+})
+
+
+
+
+
+
+
+
 // open, close, minimize button functions, taskbar icons funtion //
 
 const compCloseBtn = document.getElementById("compCloseBtn")
@@ -30,19 +54,34 @@ compTaskbar.onclick = function(){
 }
 
 
-
+const projectMinBtn = document.getElementById("projectMinBtn");
 const projectsModal = document.getElementById("projectsModal");
 const projectsBtn =document.getElementById("projectsBtn");
 const projectsCloseBtn = document.getElementById("projectsCloseBtn");
+const projectsTaskbar = document.getElementById("projectsTaskbar");
 
-// open projects modal button//
+// open projects modal button, show taskbar icon//
 projectsBtn.onclick = function () {
     projectsModal.style.display = "block"
+    projectsTaskbar.style.display = "block"
 }
 
+// close projects modal button, hide taskbar icon//
 projectsCloseBtn.onclick = function(){
     projectsModal.style.display = "none";
+    projectsTaskbar.style.display = "none";
 }
+
+// minimize projects modal //
+projectMinBtn.onclick = function() {
+    projectsModal.style.display = "none";
+}
+
+//open projects modal from taskbar icon function//
+projectsTaskbar.onclick = function(){
+    projectsModal.style.display = "block";
+}
+
 
 
 // modal overlap function //
@@ -57,6 +96,10 @@ compModal.onclick = function() {
     projectsModal.style.zIndex = 1;
 }
 
+
+
+
+
 //CPU usage widget function //
 
 
@@ -67,6 +110,9 @@ function updateCPUUsage(){
 }
 
 setInterval(updateCPUUsage, 1000); // updates every second //
+
+
+
 
 
 // navbar time widget function //

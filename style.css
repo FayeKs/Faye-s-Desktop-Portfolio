@@ -12,7 +12,8 @@
 }
 
 body {
-    background-color: rgba(180, 206, 206, 0.988);
+    background: url(/assets/images/Untitled\ design\ \(2\).png);
+    /* background-color: rgba(180, 206, 206, 0.988); */
     /* background: url(/assets/images/Untitled\ design\ \(1\).png); */
     min-height: 100vh;
 }
@@ -53,11 +54,11 @@ nav {
 .nav__right {
     display: flex;
     align-items: start;
-    justify-content: start;
     float: right;
-    padding: 5px;
+    padding: 4px;
     margin: 0;
-    width: 150px;
+    width: 200px;
+    justify-content: space-evenly;
 }
 
 .nav__right img {
@@ -66,10 +67,19 @@ nav {
     width: 25px;
 }
 
+.nav__arrow:hover {
+    cursor: pointer;
+}
 
 
-
-
+.nav__popup {
+    border-style: solid;
+    display: none;
+    width: 200px;
+    float: right;
+    background-color: var(--primary-clr);
+    margin: 10px;
+}
 
 /* Desktop Left Section */
 
@@ -134,14 +144,14 @@ main img {
     padding: 3px;
 }
 
-.comp__Taskbar {
+.comp__taskbar, .projects__taskbar {
     /* display: none; */ /* off: keeps computer taskbar icon showing on refresh*/
 background-color: transparent;
 border: none;
 
 }
 
-.comp__Taskbar:hover {
+.comp__taskbar:hover, .projects__taskbar{
     cursor: pointer;
 }
 
