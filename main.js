@@ -119,7 +119,15 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 
 let now = new Date();
-let currenTime = now.toLocaleDateString('en-US', { hour: '2-digit', minute: '2-digit'});
+let currenTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit'});
 
 document.getElementById("navTime").textContent = `${currenTime}`;
 
+ //navbar desktop brighntess function //
+
+ const range = document.getElementById("range");
+const html = document.getElementById("html")
+
+range.addEventListener("change", function(){
+    html.style.filter = "brightness(" + range.value + "%)";
+});

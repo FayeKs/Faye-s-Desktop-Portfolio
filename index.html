@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Faye's Portfolio</title>
 </head>
-<body>
+<body id="body">
     <!--TODO: mobile design/ media queries-->
     <!--FIXME: nav ul/div-->
     <!--TODO: add brightness range to taskbar-->
@@ -21,6 +21,7 @@
             
             <nav>
                 <ul class="navList">
+                    <li><img src="/assets/icons/icons8-wifi-24.png" alt="" style="width: 18px;"></li>
                     <li id="navTime"></li>
                     
     
@@ -38,7 +39,8 @@
         </header>
         
         <div class="nav__popup" id="navPopup">
-            brightness
+            <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 15px;">
+            <input type="range" id="range" min="10" max="100" value="100">
         </div>
         <!--Desktop Left Section-->
         
@@ -123,19 +125,19 @@
                 </div>
                 <div>
                     <button>
-                        Desktop Portfolio
+                        Desktop Portfolio: Html, css, javascript
                     </button>
                     <button>
-                        The Paradox Exchange
+                        The Paradox Exchange: react, javascript
                     </button>
                     <button>
-                        Blog
+                        Blog: react,scss, javascript
                     </button>
                     <button>
-                        Weather app
+                        Weather app: api, tailwind
                     </button>
                     <button>
-                        E-commerce store
+                        E-commerce store: react, typescript
                     </button>
                 </div>
             </div>
