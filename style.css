@@ -130,7 +130,7 @@ main img {
     font-size: 9px;
 }
 
-.computer, .projects {
+.computer, .projects, .calculator, .github {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,6 +258,7 @@ border: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+   
 }
 
 .skills__item {
@@ -336,7 +337,8 @@ border: none;
 
 /* TODO: create close and open function for modal */
 /* Close and Open buttons*/
-.closeBtn:hover, .minBtn:hover, .comp__btn:hover, .projects__btn{
+.closeBtn:hover, .minBtn:hover, 
+.comp__btn:hover, .projects__btn, .calc__btn, .github__btn{
     cursor: pointer;
 }
 .closeBtn {
@@ -348,7 +350,7 @@ border: none;
     background-color: rgb(209, 209, 146);
 }
 
-.comp__btn, .projects__btn {
+.comp__btn, .projects__btn, .calc__btn, .github__btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,5 +359,9 @@ border: none;
     height: 50px;
     background-color: transparent;
     border: none;
+}
+
+.github__btn {
+    text-decoration: none;
 }
 
