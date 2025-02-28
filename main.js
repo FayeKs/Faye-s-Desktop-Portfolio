@@ -1,7 +1,29 @@
+
+// navbar time widget function //
+
+
+let now = new Date();
+let currenTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit'});
+
+document.getElementById("navTime").textContent = `${currenTime}`;
+
+ //navbar desktop brighntess function //
+
+ const range = document.getElementById("range");
+const html = document.getElementById("html")
+
+range.addEventListener("change", function(){
+    html.style.filter = "brightness(" + range.value + "%)";
+
+});
+
+
+
 // navbar popup function //
 const navPopup = document.getElementById("navPopup");
 const navArrow =document.getElementById("navArrow")
 
+navPopup.style.display = "none" //ensures popup in hidden initially//
 
 navArrow.addEventListener("mouseover", function(e){
     navPopup.style.display = "block";
@@ -113,21 +135,3 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 
 
-
-
-// navbar time widget function //
-
-
-let now = new Date();
-let currenTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit'});
-
-document.getElementById("navTime").textContent = `${currenTime}`;
-
- //navbar desktop brighntess function //
-
- const range = document.getElementById("range");
-const html = document.getElementById("html")
-
-range.addEventListener("change", function(){
-    html.style.filter = "brightness(" + range.value + "%)";
-});
