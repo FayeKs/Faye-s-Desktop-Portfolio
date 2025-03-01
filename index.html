@@ -25,20 +25,16 @@
         <header>
             
             <nav>
-                <ul class="navList">
+                <ul class="nav__left">
                     <li id="navTime"></li>
                     <li><img src="/assets/icons/icons8-wifi-24.png" alt="" style="width: 18px;"></li>
+                </ul>
+                <ul class="nav__right">   
+                    <li id="cpuWidget"></li>
+                    <li><img src="/assets/icons/icons8-battery-30.png" alt=""></li>
+                    <li><img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 23px;"></li>
                     
-
-                    
-                    <div class="nav__right">
-                        <div id="cpuWidget"></div>
-                        <img src="/assets/icons/icons8-battery-30.png" alt="">
-                        <img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 20px;">
-                    </div>
-
-                    
-                    
+                    <!--FIXME: fix the ul/div list structure-->
                 </ul>
             </nav>
         </header>
@@ -196,13 +192,22 @@
 
 
 <!--Taskbar Section-->
-        <div class="taskBar">
-            <div class="taskbar__Icons">
-                <button id="compTaskbar" class="comp__taskbar"><img src="/assets/icons/icons8-old-computer-80 (1).png" ></button>
-                <button id="projectsTaskbar" class="projects__taskbar"><img src="/assets/icons/icons8-folder-40.png" alt=""></button>
+        
+            <div class="taskbar">
+                <button id="compTaskbar" class="comp__taskbar">
+                    <img src="/assets/icons/icons8-old-computer-80 (1).png" >
+                    <p>about me</p>
+                </button>
+
+                <button id="projectsTaskbar" class="projects__taskbar">
+                    <img src="/assets/icons/icons8-folder-40.png" alt="">
+                   <p>projects</p>
+                </button>
+
+
                 <img src="/assets/icons/icons8-folder-40.png" alt="">
            </div>
-        </div>
+        
     </div>
 </main>
     
