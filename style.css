@@ -289,7 +289,7 @@ nav {
 /* Projects Folder Modal Section*/
 
 .projects__modal {
-    background-color: rgb(252, 242, 242);
+    background-color: var(--primary-clr);
     box-shadow: 11px 12px 0px -1px rgba(86,86,86,1);
     position: fixed;
     display: none;
@@ -301,10 +301,24 @@ nav {
     top: 30%;
     transform: translate(-20%, -20%);
 }
+.projects__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+} 
 
+
+    
 .projects__buttons button{
-    height: 90px;
-    width: 100%;
+    font-size: 12px;
+    height: 80px;
+    width: 90%;
+    border-style: outset;
+    border-width: 4px;
+    margin-bottom: 4px;
+    border-color: rgb(190, 188, 187);
 }
 
 
@@ -316,7 +330,8 @@ nav {
 /* TODO: create close and open function for modal */
 /* Close and Open buttons*/
 .closeBtn:hover, .minBtn:hover, 
-.comp__btn:hover, .projects__btn, .calc__btn, .github__btn{
+.comp__btn:hover, .projects__btn, 
+.calc__btn, .github__btn, .projects__buttons button:hover{
     cursor: pointer;
 }
 .closeBtn {

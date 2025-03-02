@@ -151,3 +151,22 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 
 
+// pink mode/default mode desktop theme function //
+
+const pinkMode = document.getElementById("pinkMode");
+const defaultMode = document.getElementById("defaultMode");
+
+defaultMode.style.display = "none";
+
+
+pinkMode.onclick = function() {
+    body.style.backgroundImage = "url('/assets/images/kawaii.png')";
+    pinkMode.style.display = "none";
+    defaultMode.style.display = "block";
+}
+
+defaultMode.onclick = function() {
+    pinkMode.style.display = "block"
+    body.style.backgroundImage = "url('/assets/images/Untitled design (2).png')";
+    defaultMode.style.display = "none"
+}
