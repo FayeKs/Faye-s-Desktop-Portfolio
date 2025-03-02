@@ -73,6 +73,8 @@ minBtn.onclick = function(){
 //open modal from taskbar icon function//
 compTaskbar.onclick = function(){
     compModal.style.display = "block";
+    compModal.style.zIndex = 9999;
+    projectsModal.style.zIndex = 1;
 }
 
 
@@ -81,6 +83,9 @@ const projectsModal = document.getElementById("projectsModal");
 const projectsBtn =document.getElementById("projectsBtn");
 const projectsCloseBtn = document.getElementById("projectsCloseBtn");
 const projectsTaskbar = document.getElementById("projectsTaskbar");
+
+projectsTaskbar.style.display = "none";
+
 
 // open projects modal button, show taskbar icon//
 projectsBtn.onclick = function () {
@@ -102,7 +107,18 @@ projectMinBtn.onclick = function() {
 //open projects modal from taskbar icon function//
 projectsTaskbar.onclick = function(){
     projectsModal.style.display = "block";
+    projectsModal.style.zIndex = 9999;
+    compModal.style.zIndex = 1;
 }
+
+//project under maintenence alert function //
+const projectButtons = document.querySelectorAll('.project');
+
+projectButtons.forEach(function(button){
+    button.addEventListener ('click',function(){
+        alert("Sorry! This project is under maintenence.")
+    });
+});
 
 
 
