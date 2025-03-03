@@ -24,7 +24,7 @@
 
         <header>
             
-            <nav>
+            <nav id="nav">
                 <ul class="nav__left">
                     <li id="navTime"></li>
                     <li><img src="/assets/icons/icons8-wifi-24.png" alt="" style="width: 18px;"></li>
@@ -32,7 +32,7 @@
                 <ul class="nav__right">   
                     <li id="cpuWidget"></li>
                     <li><img src="/assets/icons/icons8-battery-30.png" alt=""></li>
-                    <li><img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 23px;"></li>
+                    <li><img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 20px;"></li>
                     
                     <!--FIXME: fix the ul/div list structure-->
                 </ul>
@@ -93,7 +93,7 @@
 <!--My Commputer Modal Section-->
 
         <div id="compModal" class="comp__modal">
-            <div class="titleBar">
+            <div class="titleBar" id="compTitlebar">
                 <button class="closeBtn" id="compCloseBtn"></button>
                 <button class="minBtn" id="minBtn"></button>
                 <p>about me</p>
@@ -103,24 +103,27 @@
                 <p>Hello!</p>
                 <hr>
                 <br>
-                <p>I'm Faye, a Frontend Developer passionate about creating immersive, user-friendly web experiences. 
-                    I believe in continious learning and am always excited to take on new challenges that push my skills further.</p>
+                <p>I'm Faye, a Frontend Developer passionate about creating immersive, user-friendly web experiences. I enjoy spending my day working with HTML, CSS, JavaScript and other Frontend technologies to turn my ideas into reality.
+                    <br>
+                    I believe in continious learning and am always excited to take on new challenges that push my skills further. Ultimately, i aim to become the best developer i can be and to make a meaningful contribution to the tech industry.</p>
                 <br>
                 <p>Skills</p>
                 <hr>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-                <p>Typescript</p>
-                <p>React</p>
-                <p>Linux</p>
-                <p>Git</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>Linux</li>
+                    <li>Git</li>
+                </ul>
                 <br>
                 <p>Contact Me</p>
                 <hr>
-                <p>Linkdin</p>
-                <p>Github</p> 
-                <p>Facebook</p>
+                <li>Linkdin</li>
+                <li>Github</li> 
+                <li>Facebook</li>
             </div>
         </div>     
 
@@ -161,7 +164,7 @@
 
 <!--Taskbar Section-->
         
-            <div class="taskbar">
+            <div class="taskbar" id="taskbar">
                 <button id="compTaskbar" class="comp__taskbar">
                     <!-- <img src="/assets/icons/icons8-old-computer-80 (1).png" > -->
                     <p>My Computer</p>

@@ -47,7 +47,7 @@ navPopup.addEventListener("mouseout", function(e){
 // open, close, minimize button functions, taskbar icons funtion //
 
 const compCloseBtn = document.getElementById("compCloseBtn")
-const minBtn = document.getElementById("minBtn")
+const compMinBtn = document.getElementById("minBtn")
 
 const compModal = document.getElementById("compModal");
 const compBtn = document.getElementById("compBtn");
@@ -66,7 +66,7 @@ compCloseBtn.onclick = function() {
 }
 
 //minimize computer modal button funtion//
-minBtn.onclick = function(){
+compMinBtn.onclick = function(){
     compModal.style.display = "none"
 }
 
@@ -155,18 +155,25 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 const pinkMode = document.getElementById("pinkMode");
 const defaultMode = document.getElementById("defaultMode");
+const body = document.body;
+
 
 defaultMode.style.display = "none";
+pinkMode.style.borderColor = "pink"
 
-
-pinkMode.onclick = function() {
-    body.style.backgroundImage = "url('/assets/images/kawaii.png')";
-    pinkMode.style.display = "none";
+function activatePinkMode() {
+    pinkMode.style.display = "none"
     defaultMode.style.display = "block";
+    body.classList.add("pink-mode");
+    body.classList.remove("default-mode")
 }
 
-defaultMode.onclick = function() {
-    pinkMode.style.display = "block"
-    body.style.backgroundImage = "url('/assets/images/Untitled design (2).png')";
+function activateDefaultMode() {
     defaultMode.style.display = "none"
+    pinkMode.style.display = "block"
+    body.classList.add("default-mode");
+    body.classList.remove("pink-mode");
 }
+
+pinkMode.onclick = activatePinkMode;
+defaultMode.onclick = activateDefaultMode;

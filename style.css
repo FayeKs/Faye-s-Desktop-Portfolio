@@ -37,10 +37,10 @@ header {
 }
 
 nav {
-    width: 100%;
+    width: auto;
     display: flex;
     border-style: solid;
-    border-width: 2px;
+    border-width: 0px 0px 2px 0px;
     border-color: rgba(86, 86, 86, 1);
     height: 30px;
     background-color:var(--primary-clr);
@@ -83,16 +83,24 @@ nav {
     display: none;
     z-index: 9999;
     position: absolute;
-    left: 70px;
     right: 0;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    width: auto;
-    height: 40px;
+    width: 200px;
+    height: 80px;
     background-color: var(--primary-clr);
     margin: 10px;
     text-align: center;
+    padding: 10px;
+    display: flex;
+}
+
+.nav__popup button {
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
 }
 
 
@@ -163,7 +171,7 @@ nav {
     width: 100%;
     background-color: var(--primary-clr);
     border-style: solid;
-    border-width: 2px;
+    border-width: 2px 0px 0px 0px;
     border-color: var(--border-clr);
     margin: 0;
     height: 30px;
@@ -247,6 +255,10 @@ nav {
     border-width: 2px;
 }
 
+.comp__content li {
+    list-style: none;
+}
+
 
 
 
@@ -255,7 +267,7 @@ nav {
 
 .titleBar {
     position: sticky;
-    width: 100%;
+    width: auto;
     top: 0;
     background-color: var(--primary-clr);
     height: 22px;
@@ -364,6 +376,58 @@ nav {
 button {
     color: black;
 }
+
+
+
+
+/* Pink mode and Default mode styles */
+
+
+
+.pink-mode {
+    background: url("/assets/images/kawaii.png");
+}
+
+
+.pink-mode nav, .pink-mode .titleBar, 
+.pink-mode .taskbar, 
+.pink-mode .nav__popup {
+    background-color: rgb(250, 169, 240);
+}
+
+.pink-mode .closeBtn {
+    background-color: rgb(164, 21, 164);
+    border-radius: 20%;
+}
+
+.pink-mode .minBtn {
+    background-color: rgb(235, 98, 232);
+    border-radius: 20%;
+}
+
+.pink-mode .comp__modal, .projects__modal{
+    background-color: var(--primary-clr);
+    border-color: rgb(218, 108, 248);
+}
+
+.pink-mode .taskbar button {
+    background-color: var(--primary-clr);
+}
+
+
+
+.default-mode {
+    background-image: url("/assets/images/Untitled\ design\ \(2\).png");
+}
+
+.default-mode nav, .default-mode .titleBar, 
+.default-mode .nav__popup, .default-mode .taskbar,
+.default-mode .projects__modal{
+    background-color: var(--primary-clr);
+    border-color: initial;
+}
+
+
 
 /* Media Queries */
 
