@@ -1,193 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" id="html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Faye's Portfolio</title>
-</head>
-<body id="body">
+  </head>
+  <body id="body">
     <!--TODO: mobile design/ media queries-->
     <!--FIXME: nav ul/div-->
     <!--TODO: add brightness range to taskbar-->
-    
-
 
     <main class="desktop">
+      <!--Navbar Section-->
 
+      <header>
+        <nav id="nav">
+          <ul class="nav__left">
+            <li id="navTime"></li>
+            <li>
+              <img
+                src="/assets/icons/icons8-wifi-24.png"
+                alt=""
+                style="width: 18px"
+              />
+            </li>
+          </ul>
+          <ul class="nav__right">
+            <li id="cpuWidget"></li>
+            <li><img src="/assets/icons/icons8-battery-30.png" alt="" /></li>
+            <li>
+              <img
+                src="/assets//icons/icons8-arrow-down-24.png"
+                alt=""
+                class="nav__arrow"
+                id="navArrow"
+                style="width: 20px"
+              />
+            </li>
 
+            <!--FIXME: fix the ul/div list structure-->
+          </ul>
+        </nav>
+      </header>
 
-<!--Navbar Section-->
+      <!--Navbar popup Section-->
 
-        <header>
-            
-            <nav id="nav">
-                <ul class="nav__left">
-                    <li id="navTime"></li>
-                    <li><img src="/assets/icons/icons8-wifi-24.png" alt="" style="width: 18px;"></li>
-                </ul>
-                <ul class="nav__right">   
-                    <li id="cpuWidget"></li>
-                    <li><img src="/assets/icons/icons8-battery-30.png" alt=""></li>
-                    <li><img src="/assets//icons/icons8-arrow-down-24.png" alt="" class="nav__arrow" id="navArrow" style="width: 20px;"></li>
-                    
-                    <!--FIXME: fix the ul/div list structure-->
-                </ul>
-            </nav>
-        </header>
-        
- <!--Navbar popup Section-->  
+      <div class="nav__popup" id="navPopup">
+        <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" />
+        <input
+          type="range"
+          id="range"
+          class="range"
+          min="50"
+          max="100"
+          value="100"
+        />
+        <button id="pinkTheme">Pink Theme</button>
+        <button id="defaultTheme">Default Theme</button>
+      </div>
 
-        <div class="nav__popup" id="navPopup">
-            <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px;">
-            <input type="range" id="range" class="range" min="50" max="100" value="100">
-            <button id="pinkTheme" >Pink Theme</button> 
-            <button id="defaultTheme"> Default Theme</button>
+      <!--Desktop Left Section-->
+
+      <div class="desktop__left">
+        <div class="computer">
+          <button id="compBtn" class="comp__btn">
+            <img
+              src="/assets/icons/icons8-old-computer-80 (1).png"
+              alt=""
+              id="myCompTheme"
+            />
+            <p>My Computer</p>
+          </button>
         </div>
 
-
-
-
-
-<!--Desktop Left Section-->
-        
-        <div class="desktop__left">
-
-            <div class="computer">
-                <button id="compBtn" class="comp__btn">
-                    <img src="/assets/icons/icons8-old-computer-80 (1).png" alt="" id="myCompTheme">
-                    <p>My Computer</p>
-                </button>
-            </div>
-
-           <div class="projects"> 
-                <button id="projectsBtn" class="projects__btn">
-                    <img src="/assets/icons/icons8-folder-40.png" alt="" id="projectsTheme">
-                    <p>Projects</p>
-                </button>    
-            </div>
-            
-            <div class="calculator">
-                <button id="calcBtn" class="calc__btn">
-                    <img src="/assets/icons/icons8-calculator-64.png" alt="" id="calcTheme">
-                    <p>Calculator</p>
-                </button>
-            </div>
-
-            <div class="github">
-                <a href="https://github.com/FayeKs" class="github__btn"  >
-                    <img src="/assets/icons/icons8-github-80.png" alt="" id="githubTheme" >
-                    <p>Github</p>
-                </a>
-            </div>
+        <div class="projects">
+          <button id="projectsBtn" class="projects__btn">
+            <img
+              src="/assets/icons/icons8-folder-40.png"
+              alt=""
+              id="projectsTheme"
+            />
+            <p>Projects</p>
+          </button>
         </div>
 
-
-<!-- Modals Section-->
-
-
-<!--My Commputer Modal Section-->
-
-        <div id="compModal" class="comp__modal">
-            <div class="titleBar" id="compTitlebar">
-                <button class="closeBtn" id="compCloseBtn"></button>
-                <button class="minBtn" id="minBtn"></button>
-                <p>about me</p>
-            </div>
-            <div class="comp__content">
-                <img src="/assets/images/profilepic.jpg" alt="">
-                <p>Hello!</p>
-                <hr>
-                <br>
-                <p>I'm Faye, a Frontend Developer passionate about creating immersive, user-friendly web experiences. I enjoy spending my day working with HTML, CSS, JavaScript and other Frontend technologies to turn my ideas into reality.
-                    <br>
-                    I believe in continious learning and am always excited to take on new challenges that push my skills further. Ultimately, i aim to become the best developer i can be and to make a meaningful contribution to the tech industry.</p>
-                <br>
-                <p>Skills</p>
-                <hr>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>React</li>
-                    <li>Linux</li>
-                    <li>Git</li>
-                </ul>
-                <br>
-                <p>Contact Me</p>
-                <hr>
-                <li>Linkdin</li>
-                <li>Github</li> 
-                <li>Facebook</li>
-            </div>
-        </div>     
-
-
-
-<!--Projects Folder Modal Section-->
-
-        <div id="projectsModal" class="projects__modal">
-            <div class="projects__content">
-                <div class="titleBar">
-                    <button class="closeBtn" id="projectsCloseBtn"></button>
-                    <button class="minBtn" id="projectMinBtn"></button>
-                    <p>/Projects</p>
-                </div>
-                <div class="projects__buttons">
-                    <button class="project">
-                        Desktop Portfolio: Html, css, javascript
-                    </button>
-                    <button class="project">
-                        The Paradox Exchange: react, javascript
-                    </button>
-                    <button class="project">
-                        Blog: react,scss, javascript
-                    </button>
-                    <button class="project">
-                        Weather app: api, tailwind
-                    </button>
-                    <button class="project">
-                        E-commerce store: react, typescript
-                    </button>
-                </div>
-            </div>
-
-            
+        <div class="calculator">
+          <button id="calcBtn" class="calc__btn">
+            <img
+              src="/assets/icons/icons8-calculator-64.png"
+              alt=""
+              id="calcTheme"
+            />
+            <p>Calculator</p>
+          </button>
         </div>
 
+        <div class="github">
+          <a href="https://github.com/FayeKs" class="github__btn">
+            <img
+              src="/assets/icons/icons8-github-80.png"
+              alt=""
+              id="githubTheme"
+            />
+            <p>Github</p> </a
+          >
+        </div>
+
+        <div class="tictactoe">
+          <button id="tictactoeBtn" class="tictactoe__btn">
+            <img src="/assets/icons/icons8-tic-tac-toe-53.png" alt="">
+            <p>Tic-Tac-Toe</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modals Section-->
+
+      <!--My Commputer Modal Section-->
+
+      <div id="compModal" class="comp__modal">
+        <div class="titleBar" id="compTitlebar">
+          <button class="closeBtn" id="compCloseBtn"></button>
+          <button class="minBtn" id="minBtn"></button>
+          <p>about me</p>
+        </div>
+        <div class="comp__content">
+          <img src="/assets/images/profilepic.jpg" alt="" />
+          <p>Hello!</p>
+          <hr />
+          <br />
+          <p>
+            I'm Faye, a Frontend Developer passionate about creating immersive,
+            user-friendly web experiences. I enjoy spending my day working with
+            HTML, CSS, JavaScript and other Frontend technologies to turn my
+            ideas into reality.
+            <br />
+            I believe in continious learning and am always excited to take on
+            new challenges that push my skills further. Ultimately, i aim to
+            become the best developer i can be and to make a meaningful
+            contribution to the tech industry.
+          </p>
+          <br />
+          <p>Skills</p>
+          <hr />
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Linux</li>
+            <li>Git</li>
+          </ul>
+          <br />
+          <p>Contact Me</p>
+          <hr />
+          <li>Linkdin</li>
+          <li>Github</li>
+          <li>Facebook</li>
+        </div>
+      </div>
+
+      <!--Projects Folder Modal Section-->
+
+      <div id="projectsModal" class="projects__modal">
+        <div class="projects__content">
+          <div class="titleBar">
+            <button class="closeBtn" id="projectsCloseBtn"></button>
+            <button class="minBtn" id="projectMinBtn"></button>
+            <p>/Projects</p>
+          </div>
+          <div class="projects__buttons">
+            <button class="project">
+              Desktop Portfolio: Html, css, javascript
+            </button>
+            <button class="project">
+              The Paradox Exchange: react, javascript
+            </button>
+            <button class="project">Blog: react,scss, javascript</button>
+            <button class="project">Weather app: api, tailwind</button>
+            <button class="project">E-commerce store: react, typescript</button>
+          </div>
+        </div>
+      </div>
 
 
-<!--Taskbar Section-->
-        
-            <div class="taskbar" id="taskbar">
-                <button id="compTaskbar" class="comp__taskbar">
-                    <!-- <img src="/assets/icons/icons8-old-computer-80 (1).png" > -->
-                    <p>My Computer</p>
-                </button>
+      <!--Tic-Tac-Toe Game Modal -->
 
-                <button id="projectsTaskbar" class="projects__taskbar">
-                   <p>Projects</p>
-                </button>
+      <div id="tictactoeModal" class="tictactoe__modal">
+        <div class="tictactoe__content">
+          <div class="titleBar">
+              <button class="closeBtn" id="tictactoeCloseBtn"></button>
+              <button class="minBtn" id="tictactoeMinBtn"></button>
+              <p>Tic-Tac-Toe Game</p>
+          </div>
 
+        </div>
 
-               
-           </div>
-        
-    </div>
-</main>
-    
+      </div>
 
 
 
+      <!--Taskbar Section-->
 
+      <div class="taskbar" id="taskbar">
+        <button id="compTaskbar" class="comp__taskbar">
+          <p>My Computer</p>
+        </button>
 
+        <button id="projectsTaskbar" class="projects__taskbar">
+          <p>Projects</p>
+        </button>
 
-
+        <button class="tictactoe__taskbar" id="tictactoeTaskbar">
+          <p>Tic-tac-toe</p>
+        </button>
+      </div>
+    </main>
 
     <script src="/main.js"></script>
-</body>
+  </body>
 </html>
