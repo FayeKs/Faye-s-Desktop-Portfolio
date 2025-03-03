@@ -153,27 +153,37 @@ setInterval(updateCPUUsage, 1000); // updates every second //
 
 // pink mode/default mode desktop theme function //
 
-const pinkMode = document.getElementById("pinkMode");
-const defaultMode = document.getElementById("defaultMode");
+const pinkThemeBtn = document.getElementById("pinkTheme");
+const defaultThemeBtn = document.getElementById("defaultTheme");
 const body = document.body;
+const myCompTheme = document.getElementById("myCompTheme");
+const projectsTheme = document.getElementById("projectsTheme");
+const calcTheme = document.getElementById("calcTheme");
+const githubTheme = document.getElementById('githubTheme')
 
+defaultThemeBtn.style.display = "none";
 
-defaultMode.style.display = "none";
-pinkMode.style.borderColor = "pink"
-
-function activatePinkMode() {
-    pinkMode.style.display = "none"
-    defaultMode.style.display = "block";
-    body.classList.add("pink-mode");
-    body.classList.remove("default-mode")
+function activatePinkTheme() {
+    pinkThemeBtn.style.display = "none"
+    defaultThemeBtn.style.display = "block";
+    body.classList.add("pink-theme");
+    body.classList.remove("default-theme")
+    myCompTheme.src = "/assets/icons/icons8-old-computer-80 (2).png";
+    projectsTheme.src = "/assets/icons/icons8-folder-40 (1).png";
+    calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png"
+    githubTheme.src = "/assets/icons/icons8-github-40.png";
 }
 
-function activateDefaultMode() {
-    defaultMode.style.display = "none"
-    pinkMode.style.display = "block"
-    body.classList.add("default-mode");
-    body.classList.remove("pink-mode");
+function activateDefaultTheme() {
+    defaultThemeBtn.style.display = "none"
+    pinkThemeBtn.style.display = "block"
+    body.classList.add("default-theme");
+    body.classList.remove("pink-theme");
+    myCompTheme.src = "/assets/icons/icons8-old-computer-80 (1).png"
+    projectsTheme.src = "/assets/icons/icons8-folder-40.png";
+    calcTheme.src = "/assets/icons/icons8-calculator-64.png";
+    githubTheme.src = "/assets/icons/icons8-github-80.png";
 }
 
-pinkMode.onclick = activatePinkMode;
-defaultMode.onclick = activateDefaultMode;
+pinkThemeBtn.onclick = activatePinkTheme;
+defaultThemeBtn.onclick = activateDefaultTheme;

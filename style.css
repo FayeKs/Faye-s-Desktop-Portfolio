@@ -384,48 +384,58 @@ button {
 
 
 
-.pink-mode {
+#pinkTheme {
+    border-color: pink;
+}
+
+#defaultTheme {
+    border-color: grey;
+}
+
+.pink-theme {
     background: url("/assets/images/kawaii.png");
 }
 
 
-.pink-mode nav, .pink-mode .titleBar, 
-.pink-mode .taskbar, 
-.pink-mode .nav__popup {
-    background-color: rgb(250, 169, 240);
+.pink-theme nav, .pink-theme .titleBar, 
+.pink-theme .taskbar, 
+.pink-theme .nav__popup {
+    background-color: #F1BFF4;
 }
 
-.pink-mode .closeBtn {
-    background-color: rgb(164, 21, 164);
+.pink-theme .closeBtn {
+    background-color: #AC42D7;
     border-radius: 20%;
 }
 
-.pink-mode .minBtn {
-    background-color: rgb(235, 98, 232);
+.pink-theme .minBtn {
+    background-color: #FD87D7;
     border-radius: 20%;
 }
 
-.pink-mode .comp__modal, .projects__modal{
-    background-color: var(--primary-clr);
-    border-color: rgb(218, 108, 248);
+.pink-theme .comp__modal, .projects__modal{
+    background-color: rgb(237, 223, 234);
+    border-color: #FD87D7;
+    color: purple;
 }
 
-.pink-mode .taskbar button {
+.pink-theme .taskbar button {
     background-color: var(--primary-clr);
 }
 
 
 
-.default-mode {
+.default-theme {
     background-image: url("/assets/images/Untitled\ design\ \(2\).png");
 }
 
-.default-mode nav, .default-mode .titleBar, 
-.default-mode .nav__popup, .default-mode .taskbar,
-.default-mode .projects__modal{
+.default-theme nav, .default-theme .titleBar, 
+.default-theme .nav__popup, .default-theme .taskbar,
+.default-theme .projects__modal{
     background-color: var(--primary-clr);
     border-color: initial;
 }
+
 
 
 
