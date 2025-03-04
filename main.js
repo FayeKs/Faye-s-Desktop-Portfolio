@@ -1,4 +1,4 @@
-// navbar time widget function //
+// Navbar time widget function //
 
 let now = new Date();
 let currenTime = now.toLocaleTimeString("en-US", {
@@ -8,7 +8,16 @@ let currenTime = now.toLocaleTimeString("en-US", {
 
 document.getElementById("navTime").textContent = `${currenTime}`;
 
-//navbar desktop brighntess function //
+//CPU usage widget function //
+
+function updateCPUUsage() {
+  const cpuUsage = (Math.random() * (7 - 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
+  document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%`;
+}
+
+setInterval(updateCPUUsage, 1000); // updates every second //
+
+//Navbar desktop brighntess function //
 
 const range = document.getElementById("range");
 const html = document.getElementById("html");
@@ -17,88 +26,124 @@ range.addEventListener("change", function () {
   html.style.filter = "brightness(" + range.value + "%)";
 });
 
-// navbar popup function //
+
+
+// Utility function to open modal and show taskbar icon
+
+function openModal(modal, taskbar){
+  modal.style.display = "block";
+  taskbar.style.display = "block"
+  setZIndex(modal);
+}
+
+// Utiltiy function to close modal and hide taskbar icon
+
+function closeModal(modal, taskbar){
+  modal.style.display = "none";
+  taskbar.style.display = "none";
+}
+
+// Utility function to minimize modal 
+
+function minimizeModal(modal){
+  modal.style.display = "none";
+  
+}
+
+// Utility function to set z-index for active modal
+function setZIndex(activeModal){
+  const modals = [compModal, projectsModal, tictactoeModal];
+  modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
+}
+
+//Navbar popup
 const navPopup = document.getElementById("navPopup");
 const navArrow = document.getElementById("navArrow");
 
 navPopup.style.display = "none"; //ensures popup in hidden initially//
 
-navArrow.addEventListener("mouseover", function (e) {
-  navPopup.style.display = "block";
-});
+// Show/hide navbar popup
+navArrow.addEventListener("mouseover", () => navPopup.style.display = "block");
+navPopup.addEventListener("mouseover", () => navPopup.style.display = "block");
+navPopup.addEventListener("mouseout", () => navPopup.style.display = "none");
 
-navPopup.addEventListener("mouseover", function (e) {
-  navPopup.style.display = "block";
-});
 
-navPopup.addEventListener("mouseout", function (e) {
-  navPopup.style.display = "none";
-});
+// Modal and taskbar elements
+const modals = {
+  compModal: document.getElementById("compModal"),
+  projectsModal: document.getElementById("projectsModal"),
+  tictactoeModal: document.getElementById("tictactoeModal"),
+};
 
-// open, close, minimize button functions, taskbar icons funtion //
 
-const compCloseBtn = document.getElementById("compCloseBtn");
-const compMinBtn = document.getElementById("minBtn");
+const taskbars = {
+  compTaskbar: document.getElementById("compTaskbar"),
+  projectsTaskbar: document.getElementById("projectsTaskbar"),
+  tictactoeTaskbar: document.getElementById("tictactoeTaskbar"),
+}
 
-const compModal = document.getElementById("compModal");
-const compBtn = document.getElementById("compBtn");
-const compTaskbar = document.getElementById("compTaskbar");
+const buttons = {
+  compBtn: document.getElementById("compBtn"),
+  compCloseBtn: document.getElementById("compCloseBtn"),
+  compMinBtn: document.getElementById("minBtn"),
+  projectsBtn: document.getElementById("projectsBtn"),
+  projectsCloseBtn: document.getElementById("projectsCloseBtn"),
+  projectsMinBtn: document.getElementById("projectMinBtn"),
+  tictactoeBtn: document.getElementById("tictactoeBtn"),
+  tictactoeCloseBtn: document.getElementById("tictactoeCloseBtn"),
+  tictactoeMinBtn: document.getElementById("tictactoeMinBtn"),
+}
 
-// open computer modal button, show taskbar icon //
-compBtn.onclick = function () {
-  compModal.style.display = "block";
+
+
+// Initialize taskbar visbility
+
+
+Object.values(taskbars).forEach(taskbar => taskbar.style.display = "none");
+
+// Open Modals
+
+buttons.compBtn.onclick = () => openModal(modals.compModal, taskbars.compTaskbar);
+buttons.projectsBtn.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
+buttons.tictactoeBtn.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+
+
+// Close Modals
+
+buttons.compCloseBtn.onclick = () => closeModal(modals.compModal, taskbars.compTaskbar);
+buttons.projectsCloseBtn.onclick = () => closeModal(modals.projectsModal, taskbars.projectsTaskbar);
+buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+
+
+
+// Minimize modals
+
+buttons.compMinBtn.onclick = () => minimizeModal(modals.compModal);
+buttons.projectsMinBtn.onclick = () => minimizeModal(modals.projectsModal);
+buttons.tictactoeMinBtn.onclick = () => minimizeModal(modals.tictactoeModal);
+
+
+
+// Click on taskbar to open modal
+
+
+taskbars.compTaskbar.onclick = () => openModal(modals.compModal, taskbars.compTaskbar);
+taskbars.projectsTaskbar.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
+taskbars.tictactoeTaskbar.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+
+
+// Modal overlap handling 
+
+Object.values(modals).forEach(modal => {
+  modal.onclick = () => setZIndex(modal);
+})
+
+
+// Ensures compTaskbar is showing intially
+
+window.addEventListener('DOMContentLoaded', function() {
   compTaskbar.style.display = "block";
-};
-//close computer modal button, hide taskbar icon//
-compCloseBtn.onclick = function () {
-  compModal.style.display = "none";
-  compTaskbar.style.display = "none";
-};
-
-//minimize computer modal button funtion//
-compMinBtn.onclick = function () {
-  compModal.style.display = "none";
-};
-
-
-const projectMinBtn = document.getElementById("projectMinBtn");
-const projectsModal = document.getElementById("projectsModal");
-const projectsBtn = document.getElementById("projectsBtn");
-const projectsCloseBtn = document.getElementById("projectsCloseBtn");
-const projectsTaskbar = document.getElementById("projectsTaskbar");
-
-projectsTaskbar.style.display = "none";
-
-//open projects modal from taskbar icon function//
-projectsTaskbar.onclick = function () {
-  projectsModal.style.display = "block";
-  projectsModal.style.zIndex = 9999;
-  compModal.style.zIndex = 1;
-  tictactoeModal.style.zIndex = 1;
-};
-// open projects modal button, show taskbar icon//
-projectsBtn.onclick = function () {
-  projectsModal.style.display = "block";
-  projectsTaskbar.style.display = "block";
-};
-
-//open modal from taskbar icon function//
-compTaskbar.onclick = function () {
-  compModal.style.display = "block";
-  compModal.style.zIndex = 9999;
-  projectsModal.style.zIndex = 1;
-  tictactoeModal.style.zIndex = 1;
-};
-// close projects modal button function, hide taskbar icon//
-projectsCloseBtn.onclick = function () {
-  projectsModal.style.display = "none";
-  projectsTaskbar.style.display = "none";
-};
-
-// minimize projects modal function//
-projectMinBtn.onclick = function () {
-  projectsModal.style.display = "none";
-};
+})
 
 
 //project under maintenence alert function //
@@ -114,73 +159,11 @@ projectButtons.forEach(function (button) {
 
 
 
-// Tic-Tac-Toe modal 
-
-const tictactoeModal = document.getElementById("tictactoeModal");
-const tictactoeBtn = document.getElementById("tictactoeBtn");
-const tictactoeTaskbar = document.getElementById("tictactoeTaskbar");
-const tictactoeCloseBtn = document.getElementById("tictactoeCloseBtn");
-const tictactoeMinBtn = document.getElementById("tictactoeMinBtn");
-
-tictactoeTaskbar.style.display = "none"
-
-// open tictactoe modal, show taskbar icon 
-
-tictactoeBtn.onclick = function() {
-  tictactoeModal.style.display = "block"
-  tictactoeTaskbar.style.display = "block"
-}
-
-// open tictactoe modal from taskbar function
-
-tictactoeTaskbar.onclick = function() {
-  tictactoeModal.style.display = "block";
-  tictactoeModal.style.zIndex = "9999";
-  projectsModal.style.zIndex = 1;
-  compModal.style.zIndex =1;
-}
-
-// close tictactoe modal function 
-
-tictactoeCloseBtn.onclick = function(){
-  tictactoeModal.style.display = "none"
-  tictactoeTaskbar.style.display = "none"
-}
-
-tictactoeMinBtn.onclick = function() {
-  tictactoeModal.style.display = "none";
-}
 
 
 
 
-// modal overlap function //
 
-projectsModal.onclick = function() {
-  projectsModal.style.zIndex = 9999;
-  compModal.style.zIndex = 1;
-  tictactoeModal.style.zIndex = 1;
-};
-compModal.onclick = function () {
-  compModal.style.zIndex = 9999;
-  projectsModal.style.zIndex = 1;
-  tictactoeModal.style.zIndex = 1;
-};
-
-tictactoeModal.onclick = function (){
-  tictactoeModal.style.zIndex = 9999;
-  projectsModal.style.zIndex = 1;
-  compModal.style.zIndex = 1;
-}
-
-//CPU usage widget function //
-
-function updateCPUUsage() {
-  const cpuUsage = (Math.random() * (7 - 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
-  document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%`;
-}
-
-setInterval(updateCPUUsage, 1000); // updates every second //
 
 // pink mode/default mode desktop theme function //
 
