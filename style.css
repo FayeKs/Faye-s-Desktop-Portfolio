@@ -14,8 +14,9 @@
 /* Mobile-First Default Styles (360px)*/
 
 body {
-  background: url(/assets/images/Untitled\ design\ \(2\).png);
+  /* background: url(/assets/images/Untitled\ design\ \(2\).png); */
   /* background-color: rgb(233, 233, 225); */
+  background-color: rgb(200, 199, 199);
   min-height: 100vh;
   font-size: 14px;
 }
@@ -27,17 +28,70 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: blue;
-
+  background: url(/assets/images/Untitled\ design\ \(5\).png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
-.login {
-  border-style: solid;
-  height: 300px;
+.splashScreen p {
+  font-size: 12px;
+}
+
+.signIn {
+  margin-bottom: 70px;
+  width: 200px;
+  height: 140px;
+  background-color: black;
+  color: rgb(198, 191, 191);
+}
+
+.signIn input {
+  width: 100px;
+}
+
+.signIn button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -20%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signIn__welcome {
+  width: 185px;
+}
+
+.signIn__welcome p{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
 }
 
 
 
-/* Desktop Sectiom */
+
+
+/* FIXME: fix the styling of sign in button and div */
+
+
+/* Desktop Section */
 
 .desktop {
   display: none;
@@ -140,6 +194,9 @@ nav {
   width: 50px;
 }
 
+.desktop__left img {
+  filter: drop-shadow(3px 4px 0px rgba(86, 86, 86, 1));
+}
 
 .desktop__left {
   display: flex;
@@ -149,6 +206,7 @@ nav {
   width: 100%;
 }
 .desktop__left p {
+  margin: 7px;
   text-align: center;
   font-size: 9px;
 }
@@ -207,7 +265,7 @@ nav {
   padding: 2px;
 }
 
-.comp__taskbar:active, .projects__taskbar:active, .tictactoe__taskbar:active {
+.comp__taskbar:active, .projects__taskbar:active, .tictactoe__taskbar:active, .project:active {
   border-style: inset;
 }
 
@@ -363,12 +421,14 @@ nav {
   cursor: pointer;
 }
 .closeBtn {
-  background-color: rgb(177, 41, 41);
+  /* background-color: rgb(177, 41, 41); */
+  background-color: rgb(55, 54, 54);
   border-color: black;
 }
 
 .minBtn {
-  background-color: rgb(216, 198, 138);
+  /* background-color: rgb(216, 198, 138); */
+  background-color: grey;
   border-color: black;
 }
 
@@ -450,9 +510,10 @@ button {
     scrollbar-color: #fd87d7 #f1bff4;
 }
 
-.default-theme {
-  background-image: url("/assets/images/Untitled\ design\ \(2\).png");
+.pink-theme .desktop__left img {
+  filter: drop-shadow(3px 4px 0px purple);
 }
+
 
 .default-theme nav,
 .default-theme .titleBar,

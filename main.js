@@ -1,4 +1,4 @@
-// Splash screen and Desktop 
+// Splash screen and desktop functions
 
 const splashScreen = document.getElementById("splashScreen");
 const desktop = document.getElementById("desktop");
@@ -9,8 +9,15 @@ startBtn.addEventListener('click', function() {
   desktop.style.display = "block";
 });
 
+// Disabled Input function
+const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
+  event.preventDefault();
 
+});
+const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
+  event.preventDefault();
 
+});
 
 
 // Navbar time widget function //
@@ -189,6 +196,7 @@ const myCompTheme = document.getElementById("myCompTheme");
 const projectsTheme = document.getElementById("projectsTheme");
 const calcTheme = document.getElementById("calcTheme");
 const githubTheme = document.getElementById("githubTheme");
+const profilePic = document.getElementById("profilePic");
 
 
 defaultThemeBtn.style.display = "none";
@@ -202,6 +210,7 @@ function activatePinkTheme() {
   projectsTheme.src = "/assets/icons/icons8-folder-40 (1).png";
   calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png";
   githubTheme.src = "/assets/icons/icons8-github-40.png";
+  profilePic.src = "/assets/images/profilepic.jpg";
 }
 
 function activateDefaultTheme() {
@@ -213,6 +222,7 @@ function activateDefaultTheme() {
   projectsTheme.src = "/assets/icons/icons8-folder-40.png";
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";
+  profilePic.src = "/assets/images/IMG_0034 (2).jpg";
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
