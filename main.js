@@ -1,3 +1,18 @@
+// Splash screen and Desktop 
+
+const splashScreen = document.getElementById("splashScreen");
+const desktop = document.getElementById("desktop");
+const startBtn = document.getElementById("start-button");
+
+startBtn.addEventListener('click', function() {
+  splashScreen.style.display = "none";
+  desktop.style.display = "block";
+});
+
+
+
+
+
 // Navbar time widget function //
 
 let now = new Date();
