@@ -39,23 +39,34 @@ body {
 }
 
 .signIn {
-  margin-bottom: 70px;
+  margin-bottom: 75px;
+  border-radius: 7px;
   width: 200px;
-  height: 140px;
-  background-color: black;
-  color: rgb(198, 191, 191);
+  height: 130px;
+  color: rgb(255, 255, 255);
 }
 
 .signIn input {
+  font-size: 12px;
   width: 100px;
+  background-color: transparent;
+  color: white;
+}
+
+.signIn label {
+  font-size: 12px;
 }
 
 .signIn button {
   position: absolute;
+  border-color: white;
+  background-color: transparent;
+  color: white;
   top: 50%;
   left: 50%;
   transform: translate(-20%, -20%);
-  border-radius: 5px;
+  border-radius: 0px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -153,7 +164,7 @@ nav {
   border-width: 1px;
   border-radius: 5px;
   width: 200px;
-  height: 80px;
+  height: 120px;
   background-color: var(--primary-clr);
   margin: 10px;
   text-align: center;
@@ -404,6 +415,26 @@ nav {
 }
 
 
+/* Shut Down Screen Section */
+.shutDownScreen {
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 1000;
+  color: white;
+}
+
+.shutDownScreen p {
+  border-style: solid;
+}
+
+
+
 
 
 
@@ -422,7 +453,7 @@ nav {
 }
 .closeBtn {
   /* background-color: rgb(177, 41, 41); */
-  background-color: rgb(55, 54, 54);
+  background-color: rgb(54, 55, 54);
   border-color: black;
 }
 

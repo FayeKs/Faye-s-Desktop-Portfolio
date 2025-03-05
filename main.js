@@ -222,8 +222,27 @@ function activateDefaultTheme() {
   projectsTheme.src = "/assets/icons/icons8-folder-40.png";
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";
-  profilePic.src = "/assets/images/IMG_0034 (2).jpg";
+  // profilePic.src = "/assets/images/IMG_0034 (2).jpg";
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
 defaultThemeBtn.onclick = activateDefaultTheme;
+
+
+// Shut Down Crt Screen Function 
+ const shutDownBtn = document.getElementById("shutDownBtn");
+ const shutDownScreen = document.getElementById("shutDownScreen");
+
+ shutDownBtn.addEventListener('click', function() {
+  desktop.style.display = "none";
+  shutDownScreen.style.display = "block";
+
+ })
+
+// Reboot Button function 
+
+document.getElementById("rebootBtn").addEventListener('click', function(){
+  location.reload()
+})
+  
+
