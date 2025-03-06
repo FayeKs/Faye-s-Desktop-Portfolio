@@ -50,6 +50,48 @@ range.addEventListener("change", function () {
 
 
 
+// Slide-In popup function 
+
+const slideIn = document.getElementById("slideIn")
+
+  
+  function slideInModal() {
+    slideIn.style.display = "block"
+    setTimeout(() => {
+      slideIn.style.right = "0" // slide in the modal
+    }, 3500); //delay to trigger the animation
+  }
+  
+  // slide out function 
+  
+  function slideOutModal() {
+    slideIn.style.right = "-300px";
+    setTimeout(() => {
+      slideIn.style.display = "none"
+    }, 500) // wait for the slide-out animation to finsish
+  }
+  
+ 
+// show modal on page load
+
+startBtn.onclick = () => {
+  slideIn.style.display = "block"
+  setTimeout(() => {
+
+    slideInModal(); // slide in when page loads
+  }, 3000); // 3 seconds delay 
+  
+  
+  setTimeout(() => {
+    slideOutModal();
+  }, 10000) // modal stays open for 10 seconds before sliding out
+}
+
+
+
+
+
+
 // Utility function to open modal and show taskbar icon
 
 function openModal(modal, taskbar){

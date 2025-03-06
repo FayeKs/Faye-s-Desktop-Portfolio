@@ -28,7 +28,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: url(/assets/images/Untitled\ design\ \(5\).png);
+  /* background: url(/assets/images/Untitled\ design\ \(5\).png); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -41,16 +41,19 @@ body {
 .signIn {
   display: flex;
   align-items: center;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
   flex-direction: column;
   margin-bottom: 75px;
   border-radius: 7px;
-  width: 200px;
-  height: 130px;
+  width: 500px;
+  height: 300px;
   color: rgb(255, 255, 255);
 }
 
 .signIn input {
-  font-size: 12px;
+  font-size: 14px;
   width: 100px;
   background-color: transparent;
   color: white;
@@ -131,8 +134,8 @@ nav {
   width: auto;
   display: flex;
   border-style: solid;
-  border-width: 0px 0px 2px 0px;
-  border-color: rgba(86, 86, 86, 1);
+  border-width: 0px 0px 1px 0px;
+  border-color: #565656;
   height: 30px;
   background-color: var(--primary-clr);
   overflow: hidden;
@@ -144,13 +147,15 @@ nav {
   display: flex;
   list-style: none;
   overflow: hidden;
-  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 30px;
 }
 
 .nav__left li,
 .nav__right li {
   padding: 2px;
+  margin-left: 5px;
 }
 
 .nav__right li a {
@@ -169,7 +174,7 @@ nav {
 
 .nav__popup {
   display: none;
-  z-index: 9999;
+  z-index: 10000;
   position: absolute;
   right: 0;
   border-style: solid;
@@ -210,6 +215,21 @@ nav {
   border-radius: 50%;
   cursor: pointer;
 }
+
+/* Slide-in Popup Section */
+.slideIn {
+  display: none;
+  position: fixed;
+  right: -220px; /* start off screen */
+  width: 210px;
+  height: 30px;
+  background-color: white;
+  z-index: 1000;
+  transition: right 0.5s ease-in-out; /* slide effect */
+}
+
+
+
 
 /* Desktop Left Section */
 
@@ -255,7 +275,7 @@ nav {
   width: 100%;
   background-color: var(--primary-clr);
   border-style: solid;
-  border-width: 2px 0px 0px 0px;
+  border-width: 1px 0px 0px 0px;
   border-color: var(--border-clr);
   margin: 0;
   height: 30px;
@@ -328,6 +348,7 @@ nav {
 .titleBar p {
   margin: 0;
   font-size: 15px;
+  letter-spacing: 2px;
 }
 
 
@@ -381,7 +402,7 @@ nav {
 /* Projects Folder Modal Section*/
 
 .projects__modal {
-    background-color: var(--primary-clr);
+  background-color: var(--primary-clr);
   box-shadow: 11px 12px 0px -1px rgba(86, 86, 86, 1);
   position: fixed;
   display: none;
@@ -483,6 +504,9 @@ nav {
  .shutDownScreen button:active {
   border: inset;
  }
+
+
+
 
 
 
