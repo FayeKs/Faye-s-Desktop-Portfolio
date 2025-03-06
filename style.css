@@ -39,6 +39,9 @@ body {
 }
 
 .signIn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 75px;
   border-radius: 7px;
   width: 200px;
@@ -54,22 +57,32 @@ body {
 }
 
 .signIn label {
+  width: 70px;
+  float: left;
   font-size: 12px;
+  text-align: left;
 }
 
+
+
 .signIn button {
+  font-size: 12px;
   position: absolute;
-  border-color: white;
-  background-color: transparent;
+  background-color: black;
+  border: outset;
+  border-width: 2px;
   color: white;
   top: 50%;
   left: 50%;
   transform: translate(-20%, -20%);
-  border-radius: 0px;
-  padding: 5px;
+  padding: 2px;
   cursor: pointer;
+  margin: 5px;
+  width: 80px;
 }
-
+.signIn button:active {
+  border: inset;
+}
 .signIn__welcome {
   width: 185px;
 }
@@ -381,6 +394,7 @@ nav {
   left: 40%;
   top: 30%;
   transform: translate(-20%, -20%);
+  overflow-y: auto;
 }
 .projects__buttons {
   display: flex;
@@ -392,12 +406,17 @@ nav {
 
 .projects__buttons button {
   font-size: 12px;
-  height: 80px;
+  height: 100px;
   width: 90%;
   border-style: outset;
   border-width: 4px;
   margin-bottom: 4px;
   border-color: rgb(190, 188, 187);
+}
+
+.filmForecast {
+  background-color: blue;
+  color: white;
 }
 
 /*  Tic-Tac-Toe Modal */
@@ -422,17 +441,28 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: black;
   z-index: 1000;
   color: white;
+  position: relative;
 }
 
-.shutDownScreen p {
+.shutDownScreen button {
+  position: absolute;
   border-style: solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  border: outset;
+  border-width: 5px;
+  border-color: rgb(187, 185, 185);
 }
-
+ .shutDownScreen button:active {
+  border: inset;
+ }
 
 
 
