@@ -197,7 +197,7 @@ const projectsTheme = document.getElementById("projectsTheme");
 const calcTheme = document.getElementById("calcTheme");
 const githubTheme = document.getElementById("githubTheme");
 const profilePic = document.getElementById("profilePic");
-
+const tictactoeTheme = document.getElementById("tictactoeTheme");
 
 defaultThemeBtn.style.display = "none";
 
@@ -211,6 +211,7 @@ function activatePinkTheme() {
   calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png";
   githubTheme.src = "/assets/icons/icons8-github-40.png";
   profilePic.src = "/assets/images/profilepic.jpg";
+  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png"
 }
 
 function activateDefaultTheme() {
@@ -222,6 +223,7 @@ function activateDefaultTheme() {
   projectsTheme.src = "/assets/icons/icons8-folder-40.png";
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";
+  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
   // profilePic.src = "/assets/images/IMG_0034 (2).jpg";
 }
 

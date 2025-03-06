@@ -24,13 +24,12 @@
         </div>
         <br>
         <div class="signIn__username">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="FayeS" >
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" value="FayeS" >
         </div>
-        <br>
         <div>
-        <label for="pwd">Password:</label>
-        <input type="text" name="pwd" id="pwd" value="&#x2022;&#x2022;&#x2022;&#x2022;">
+          <label for="pwd">Password:</label>
+          <input type="text" name="pwd" id="pwd" value="&#x2022;&#x2022;&#x2022;&#x2022;">
         </div>
         <button id="start-button">Sign In</button>
       </div>
@@ -134,7 +133,7 @@
 
         <div class="tictactoe">
           <button id="tictactoeBtn" class="tictactoe__btn">
-            <img src="/assets/icons/icons8-tic-tac-toe-53.png" alt="">
+            <img src="/assets/icons/icons8-tic-tac-toe-53.png" alt="" id="tictactoeTheme">
             <p>Tic-Tac-Toe</p>
           </button>
         </div>
@@ -221,9 +220,25 @@
               <button class="minBtn" id="tictactoeMinBtn"></button>
               <p>Tic-Tac-Toe Game</p>
           </div>
-
+          <div class="player__display">
+            Player <span class="display-player playerX">X</span>'s turn
+          </div>
+          <div class="game__container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="display annoncer hide"></div>
+          <div class="controls">
+            <button id="reset">Reset</button>
+          </div>
         </div>
-
       </div>
 
 

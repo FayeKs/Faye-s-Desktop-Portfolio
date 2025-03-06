@@ -54,6 +54,7 @@ body {
   width: 100px;
   background-color: transparent;
   color: white;
+  margin-bottom: 5px;
 }
 
 .signIn label {
@@ -68,21 +69,19 @@ body {
 .signIn button {
   font-size: 12px;
   position: absolute;
-  background-color: black;
-  border: outset;
-  border-width: 2px;
+  background-color: rgb(0, 0, 0);
+  border: solid;
+  border-width: 1px;
+  border-color: grey;
   color: white;
   top: 50%;
   left: 50%;
   transform: translate(-20%, -20%);
   padding: 2px;
   cursor: pointer;
-  margin: 5px;
   width: 80px;
 }
-.signIn button:active {
-  border: inset;
-}
+
 .signIn__welcome {
   width: 185px;
 }
@@ -426,12 +425,33 @@ nav {
     background-color: var(--primary-clr);
     border-style: solid;
     position: fixed;
-    width: 250px;
+    width: 350px;
     right: 10%;
     top: 40%;
-    height: 250px;
+    height: 400px;
    transform: translate( 10%, -40%);
 }
+
+.game__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  max-width: 300px; 
+}
+
+.tile {
+  border: 1px solid black;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
 
 
 /* Shut Down Screen Section */
