@@ -81,7 +81,7 @@
         />
         <button id="pinkTheme">Pink Theme</button>
         <button id="defaultTheme">Default Theme</button>
-        <button id="shutDownBtn">Shut Down</button>
+        <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
       </div>
 
 <!--Slide-in Msg Section-->
@@ -224,14 +224,14 @@
       <!--Tic-Tac-Toe Game Modal -->
 
       <div id="tictactoeModal" class="tictactoe__modal">
+        <div class="titleBar">
+            <button class="closeBtn" id="tictactoeCloseBtn"></button>
+            <button class="minBtn" id="tictactoeMinBtn"></button>
+            <p>Tic-Tac-Toe Game</p>
+        </div>
         <div class="tictactoe__content">
-          <div class="titleBar">
-              <button class="closeBtn" id="tictactoeCloseBtn"></button>
-              <button class="minBtn" id="tictactoeMinBtn"></button>
-              <p>Tic-Tac-Toe Game</p>
-          </div>
           <div class="player__display">
-            Player <span class="display-player playerX">X</span>'s turn
+            <span class="display-player playerX"></span>
           </div>
           <div class="game__container">
             <div class="tile"></div>
@@ -245,8 +245,7 @@
             <div class="tile"></div>
           </div>
           <div class="display annoncer hide"></div>
-          <div class="controls">
-            <button id="reset">Reset</button>
+            <button id="reset" class="reset">Reset</button>
           </div>
         </div>
       </div>

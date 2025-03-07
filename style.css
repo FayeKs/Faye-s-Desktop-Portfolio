@@ -196,6 +196,10 @@ nav {
   border-radius: 10px;
 }
 
+.shutDownBtn {
+  background-color: rgb(54, 55, 54);
+  color: white;
+}
 /* brightness range */
 
 .range {
@@ -451,11 +455,12 @@ nav {
     background-color: var(--primary-clr);
     border-style: solid;
     position: fixed;
-    width: 350px;
+    width: 400px;
     right: 10%;
     top: 40%;
-    height: 400px;
+    height: 420px;
    transform: translate( 10%, -40%);
+  
 }
 
 .game__container {
@@ -463,7 +468,14 @@ nav {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 33% 33% 33%;
-  max-width: 300px; 
+  max-width: 300px;
+}
+
+.tictactoe__content {
+  display:grid;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--primary-clr);
 }
 
 .tile {
@@ -477,7 +489,32 @@ nav {
   cursor: pointer;
 }
 
+.playerX {
+  color: black;
+}
 
+.playerO {
+  color: grey;
+}
+
+.player__display {
+  text-align: center;
+  width: 300px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.reset {
+  margin: 5px;
+  padding: 5px 10px;
+  border: outset;
+  border-width: 3px;
+}
+
+.reset:active {
+  border: inset;
+}
 
 
 /* Shut Down Screen Section */
@@ -504,7 +541,7 @@ nav {
   padding: 5px;
   border: outset;
   border-width: 5px;
-  border-color: rgb(187, 185, 185);
+  border-color: var(--primary-clr);
 }
  .shutDownScreen button:active {
   border: inset;
@@ -602,7 +639,8 @@ button {
 }
 
 .pink-theme .comp__modal,
-.pink-theme .projects__modal {
+.pink-theme .projects__modal, 
+.pink-theme .tictactoe__modal {
   background-color: rgb(237, 223, 234);
   border-color: #ac42d7;
   color: purple;

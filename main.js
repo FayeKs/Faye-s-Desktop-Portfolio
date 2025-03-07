@@ -299,3 +299,130 @@ document.getElementById("rebootBtn").addEventListener('click', function(){
 })
   
 
+
+
+
+
+
+//Tic-Tac-Toe Game function 
+
+const tiles = document.querySelectorAll('.tile')
+const resetBtn = document.querySelector('#reset');
+const playerDisplay = document.querySelector('.display-player');
+const announcer = document.querySelector('.announcer');
+
+let board = ['', '', '', '', '', '', '', '', '']
+let currentPlayer = 'X';
+let isGameActive = true;
+
+const PLAYERX_WON = 'PLAYERX_WON';
+const PLAYERO_WON = 'PLAYERO_WON';
+const TIE = 'TIE';
+
+//index-based win conditions
+const winningConditions = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+];
+
+playerDisplay.textContent = "Let's play! You'll be Player X"  // initial msg before first game
+
+//event listener for player moves
+tiles.forEach((tile, index) => {
+  tile.addEventListener('click', () => playerMove(index))
+})
+
+// function to handle player's move
+
+function playerMove(index) {
+  if (isGameActive && board[index] === ''){
+    board[index] = 'X';
+    tiles[index].textContent = 'X';
+    checkGameStatus();
+    if (isGameActive) {
+      setTimeout(() => {
+        playerDisplay.textContent = `Player O's move`
+      }, 1000)
+      setTimeout(() => {
+        compuerMove();
+      }, 3000); // 2 second delay before computer's move
+    }
+  }
+}
+
+// function to handle computer's move
+
+function compuerMove(){
+  if (!isGameActive) return;
+  setTimeout(() => {
+    playerDisplay.textContent = `Player X's move`
+  }, 1000); // 1 second delay for msg
+
+   //Randomly pick an empty cell for the compuer to play
+   let availableTile = board
+   .map((value, index) =>  value === '' ? index : null)
+   .filter(index => index !== null);
+
+   const randomIndex = availableTile[Math.floor(Math.random() * availableTile.length)]
+  board[randomIndex] = 'O'
+  tiles[randomIndex].textContent = 'O'
+  checkGameStatus();
+
+}
+
+// function to check if there is a winner
+
+function checkGameStatus() {
+  let winner = null;
+
+  //check for winning combination
+  winningConditions.forEach(condition => {
+    const [a, b, c] = condition;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]){
+      winner = board[a];
+    }
+  });
+
+  // if we found a winner
+
+  if(winner) {
+    isGameActive = false;
+    playerDisplay.textContent = `Player ${winner} wins!`;
+    setTimeout(() => {
+      playerDisplay.textContent = `Let's play again!`
+    }, 2000); // 1 second delay for msg
+    return;
+  }
+
+  // if there is a draw (no empty cells left)
+
+  if (!board.includes('')) {
+    isGameActive = false;
+    playerDisplay.textContent = "It's a draw!"
+    setTimeout(() => {
+      playerDisplay.textContent = `Let's play again!`
+    }, 2000) // 1 second delay for msg
+    return;
+  }
+
+  // switch to new player if game is still active
+
+  currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+
+  
+}
+
+// reset game function
+
+resetBtn.addEventListener('click', () => {
+  board = ['', '', '', '', '', '', '', '', ''];
+  isGameActive = true;
+  tiles.forEach(tile => tile.textContent = '');
+  playerDisplay.textContent = 'Player X, your move!'
+})
