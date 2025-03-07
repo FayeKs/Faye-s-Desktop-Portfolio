@@ -58,8 +58,8 @@ const slideIn = document.getElementById("slideIn")
   function slideInModal() {
     slideIn.style.display = "block"
     setTimeout(() => {
-      slideIn.style.right = "0" // slide in the modal
-    }, 3500); //delay to trigger the animation
+      slideIn.style.right = "2px" // slide in the modal
+    }, 3000); //delay to trigger the animation
   }
   
   // slide out function 
@@ -84,7 +84,7 @@ startBtn.onclick = () => {
   
   setTimeout(() => {
     slideOutModal();
-  }, 10000) // modal stays open for 10 seconds before sliding out
+  }, 15000) // modal stays open for a few seconds before sliding out
 }
 
 
@@ -126,10 +126,19 @@ const navArrow = document.getElementById("navArrow");
 
 navPopup.style.display = "none"; //ensures popup in hidden initially//
 
-// Show/hide navbar popup
+// Show/hide navbar popup on hover (click fuction for mobile)
 navArrow.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseout", () => navPopup.style.display = "none");
+
+navArrow.addEventListener("click", () => {
+  if (navPopup.style.display === "none" || navPopup.style.display === "") {
+    navPopup.style.display = "block"
+  } else { 
+    navPopup.style.display = "none"
+  }
+});
+
 
 
 // Modal and taskbar elements

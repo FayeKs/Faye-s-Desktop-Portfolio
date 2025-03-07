@@ -86,7 +86,7 @@ body {
 }
 
 .signIn__welcome {
-  width: 185px;
+  width: 260px;
 }
 
 .signIn__welcome p{
@@ -220,11 +220,16 @@ nav {
 .slideIn {
   display: none;
   position: fixed;
-  right: -220px; /* start off screen */
-  width: 210px;
-  height: 30px;
-  background-color: white;
+  right: -270px; /* start off screen */
+  width: 270px;
+  height: 35px;
+  margin-top: 10px;
+  background-color: var(--primary-clr);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #565656;
   z-index: 1000;
+  padding: 5px;
   transition: right 0.5s ease-in-out; /* slide effect */
 }
 
