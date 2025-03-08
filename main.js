@@ -96,7 +96,7 @@ startBtn.onclick = () => {
 
 function openModal(modal, taskbar){
   modal.style.display = "block";
-  taskbar.style.display = "block"
+  taskbar.style.display = "block";
   setZIndex(modal);
 }
 
@@ -116,7 +116,7 @@ function minimizeModal(modal){
 
 // Utility function to set z-index for active modal
 function setZIndex(activeModal){
-  const modals = [compModal, projectsModal, tictactoeModal];
+  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal];
   modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
 }
 
@@ -146,6 +146,7 @@ const modals = {
   compModal: document.getElementById("compModal"),
   projectsModal: document.getElementById("projectsModal"),
   tictactoeModal: document.getElementById("tictactoeModal"),
+  learnMoreModal: document.getElementById("learnMoreModal"),
 };
 
 
@@ -165,6 +166,8 @@ const buttons = {
   tictactoeBtn: document.getElementById("tictactoeBtn"),
   tictactoeCloseBtn: document.getElementById("tictactoeCloseBtn"),
   tictactoeMinBtn: document.getElementById("tictactoeMinBtn"),
+  learnMoreBtn: document.getElementById("learnMoreBtn"),
+  learnMoreCloseBtn: document.getElementById("learnMoreCloseBtn"),
 }
 
 
@@ -179,6 +182,7 @@ Object.values(taskbars).forEach(taskbar => taskbar.style.display = "none");
 buttons.compBtn.onclick = () => openModal(modals.compModal, taskbars.compTaskbar);
 buttons.projectsBtn.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
 buttons.tictactoeBtn.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+buttons.learnMoreBtn.onclick = () => openModal(modals.learnMoreModal);
 
 
 // Close Modals
@@ -186,6 +190,7 @@ buttons.tictactoeBtn.onclick = () => openModal(modals.tictactoeModal, taskbars.t
 buttons.compCloseBtn.onclick = () => closeModal(modals.compModal, taskbars.compTaskbar);
 buttons.projectsCloseBtn.onclick = () => closeModal(modals.projectsModal, taskbars.projectsTaskbar);
 buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal)
 
 
 
@@ -351,7 +356,7 @@ function playerMove(index) {
       }, 1000)
       setTimeout(() => {
         compuerMove();
-      }, 3000); // 2 second delay before computer's move
+      }, 3000); // 3 second delay before computer's move
     }
   }
 }
@@ -393,10 +398,9 @@ function checkGameStatus() {
 
   if(winner) {
     isGameActive = false;
-    playerDisplay.textContent = `Player ${winner} wins!`;
     setTimeout(() => {
-      playerDisplay.textContent = `Let's play again!`
-    }, 2000); // 1 second delay for msg
+      playerDisplay.textContent = `Player ${winner} wins! Let's play again!`
+    }, 1000); // 1 second delay for msg
     return;
   }
 

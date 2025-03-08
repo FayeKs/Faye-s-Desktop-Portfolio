@@ -18,6 +18,8 @@ body {
   /* background-color: rgb(233, 233, 225); */
   background-color: rgb(200, 199, 199);
   min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
   font-size: 14px;
 }
 
@@ -121,6 +123,9 @@ body {
 
 .desktop {
   display: none;
+  min-height: 100vh;
+  overflow: hidden;
+  height: 100%;
 }
 
 
@@ -458,7 +463,7 @@ nav {
     width: 400px;
     right: 10%;
     top: 40%;
-    height: 420px;
+    height: 440px;
    transform: translate( 10%, -40%);
   
 }
@@ -499,7 +504,7 @@ nav {
 
 .player__display {
   text-align: center;
-  width: 300px;
+  width: 200px;
   margin: 5px;
   padding: 5px;
   font-size: 16px;
@@ -517,6 +522,40 @@ nav {
 }
 
 
+
+/* Learn More Section */
+
+.learnMoreBtn {
+  border-style: solid ;
+  border-color: grey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.learnMore__modal {
+  display: none;
+  position: fixed;
+  text-align: left;
+  border-style: solid;
+  background-color: var(--primary-clr);
+  width: 340px;
+  height: 350px;
+  left: 60%;
+  font-size: 12px;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  overflow-y: auto;
+}
+.learnMore__content {
+  padding: 15px;
+}
 /* Shut Down Screen Section */
 .shutDownScreen {
   display: none;
@@ -526,7 +565,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: black;
+  background: rgb(0, 0, 222);
   z-index: 1000;
   color: white;
   position: relative;
@@ -564,7 +603,7 @@ nav {
 .calc__btn,
 .github__btn,
 .tictactoe__btn,
-.projects__buttons button:hover {
+.shutDownBtn{
   cursor: pointer;
 }
 .closeBtn {
@@ -623,7 +662,8 @@ button {
 .pink-theme nav,
 .pink-theme .titleBar,
 .pink-theme .taskbar,
-.pink-theme .nav__popup {
+.pink-theme .nav__popup,
+.pink-theme .learnMoreBtn {
   background-color: #f1bff4;
   border-color: #ac42d7;
 }
@@ -640,12 +680,13 @@ button {
 
 .pink-theme .comp__modal,
 .pink-theme .projects__modal, 
-.pink-theme .tictactoe__modal {
+.pink-theme .tictactoe__modal,
+.pink-theme .learnMore__modal {
   background-color: rgb(237, 223, 234);
   border-color: #ac42d7;
   color: purple;
   box-shadow: 11px 12px 0px -1px purple;
-  
+  scrollbar-color: #fd87d7 #f1bff4;
 }
 
 .pink-theme .taskbar button {
@@ -654,12 +695,15 @@ button {
   color: purple;
 }
 
-.pink-theme .comp__modal {
-    scrollbar-color: #fd87d7 #f1bff4;
-}
 
 .pink-theme .desktop__left img {
   filter: drop-shadow(3px 4px 0px purple);
+}
+
+.pink-theme .reset {
+  background-color: #F1BFF4;
+  border-color: #ac42d7;
+  color: purple;
 }
 
 
