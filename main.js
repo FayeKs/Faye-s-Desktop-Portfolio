@@ -92,33 +92,6 @@ startBtn.onclick = () => {
 
 
 
-// Utility function to open modal and show taskbar icon
-
-function openModal(modal, taskbar){
-  modal.style.display = "block";
-  taskbar.style.display = "block";
-  setZIndex(modal);
-}
-
-// Utiltiy function to close modal and hide taskbar icon
-
-function closeModal(modal, taskbar){
-  modal.style.display = "none";
-  taskbar.style.display = "none";
-}
-
-// Utility function to minimize modal 
-
-function minimizeModal(modal){
-  modal.style.display = "none";
-  
-}
-
-// Utility function to set z-index for active modal
-function setZIndex(activeModal){
-  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal];
-  modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
-}
 
 //Navbar popup
 const navPopup = document.getElementById("navPopup");
@@ -147,6 +120,7 @@ const modals = {
   projectsModal: document.getElementById("projectsModal"),
   tictactoeModal: document.getElementById("tictactoeModal"),
   learnMoreModal: document.getElementById("learnMoreModal"),
+  terminalModal: document.getElementById("terminalModal"),
 };
 
 
@@ -154,6 +128,7 @@ const taskbars = {
   compTaskbar: document.getElementById("compTaskbar"),
   projectsTaskbar: document.getElementById("projectsTaskbar"),
   tictactoeTaskbar: document.getElementById("tictactoeTaskbar"),
+  terminalTaskbar: document.getElementById("terminalTaskbar"),
 }
 
 const buttons = {
@@ -168,9 +143,39 @@ const buttons = {
   tictactoeMinBtn: document.getElementById("tictactoeMinBtn"),
   learnMoreBtn: document.getElementById("learnMoreBtn"),
   learnMoreCloseBtn: document.getElementById("learnMoreCloseBtn"),
+  terminalBtn: document.getElementById("terminalBtn"),
+  terminalCloseBtn:document.getElementById("terminalCloseBtn"),
+  terminalMinBtn: document.getElementById("terminalMinBtn"),
 }
 
 
+// Utility function to open modal and show taskbar icon
+
+function openModal(modal, taskbars){
+  modal.style.display = "block";
+  taskbars.style.display = "block";
+  setZIndex(modal);
+}
+
+// Utiltiy function to close modal and hide taskbar icon
+
+function closeModal(modal, taskbars){
+  modal.style.display = "none";
+  taskbars.style.display = "none";
+}
+
+// Utility function to minimize modal 
+
+function minimizeModal(modal){
+  modal.style.display = "none";
+  
+}
+
+// Utility function to set z-index for active modal
+function setZIndex(activeModal){
+  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal, terminalModal];
+  modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
+}
 
 // Initialize taskbar visbility
 
@@ -195,6 +200,10 @@ buttons.learnMoreBtn.onclick = () => {
   openModal(modals.learnMoreModal);
   dragModal(modals.learnMoreModal);
 }
+buttons.terminalBtn.onclick = () => {
+  openModal(modals.terminalModal, taskbars.terminalTaskbar);
+  dragModal(modals.terminalModal, taskbars.terminalTaskbar);
+}
 
 
 // Close Modals
@@ -202,7 +211,8 @@ buttons.learnMoreBtn.onclick = () => {
 buttons.compCloseBtn.onclick = () => closeModal(modals.compModal, taskbars.compTaskbar);
 buttons.projectsCloseBtn.onclick = () => closeModal(modals.projectsModal, taskbars.projectsTaskbar);
 buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
-buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal)
+buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal);
+buttons.terminalCloseBtn.onclick = () => closeModal(modals.terminalModal, taskbars.terminalTaskbar);
 
 
 
@@ -211,7 +221,7 @@ buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal)
 buttons.compMinBtn.onclick = () => minimizeModal(modals.compModal);
 buttons.projectsMinBtn.onclick = () => minimizeModal(modals.projectsModal);
 buttons.tictactoeMinBtn.onclick = () => minimizeModal(modals.tictactoeModal);
-
+buttons.terminalMinBtn.onclick = () => minimizeModal(modals.terminalModal, taskbars.terminalTaskbar);
 
 
 // Click on taskbar to open modal
@@ -220,7 +230,7 @@ buttons.tictactoeMinBtn.onclick = () => minimizeModal(modals.tictactoeModal);
 taskbars.compTaskbar.onclick = () => openModal(modals.compModal, taskbars.compTaskbar);
 taskbars.projectsTaskbar.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
 taskbars.tictactoeTaskbar.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
-
+taskbars.terminalTaskbar.onclick = () => openModal(modals.terminalModal, taskbars.terminalTaskbar);
 
 // Modal overlap handling 
 
@@ -237,11 +247,12 @@ window.addEventListener('DOMContentLoaded', function() {
 })
 
 
-//Draggable modals function 
+//Draggable modals function (window.event is depriciated)
 
 
 function dragModal(modal) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  
   if (modal) {
     // if present, the header is where you move the DIV from:
     modal.onmousedown = dragMouseDown;

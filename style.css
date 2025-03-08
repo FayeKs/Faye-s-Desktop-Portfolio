@@ -322,23 +322,21 @@ nav {
 
 .comp__taskbar,
 .projects__taskbar,
-.tictactoe__taskbar {
+.tictactoe__taskbar,
+.terminal__taskbar {
   /* display: none; */ /* off: keeps computer taskbar icon showing on refresh */
   background-color: transparent;
   text-align: left;
   margin: 3px;
   padding: 2px;
+  cursor: pointer;
 }
 
-.comp__taskbar:active, .projects__taskbar:active, .tictactoe__taskbar:active, .project:active {
+.comp__taskbar:active, .projects__taskbar:active, .tictactoe__taskbar:active,
+.terminal__taskbar:active {
   border-style: inset;
 }
 
-.comp__taskbar,
-.projects__taskbar,
-.tictactoe__taskbar {
-    cursor: pointer;
-}
 
 /* Modal Title Bar Section */
 
@@ -356,7 +354,6 @@ nav {
   text-align: center;
   overflow: hidden;
   padding-left: 4px;
-  cursor: move;
 }
 
 .titleBar button {
@@ -463,10 +460,10 @@ nav {
     border-style: solid;
     position: fixed;
     width: 400px;
-    right: 10%;
-    top: 40%;
+    right: 20%;
+    top: 50%;
     height: 440px;
-   transform: translate( 10%, -40%);
+   transform: translate( 30%, -50%);
   
 }
 
@@ -524,6 +521,21 @@ nav {
   border: inset;
 }
 
+/* Terminal Modal */
+
+.terminal__modal {
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+  background-color: black;
+  z-index: 9999;
+  right: 50%;
+  top: 50%;
+  transform: translate(60%, -50%);
+  color: var(--primary-clr);
+}
 
 
 /* Learn More Section */

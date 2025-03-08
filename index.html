@@ -145,7 +145,7 @@
         </div>
 
         <div class="terminal">
-          <button class="terminal__btn">
+          <button class="terminal__btn" id="terminalBtn">
           <img src="/assets/icons/icons8-console-40.png" alt="">
           <p>Terminal</p>
           </button>
@@ -252,6 +252,20 @@
         </div>
       </div>
 
+<!--Terminal modal-->
+
+      <div class="terminal__modal" id="terminalModal">
+        <div class="titleBar">
+          <button class="closeBtn" id="terminalCloseBtn"></button>
+          <button class="minBtn" id="terminalMinBtn"></button>
+        </div>
+        <div id="termial-output"></div>
+        <div class="input-line">
+          <span class="prompt">guest@fayesdesktop: ~$</span>
+          <input type="text" name="terminal-input" id="terminal-input" autofocus>
+        </div>
+      </div>
+
       <!-- Learn More Section-->
 
       <button class="learnMoreBtn" id="learnMoreBtn">
@@ -276,7 +290,9 @@
           customizable settings like theme toggling and brightness adjustment.
           <br> 
           <br>
-          To view more projects i've worked on using technologies liked React, Typescript, SCSS, and more, simply open the <b>Projects</b> folder on the destop and explore!
+          Thank you for taking the time to explore my portfolio.
+          To view more projects i've worked on using technologies liked React, Typescript, SCSS, and more, simply open the <b>Projects</b> folder on the destop. If you have
+          any questions or comments, please contact me via email <b>@fk44pm@gmail.com</b>.
            </p> 
         </div>
       </div>
@@ -294,6 +310,10 @@
 
         <button class="tictactoe__taskbar" id="tictactoeTaskbar">
           <p>Tic-Tac-Toe</p>
+        </button>
+
+        <button class="terminal__taskbar" id="terminalTaskbar">
+          <p>Terminal</p>
         </button>
       </div>
     </main>
