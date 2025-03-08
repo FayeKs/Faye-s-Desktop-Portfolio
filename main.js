@@ -33,7 +33,7 @@ document.getElementById("navTime").textContent = `${currenTime}`;
 //CPU usage widget function //
 
 function updateCPUUsage() {
-  const cpuUsage = (Math.random() * (7 - 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
+  const cpuUsage = (Math.random() * (6 - 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
   document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%`;
 }
 

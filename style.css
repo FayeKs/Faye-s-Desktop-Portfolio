@@ -30,15 +30,12 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  /* background: url(/assets/images/Untitled\ design\ \(5\).png); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
 }
-.splashScreen p {
-  font-size: 12px;
-}
+
 
 .signIn {
   display: flex;
@@ -52,14 +49,15 @@ body {
   width: 500px;
   height: 300px;
   color: rgb(255, 255, 255);
+  padding: 40px;
 }
 
 .signIn input {
-  font-size: 14px;
+  font-size: 12px;
   width: 100px;
   background-color: transparent;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .signIn label {
@@ -85,10 +83,11 @@ body {
   padding: 2px;
   cursor: pointer;
   width: 80px;
+  margin: 10px;
 }
 
 .signIn__welcome {
-  width: 260px;
+  width: 300px;
 }
 
 .signIn__welcome p{
@@ -258,9 +257,11 @@ nav {
 .desktop__left {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
-  width: 100%;
+  width: 30%;
+  height: 500px;
 }
 .desktop__left p {
   margin: 7px;
@@ -272,7 +273,8 @@ nav {
 .projects,
 .calculator,
 .github,
-.tictactoe {
+.tictactoe,
+.terminal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,40 +426,32 @@ nav {
   border-radius: 5px;
   z-index: 9999;
   width: 250px;
-  height: 480px;
+  height: 300px;
   left: 40%;
   top: 30%;
   transform: translate(-20%, -20%);
   overflow-y: auto;
 }
-.projects__buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+
+.projectFolders{
+  list-style: none;
+  font-size: 10px;
+  display: grid;
+  grid-template-rows: 40% 40%;
+  grid-template-columns: 40% 40%;
+  gap: 20px;
+  padding: 10px;
 }
 
-.projects__buttons button {
-  font-size: 12px;
-  height: 100px;
-  width: 90%;
-  border-style: outset;
-  border-width: 4px;
-  margin-bottom: 4px;
-  border-color: rgb(190, 188, 187);
+.projectFolders img {
+  width: 50px;
 }
-
-.filmForecast {
-  background-color: blue;
-  color: white;
-}
-
 /*  Tic-Tac-Toe Modal */
 
 .tictactoe__modal {
     display: none;
     background-color: var(--primary-clr);
+    box-shadow: 11px 12px 0px -1px rgba(86, 86, 86, 1);
     border-style: solid;
     position: fixed;
     width: 400px;
@@ -505,6 +499,7 @@ nav {
 .player__display {
   text-align: center;
   width: 200px;
+  height: 50px;
   margin: 5px;
   padding: 5px;
   font-size: 16px;
@@ -544,6 +539,7 @@ nav {
   text-align: left;
   border-style: solid;
   background-color: var(--primary-clr);
+  box-shadow: 11px 12px 0px -1px rgba(86, 86, 86, 1);
   width: 340px;
   height: 350px;
   left: 60%;
@@ -555,9 +551,12 @@ nav {
 }
 .learnMore__content {
   padding: 15px;
+  text-decoration: underline;
+  line-height: 20px;
 }
 /* Shut Down Screen Section */
 .shutDownScreen {
+  background-color: rgb(200, 199, 199);
   display: none;
   text-align: center;
   position: fixed;
@@ -565,8 +564,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgb(0, 0, 222);
-  z-index: 1000;
+  z-index: 9999;
   color: white;
   position: relative;
 }
@@ -649,10 +647,12 @@ button {
 
 #pinkTheme {
   border-color: pink;
+  cursor: pointer;
 }
 
 #defaultTheme {
   border-color: grey;
+  cursor: pointer;
 }
 
 .pink-theme {
