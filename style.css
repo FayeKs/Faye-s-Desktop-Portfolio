@@ -199,7 +199,13 @@ nav {
   width: 100%;
   border-radius: 10px;
 }
-
+.navTime {
+  padding: 4px;
+  height: 25px;
+  border-style: inset;
+  border-width: 2px;
+  margin: 2px;
+}
 .shutDownBtn {
   background-color: rgb(54, 55, 54);
   color: white;
@@ -349,11 +355,13 @@ nav {
   border-width: 2px;
   text-align: center;
   overflow: hidden;
+  padding-left: 4px;
+  cursor: move;
 }
 
 .titleBar button {
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   float: left;
   margin: 3px;
@@ -362,8 +370,8 @@ nav {
 }
 
 .titleBar p {
-  margin: 0;
-  font-size: 15px;
+  padding: 2px;
+  font-size: 12px;
   letter-spacing: 2px;
 }
 
@@ -404,7 +412,7 @@ nav {
 
 .comp__content img {
   float: left;
-  width: 40%;
+  width: 50%;
   margin: 15px;
   border-style: solid;
   border-width: 2px;
@@ -530,7 +538,7 @@ nav {
   right: 0;
   bottom: 30px;
   margin: 10px;
-  padding: 2px;
+  padding-top: 1px;
 }
 
 .learnMore__modal {
@@ -620,7 +628,8 @@ nav {
 .projects__btn,
 .calc__btn,
 .github__btn,
-.tictactoe__btn {
+.tictactoe__btn,
+.terminal__btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -663,9 +672,14 @@ button {
 .pink-theme .titleBar,
 .pink-theme .taskbar,
 .pink-theme .nav__popup,
-.pink-theme .learnMoreBtn {
+.pink-theme .learnMoreBtn{
   background-color: #f1bff4;
   border-color: #ac42d7;
+}
+
+.pink-theme .navTime {
+  background-color: #f1bff4;
+  border-color: #fd87d7;
 }
 
 .pink-theme .closeBtn {

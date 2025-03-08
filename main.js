@@ -177,12 +177,24 @@ const buttons = {
 
 Object.values(taskbars).forEach(taskbar => taskbar.style.display = "none");
 
-// Open Modals
+// Open Modals/Make draggable
 
-buttons.compBtn.onclick = () => openModal(modals.compModal, taskbars.compTaskbar);
-buttons.projectsBtn.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
-buttons.tictactoeBtn.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
-buttons.learnMoreBtn.onclick = () => openModal(modals.learnMoreModal);
+buttons.compBtn.onclick = () => {
+  openModal(modals.compModal, taskbars.compTaskbar);
+  dragModal(modals.compModal);
+  }
+buttons.projectsBtn.onclick = () => {
+  openModal(modals.projectsModal, taskbars.projectsTaskbar);
+  dragModal(modals.projectsModal);
+}
+buttons.tictactoeBtn.onclick = () => {
+  openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
+  dragModal(modals.tictactoeModal);
+}
+buttons.learnMoreBtn.onclick = () => {
+  openModal(modals.learnMoreModal);
+  dragModal(modals.learnMoreModal);
+}
 
 
 // Close Modals
@@ -217,21 +229,67 @@ Object.values(modals).forEach(modal => {
 })
 
 
-// Ensures compTaskbar is showing intially
+// Ensures compTaskbar is showing and is draggable intially
 
 window.addEventListener('DOMContentLoaded', function() {
   compTaskbar.style.display = "block";
+  dragModal(modals.compModal)
 })
 
 
-//project under maintenence alert function //
-const projectButtons = document.querySelectorAll(".project");
+//Draggable modals function 
 
-projectButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    alert("Sorry! This project is under maintenence.");
-  });
-});
+
+function dragModal(modal) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (modal) {
+    // if present, the header is where you move the DIV from:
+    modal.onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    modal.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    modal.style.top = (modal.offsetTop - pos2) + "px";
+    modal.style.left = (modal.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+// //project under maintenence alert function //
+// const projectButtons = document.querySelectorAll(".project");
+
+// projectButtons.forEach(function (button) {
+//   button.addEventListener("click", function () {
+//     alert("Sorry! This project is under maintenence.");
+//   });
+// });
 
 
 
@@ -266,7 +324,7 @@ function activatePinkTheme() {
   projectsTheme.src = "/assets/icons/icons8-folder-40 (1).png";
   calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png";
   githubTheme.src = "/assets/icons/icons8-github-40.png";
-  profilePic.src = "/assets/images/profilepic.jpg";
+  profilePic.src = "/assets/images/IMG_0393 (2).jpg";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png"
 }
 
@@ -280,7 +338,7 @@ function activateDefaultTheme() {
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
-  // profilePic.src = "/assets/images/IMG_0034 (2).jpg";
+  profilePic.src = "/assets/images/IMG_0393.jpg";
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
