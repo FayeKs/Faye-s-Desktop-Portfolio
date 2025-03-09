@@ -9,17 +9,17 @@ startBtn.addEventListener('click', function() {
   desktop.style.display = "block";
 });
 
-// // Disabled Input function
-// const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
-//   event.preventDefault();
+// Disabled Input function
+const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
+  event.preventDefault();
 
-// });
-// const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
-//   event.preventDefault();
+});
+const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
+  event.preventDefault();
 
-// });
+});
 
-// const terminalInput  = document.getElementById("terminalInput");
+
 
 // Navbar time widget function //
 
@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function() {
       activateDefaultTheme();
     }
     else {
-      output = `command not found: ${command}. type 'Help' for availble commands.`;
+      output = `command not found: ${command}.`;
     }
     terminalOutput.innerHTML += `<div><span class="prompt">guest@fayesdesktop: ~$ </span> ${input}</div>`;
     terminalOutput.innerHTML += `<div>${output}</div>`;
