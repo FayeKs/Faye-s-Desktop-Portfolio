@@ -9,16 +9,17 @@ startBtn.addEventListener('click', function() {
   desktop.style.display = "block";
 });
 
-// Disabled Input function
-const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
-  event.preventDefault();
+// // Disabled Input function
+// const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
+//   event.preventDefault();
 
-});
-const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
-  event.preventDefault();
+// });
+// const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
+//   event.preventDefault();
 
-});
+// });
 
+// const terminalInput  = document.getElementById("terminalInput");
 
 // Navbar time widget function //
 
@@ -203,6 +204,7 @@ buttons.learnMoreBtn.onclick = () => {
 buttons.terminalBtn.onclick = () => {
   openModal(modals.terminalModal, taskbars.terminalTaskbar);
   dragModal(modals.terminalModal, taskbars.terminalTaskbar);
+  document.getElementById('terminalInput').focus(); // fixes input typing issue by setting the input focus when terminal opens
 }
 
 
@@ -293,6 +295,7 @@ function dragModal(modal) {
 }
 
 
+
 // //project under maintenence alert function //
 // const projectButtons = document.querySelectorAll(".project");
 
@@ -323,6 +326,7 @@ const calcTheme = document.getElementById("calcTheme");
 const githubTheme = document.getElementById("githubTheme");
 const profilePic = document.getElementById("profilePic");
 const tictactoeTheme = document.getElementById("tictactoeTheme");
+const terminalTheme = document.getElementById("terminalTheme");
 
 defaultThemeBtn.style.display = "none";
 
@@ -337,6 +341,7 @@ function activatePinkTheme() {
   githubTheme.src = "/assets/icons/icons8-github-40.png";
   profilePic.src = "/assets/images/IMG_0393 (2).jpg";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png"
+  terminalTheme.src = "/assets/icons/icons8-terminal-80.png"
 }
 
 function activateDefaultTheme() {
@@ -350,6 +355,7 @@ function activateDefaultTheme() {
   githubTheme.src = "/assets/icons/icons8-github-80.png";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
   profilePic.src = "/assets/images/IMG_0393.jpg";
+  terminalTheme.src = "/assets/icons/icons8-console-40.png"
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
@@ -499,3 +505,55 @@ resetBtn.addEventListener('click', () => {
   tiles.forEach(tile => tile.textContent = '');
   playerDisplay.textContent = 'Player X, your move!'
 })
+
+
+
+
+// Terminal functions
+
+document.addEventListener("DOMContentLoaded", function() {
+  const terminalInput = document.getElementById("terminalInput");
+  const terminalOutput = document.getElementById("terminalOutput");
+
+  const commands = {
+    projects: "film-forecast",
+    date: new Date().toString(),
+    rmrf: "Nice try, but i like existing ",
+    skills: "HTML, CSS, JavaScript, React, TypeScript, SCSS, Git, Linux",
+    why: "why not?"
+  };
+
+  function processCommand(input) {
+    let output = "";
+    const args = input.split(" ");
+    const command = args[0];
+
+    if (command === "echo") {
+      output = args.slice(1).join(" ");
+    } else if (commands[command]) {
+      output = commands[command];
+    } else if (command === "clear") {
+      terminalOutput.innerHTML = "";
+      return;
+    } else if (command === "reboot"){ 
+      location.reload();
+    } else if (command === "pink"){
+      activatePinkTheme();
+    } else if (command === "default"){
+      activateDefaultTheme();
+    }
+    else {
+      output = `command not found: ${command}. type 'Help' for availble commands.`;
+    }
+    terminalOutput.innerHTML += `<div><span class="prompt">guest@fayesdesktop: ~$ </span> ${input}</div>`;
+    terminalOutput.innerHTML += `<div>${output}</div>`;
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  }
+  terminalInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const input = terminalInput.value.trim();
+      if (input) processCommand(input);
+      terminalInput.value = "";
+    }
+  });
+});
