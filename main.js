@@ -2,22 +2,39 @@
 
 const splashScreen = document.getElementById("splashScreen");
 const desktop = document.getElementById("desktop");
-const startBtn = document.getElementById("start-button");
+const startBtn = document.getElementById("startButton");
 
 startBtn.addEventListener('click', function() {
   splashScreen.style.display = "none";
   desktop.style.display = "block";
 });
 
-// Disabled Input function
-const inputUsername = document.getElementById("username").addEventListener("keydown", function(event) {
-  event.preventDefault();
+// Splash screen input typing animation 
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("pwd");
 
-});
-const inputPwd = document.getElementById("pwd").addEventListener("keydown", function(event) {
-  event.preventDefault();
+const usernameText = "FayeS";
+const passwordText = "******";
 
+let usernameIndex= 0;
+let passwordIndex = 0;
+
+function typeWriter(input, text, index, speed, callback){
+  if (index < text.length) {
+    input.value += text.charAt(index);
+    index++;
+    setTimeout(() => typeWriter(input, text, index, speed, callback), speed);
+  } else if (callback) {
+    callback();
+  }
+}
+
+typeWriter(usernameInput, usernameText, usernameIndex, 300, () => {
+  typeWriter(passwordInput, passwordText, passwordIndex, 300, () => {
+    startBtn.classList.add("btn-press");
+  });
 });
+
 
 
 
@@ -60,7 +77,7 @@ const slideIn = document.getElementById("slideIn")
     slideIn.style.display = "block"
     setTimeout(() => {
       slideIn.style.right = "2px" // slide in the modal
-    }, 3000); //delay to trigger the animation
+    }, 2000); //delay to trigger the animation
   }
   
   // slide out function 
@@ -73,14 +90,14 @@ const slideIn = document.getElementById("slideIn")
   }
   
  
-// show modal on page load
+// show modal on desktop load
 
 startBtn.onclick = () => {
   slideIn.style.display = "block"
   setTimeout(() => {
 
     slideInModal(); // slide in when page loads
-  }, 3000); // 3 seconds delay 
+  }, 500); // delay 
   
   
   setTimeout(() => {
@@ -100,18 +117,26 @@ const navArrow = document.getElementById("navArrow");
 
 navPopup.style.display = "none"; //ensures popup in hidden initially//
 
-// Show/hide navbar popup on hover (click fuction for mobile)
+// Show/hide navbar popup on hover (click fuction for mobile) and hide when click desktop or arrow icon
 navArrow.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseout", () => navPopup.style.display = "none");
 
 navArrow.addEventListener("click", () => {
-  if (navPopup.style.display === "none" || navPopup.style.display === "") {
+  if (navPopup.style.display === "none" || navPopup.style.display === "" ) {
     navPopup.style.display = "block"
   } else { 
     navPopup.style.display = "none"
   }
 });
+
+
+
+desktop.addEventListener("click", function() {
+  if (navPopup.style.display === "block") {
+    navPopup.style.display = "none";
+  }
+})
 
 
 

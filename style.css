@@ -25,6 +25,7 @@ body {
 
 /* Splash Screen Section */
 .splashScreen {
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +41,7 @@ body {
 .signIn {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: var(--primary-clr);
   border-style: solid;
   border-color: white;
   flex-direction: column;
@@ -48,7 +49,7 @@ body {
   border-radius: 7px;
   width: 500px;
   height: 300px;
-  color: rgb(255, 255, 255);
+  color: black;
   padding: 40px;
 }
 
@@ -56,9 +57,13 @@ body {
   font-size: 12px;
   width: 100px;
   background-color: transparent;
-  color: white;
+  color: black;
   margin-bottom: 10px;
+  border-style: solid;
+  border-color: grey;
+  padding: 2px;
 }
+
 
 .signIn label {
   width: 70px;
@@ -72,45 +77,48 @@ body {
 .signIn button {
   font-size: 12px;
   position: absolute;
-  background-color: rgb(0, 0, 0);
-  border: solid;
-  border-width: 1px;
-  border-color: grey;
-  color: white;
+  
+ 
+  color: black;
   top: 50%;
   left: 50%;
-  transform: translate(-20%, -20%);
+  /* transform: translate(-20%, -20%); */
   padding: 2px;
   cursor: pointer;
   width: 80px;
   margin: 10px;
+  transition: all 0.1s ease;
+  box-shadow: 3px 4px #999;
 }
+
+/* animation to stimulate button being pressed */
+
+@keyframes startButton {
+  0% {
+    transform: translateY(0);
+    box-shadow: 3px 4px #999;
+  }
+  50% {
+    transform: translateY(4px);
+    box-shadow: 0px 1px #666;
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 3px 4px #999;
+  }
+}
+
+.btn-press {
+  animation: startButton 1s ease-in-out;
+}
+
 
 .signIn__welcome {
   width: 300px;
 }
 
-.signIn__welcome p{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(255, 255, 255); }
-}
-
+ 
 
 
 
@@ -184,7 +192,7 @@ nav {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  width: 150px;
+  width: 120px;
   height: 120px;
   background-color: var(--primary-clr);
   margin: 10px;
@@ -196,7 +204,7 @@ nav {
 .nav__popup button {
   font-size: 14px;
   width: 100%;
-  height: 30px;
+  height: 20px;
 }
 .navTime {
   padding: 4px;
@@ -628,6 +636,7 @@ nav {
   bottom: 30px;
   margin: 10px;
   padding-top: 1px;
+  cursor: pointer;
 }
 
 .learnMore__modal {

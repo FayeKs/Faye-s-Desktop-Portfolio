@@ -10,9 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Faye's Portfolio</title>
   </head>
   <body id="body">
@@ -20,20 +23,25 @@
     <div id="splashScreen" class="splashScreen">
       <div class="signIn">
         <div class="signIn__welcome">
-            <p>Welcome to Faye's Desktop Portfolio</p>
+          <p>Welcome to Faye's Desktop Portfolio</p>
         </div>
-        <br>
+        <br />
         <p class="signIn__title">Sign In</p>
-        <br>
+        <br />
         <div class="signIn__username">
           <label for="username">Username:</label>
-          <input type="text" id="username" name="username" value="FayeS" >
+          <input type="text" id="username" name="username"  class="username"readonly/>
         </div>
         <div>
           <label for="pwd">Password:</label>
-          <input type="text" name="pwd" id="pwd" value="&#x2022;&#x2022;&#x2022;&#x2022;">
+          <input
+            type="text"
+            name="pwd"
+            id="pwd"
+            readonly
+          />
         </div>
-        <button id="start-button">Sign In</button>
+        <button id="startButton" class="btn">Sign In</button>
       </div>
     </div>
     <!--TODO: mobile design/ media queries-->
@@ -45,7 +53,6 @@
         <nav id="nav">
           <ul class="nav__left">
             <li id="navTime" class="navTime"></li>
-          
           </ul>
           <ul class="nav__right">
             <li id="cpuWidget"></li>
@@ -82,15 +89,19 @@
         <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
       </div>
 
-<!--Slide-in Msg Section-->
-    <div class="slideIn" id="slideIn">
-      <div class="slideIn__content">
-        <p> Tip! Change the color theme <img src="/assets/icons/icons8-arrow-up-30.png" alt="" style="width: 15px;"></p>
+      <!--Slide-in Msg Section-->
+      <div class="slideIn" id="slideIn">
+        <div class="slideIn__content">
+          <p>
+            Tip! Change the color theme
+            <img
+              src="/assets/icons/icons8-arrow-up-30.png"
+              alt=""
+              style="width: 15px"
+            />
+          </p>
+        </div>
       </div>
-    </div>
-
-
-
 
       <!--Desktop Left Section-->
 
@@ -129,27 +140,39 @@
         </div>
 
         <div class="github">
-          <a href="https://github.com/FayeKs" class="github__btn" target="_blank">
+          <a
+            href="https://github.com/FayeKs"
+            class="github__btn"
+            target="_blank"
+          >
             <img
               src="/assets/icons/icons8-github-80.png"
               alt=""
               id="githubTheme"
             />
-            <p>Github</p> </a
-          >
+            <p>Github</p>
+          </a>
         </div>
 
         <div class="tictactoe">
           <button id="tictactoeBtn" class="tictactoe__btn">
-            <img src="/assets/icons/icons8-tic-tac-toe-53.png" alt="" id="tictactoeTheme">
+            <img
+              src="/assets/icons/icons8-tic-tac-toe-53.png"
+              alt=""
+              id="tictactoeTheme"
+            />
             <p>Tic-Tac-Toe</p>
           </button>
         </div>
 
         <div class="terminal">
           <button class="terminal__btn" id="terminalBtn">
-          <img src="/assets/icons/icons8-console-40.png" alt="" id="terminalTheme">
-          <p>Terminal</p>
+            <img
+              src="/assets/icons/icons8-console-40.png"
+              alt=""
+              id="terminalTheme"
+            />
+            <p>Terminal</p>
           </button>
         </div>
       </div>
@@ -166,11 +189,17 @@
         </div>
         <div class="comp__content">
           <div class="comp__intro">
-            <img src="/assets/images/IMG_0393.jpg" alt="" id="profilePic"/>
+            <img src="/assets/images/IMG_0393.jpg" alt="" id="profilePic" />
             <div class="comp__name">
               <p>Faye Sanders</p>
               <hr />
-              <small><img src="/assets/icons/icons8-location-pin-24.png" alt="" style="width: 12px; border: none; margin: 0;">Florida/NYC</small>
+              <small
+                ><img
+                  src="/assets/icons/icons8-location-pin-24.png"
+                  alt=""
+                  style="width: 12px; border: none; margin: 0"
+                />Florida/NYC</small
+              >
             </div>
           </div>
           <div class="comp__skills">
@@ -187,24 +216,25 @@
           </div>
           <div class="comp__aboutme">
             <p>About Me</p>
-            <hr/>
-            <br>
-            Hello! I'm a 25 year old Frontend Developer that is passionate about creating immersive,
-            user-friendly web experiences. I enjoy spending my day working with
-            HTML, CSS, JavaScript and other Frontend technologies to turn my
-            ideas into reality.
+            <hr />
             <br />
-            <br>
-            I believe in continious learning and am always excited to take on
-            new challenges that push my skills further. While my focus has been 
-            on front-end development, i've recently started diving into the basics 
-            of backend technologies like Node.js, MongoDB, and Express to expand my 
-            understanding of full-stack development. 
-           <br>
-           <br>
-            Ultimately, i aim to
-            become the best developer i can be and to make a meaningful
-            contribution to the tech industry.</p>
+            <p>
+              Hello, I'm a 25 year old Frontend Developer that is passionate
+              about creating immersive, user-friendly web experiences. I enjoy
+              spending my day working with HTML, CSS, JavaScript and other
+              Frontend technologies to turn my ideas into reality.
+              <br />
+              <br />
+              I believe in continious learning and am always excited to take on
+              new challenges that push my skills further. While my focus has
+              been on front-end development, i've recently started diving into
+              the basics of backend technologies like Node.js, MongoDB, and
+              Express to expand my understanding of full-stack development.
+              <br />
+              <br />
+              Ultimately, i aim to become the best developer i can be and to
+              make a meaningful contribution to the tech industry.
+            </p>
           </div>
           <br />
           <p>Contact Me</p>
@@ -225,25 +255,29 @@
             <p>/Projects</p>
           </div>
           <ul class="projectFolders">
-            <li><img src="/assets/icons/icons8-folder-40.png" alt=""> 
-            <p>FilmForecast</p>
+            <li>
+              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <p>FilmForecast</p>
             </li>
-           <li><img src="/assets/icons/icons8-folder-40.png" alt="">
-          <p>The Paradox Exchange</p></li>
-            <li><img src="/assets/icons/icons8-folder-40.png" alt="">
-            <p>E-Commerce Store</p></li>
+            <li>
+              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <p>The Paradox Exchange</p>
+            </li>
+            <li>
+              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <p>E-Commerce Store</p>
+            </li>
           </ul>
         </div>
       </div>
-
 
       <!--Tic-Tac-Toe Game Modal -->
 
       <div id="tictactoeModal" class="tictactoe__modal">
         <div class="titleBar">
-            <button class="closeBtn" id="tictactoeCloseBtn"></button>
-            <button class="minBtn" id="tictactoeMinBtn"></button>
-            <p>Tic-Tac-Toe Game</p>
+          <button class="closeBtn" id="tictactoeCloseBtn"></button>
+          <button class="minBtn" id="tictactoeMinBtn"></button>
+          <p>Tic-Tac-Toe Game</p>
         </div>
         <div class="tictactoe__content">
           <div class="player__display">
@@ -261,45 +295,56 @@
             <div class="tile"></div>
           </div>
           <div class="display annoncer hide"></div>
-            <button id="reset" class="reset">Reset</button>
-          </div>
+          <button id="reset" class="reset">Reset</button>
         </div>
       </div>
+      <!-- </div> -->
 
-<!--Terminal modal-->
+      <!--Terminal modal-->
 
-<div class="terminal__modal" id="terminalModal">
-  <div class="titleBar">
-    <button class="closeBtn" id="terminalCloseBtn"></button>
-    <button class="minBtn" id="terminalMinBtn"></button>
-    <p>Terminal</p>
-  </div>
-  <div class="terminal-commands">
-    <p>Available commands:</p>
-    <ul>
-      <li>clear</li>
-      <li>reboot</li>
-      <li>echo</li>
-      <li>pink</li>
-      <li>default</li>
-      <li>fortune</li>
-      <li>projects</li>
-      <li>skills</li>
-      <li>rmrf</li>
-      <li>date</li>
-    </ul>
-  </div>
-  <div id="terminalOutput" class="terminal-output"></div>
-  <div class="input-line">
-    <span class="prompt">guest@fayesdesktop: ~$</span>
-    <input type="text" name="terminal-input" id="terminalInput" class="terminal-input" value="" autofocus />
+      <div class="terminal__modal" id="terminalModal">
+        <div class="titleBar">
+          <button class="closeBtn" id="terminalCloseBtn"></button>
+          <button class="minBtn" id="terminalMinBtn"></button>
+          <p>Terminal</p>
+        </div>
+        <div class="terminal-commands">
+          <p>Available commands:</p>
+          <ul>
+            <li>clear</li>
+            <li>reboot</li>
+            <li>echo</li>
+            <li>pink</li>
+            <li>default</li>
+            <li>fortune</li>
+            <li>projects</li>
+            <li>skills</li>
+            <li>rmrf</li>
+            <li>date</li>
+          </ul>
+        </div>
+        <div id="terminalOutput" class="terminal-output"></div>
+        <div class="input-line">
+          <span class="prompt">guest@fayesdesktop: ~$</span>
+          <input
+            type="text"
+            name="terminal-input"
+            id="terminalInput"
+            class="terminal-input"
+            value=""
+            autofocus
+          />
         </div>
       </div>
 
       <!-- Learn More Section-->
 
       <button class="learnMoreBtn" id="learnMoreBtn">
-        <img src="/assets/icons/icons8-question-mark-30.png" alt="" style="width: 18px;">
+        <img
+          src="/assets/icons/icons8-question-mark-30.png"
+          alt=""
+          style="width: 18px"
+        />
       </button>
       <div class="learnMore__modal" id="learnMoreModal">
         <div class="titleBar">
@@ -307,28 +352,36 @@
           <p>Learn More</p>
         </div>
         <div class="learnMore__content">
-        <p>This portfolio is designed to look and function like a desktop enviroment,
-          creating an interactive and engaging way to showcase my work. 
-          <br>
-          <br>
-          Built with pure HTML, CSS and JavaScript, i am able to demonstrate my ability to create a functional UI with vanilla technologies. 
-          <br>
-          <br>
-          Users can explore different modals, inclding an 'About Me' window, a calculator and a tic-tac-toe game. 
-          <br>
-          The interface includes dynamic features such as draggable windows, a taskbar displaying the current time, a CPU usage widget and a dropdown menu with
-          customizable settings like theme toggling and brightness adjustment.
-          <br> 
-          <br>
-          Thank you for taking the time to explore my portfolio.
-          To view more projects i've worked on using technologies liked React, Typescript, SCSS, and more, simply open the <b>Projects</b> folder on the destop. If you have
-          any questions or comments, please contact me via email <b>@fk44pm@gmail.com</b>.
-           </p> 
+          <p>
+            This portfolio is designed to look and function like a desktop
+            enviroment, creating an interactive and engaging way to showcase my
+            work.
+            <br />
+            <br />
+            Built with pure HTML, CSS and JavaScript, i am able to demonstrate
+            my ability to create a functional UI with vanilla technologies.
+            <br />
+            <br />
+            Users can explore different modals, inclding an 'About Me' window, a
+            calculator and a tic-tac-toe game.
+            <br />
+            The interface includes dynamic features such as draggable windows, a
+            taskbar displaying the current time, a CPU usage widget and a
+            dropdown menu with customizable settings like theme toggling and
+            brightness adjustment.
+            <br />
+            <br />
+            Thank you for taking the time to explore my portfolio. To view more
+            projects i've worked on using technologies liked React, Typescript,
+            SCSS, and more, simply open the <b>Projects</b> folder on the
+            destop. If you have any questions or comments, please contact me via
+            email <b>@fk44pm@gmail.com</b>.
+          </p>
         </div>
       </div>
 
       <!--Taskbar Section-->
-<!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
+      <!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
       <div class="taskbar" id="taskbar">
         <button id="compTaskbar" class="comp__taskbar">
           <p>My Computer</p>
@@ -349,7 +402,7 @@
     </main>
     <!--Shut Down Section-->
     <div id="shutDownScreen" class="shutDownScreen">
-        <button id="rebootBtn" >Reboot</button>
+      <button id="rebootBtn">Reboot</button>
     </div>
 
     <script src="/main.js"></script>
