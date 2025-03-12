@@ -349,7 +349,7 @@ function activateDefaultTheme() {
   pinkThemeBtn.style.display = "block";
   body.classList.add("default-theme");
   body.classList.remove("pink-theme");
-  myCompTheme.src = "/assets/icons/icons8-old-computer-80 (1).png";
+  myCompTheme.src = "/assets/icons//icons8-old-computer-80 (3).png";
   projectsTheme.src = "/assets/icons/icons8-folder-40.png";
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";

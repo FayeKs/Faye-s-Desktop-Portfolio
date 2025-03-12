@@ -184,20 +184,19 @@ nav {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  width: 200px;
+  width: 150px;
   height: 120px;
   background-color: var(--primary-clr);
   margin: 10px;
   text-align: center;
-  padding: 10px;
   display: flex;
+  flex-direction: column;
 }
 
 .nav__popup button {
   font-size: 14px;
-  margin-top: 10px;
   width: 100%;
-  border-radius: 10px;
+  height: 30px;
 }
 .navTime {
   padding: 4px;
@@ -383,7 +382,7 @@ nav {
   top: 50%;
   border-radius: 5px;
   transform: translate(-50%, -50%);
-  width: 250px;
+  width: 300px;
   max-width: 100%;
   height: 350px;
   border-style: solid;
@@ -394,26 +393,60 @@ nav {
 }
 
 .comp__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
   z-index: 9999;
   font-size: 12px;
   height: auto;
-  text-align: center;
+  text-align: left;
 }
-.comp__content hr {
-  width: 30px;
+.comp__name hr {
+  width: 50px;
 }
 
 .comp__content img {
-  float: left;
-  width: 50%;
+  width: 40%;
   margin: 15px;
   border-style: solid;
   border-width: 2px;
 }
+
+.comp__intro {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.comp__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.comp__skills ul{
+  margin: 5px 10px;
+  font-size: 10px;
+  display: flex;
+  gap: 10px;flex-wrap: wrap;
+}
+
+.comp__skills ul li {
+  border-style: solid;
+  padding: 2px 7px;
+  border-radius: 30px;
+  border-width: 1px;
+}
+
+.comp__aboutme {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
 
 .comp__content li {
   list-style: none;
