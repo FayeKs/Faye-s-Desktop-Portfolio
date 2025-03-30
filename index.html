@@ -52,28 +52,33 @@
             <li id="cpuWidget"></li>
             <li><img src="/assets/icons/icons8-battery-30.png" alt="" /></li>
             <li>
-              <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" />
-              <input
-                type="range"
-                id="range"
-                class="range"
-                min="50"
-                max="100"
-                value="100"
-              />
+              <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" id="sunIcon"/>
               <img
-                src="/assets//icons/icons8-arrow-down-24.png"
-                alt=""
-                class="nav__arrow"
-                id="navArrow"
-                style="width: 20px"
-                />
+              src="/assets//icons/icons8-arrow-down-24.png"
+              alt=""
+              class="nav__arrow"
+              id="navArrow"
+              style="width: 20px"
+              />
             </li>
           </ul>
         </nav>
       </header>
-
+      
       <!--Navbar popup Section-->
+
+      <!--brightness range popup-->
+      <div class="brightness__popup" id="brightnessPopup">
+          <input
+            type="range"
+            id="range"
+            class="range"
+            min="50"
+            max="100"
+            value="100"
+          />
+        
+      </div>
 
       <div class="nav__popup" id="navPopup">
         <button id="pinkTheme">Pink Theme</button>
@@ -272,7 +277,7 @@
           <button class="minBtn" id="calcMinBtn"></button>
           <p>Calculator</p>
         </div>
-        <div>
+        <div class="calc__content">
           <input type="text">
           <div class="calc__keys">
             <button type="button" class="operations">C</button>

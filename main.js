@@ -106,12 +106,33 @@ startBtn.onclick = () => {
 }
 
 
+//Navbar brightness popup
 
+const sunIcon = document.getElementById("sunIcon");
+const brightnessPopup = document.getElementById("brightnessPopup")
 
+brightnessPopup.style.display = "none";
 
+//show/hide range popup on hover (click function for mobile)
+sunIcon.addEventListener("mouseover", () => brightnessPopup.style.display = "block")
+brightnessPopup.addEventListener("mouseover", () => brightnessPopup.style.display = "block");
+brightnessPopup.addEventListener("mouseout", () => brightnessPopup.style.display = "none")
 
+sunIcon.addEventListener("click", () => {
+  if (brightnessPopup.style.display === "none" || brightnessPopup.style.display === "" ) {
+    brightnessPopup.style.display = "block"
+  } else { 
+    brightnessPopup.style.display = "none"
+  }
+});
 
-//Navbar popup
+desktop.addEventListener("click", function() {
+  if (brightnessPopup.style.display === "block") {
+    brightnessPopup.style.display = "none";
+  }
+})
+
+//Navbar down arrow popup
 const navPopup = document.getElementById("navPopup");
 const navArrow = document.getElementById("navArrow");
 
