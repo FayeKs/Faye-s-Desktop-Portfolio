@@ -10,13 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <title>Faye's Portfolio</title>
+    <title>Faye's Desktop</title>
   </head>
   <body id="body">
     <!--Splash Screen Section-->
@@ -58,13 +52,22 @@
             <li id="cpuWidget"></li>
             <li><img src="/assets/icons/icons8-battery-30.png" alt="" /></li>
             <li>
+              <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" />
+              <input
+                type="range"
+                id="range"
+                class="range"
+                min="50"
+                max="100"
+                value="100"
+              />
               <img
                 src="/assets//icons/icons8-arrow-down-24.png"
                 alt=""
                 class="nav__arrow"
                 id="navArrow"
                 style="width: 20px"
-              />
+                />
             </li>
           </ul>
         </nav>
@@ -73,15 +76,6 @@
       <!--Navbar popup Section-->
 
       <div class="nav__popup" id="navPopup">
-        <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" />
-        <input
-          type="range"
-          id="range"
-          class="range"
-          min="50"
-          max="100"
-          value="100"
-        />
         <button id="pinkTheme">Pink Theme</button>
         <button>Brightness</button>
         <button id="defaultTheme">Themes</button>
@@ -271,7 +265,41 @@
         </div>
       </div>
 
-      <!--Tic-Tac-Toe Game Modal -->
+      <!--Calculator Modal section-->
+      <div id="calculatorModal" class="calculator__modal">
+        <div class="titleBar">
+          <button class="closeBtn" id="calcCloseBtn"></button>
+          <button class="minBtn" id="calcMinBtn"></button>
+          <p>Calculator</p>
+        </div>
+        <div>
+          <input type="text">
+          <div class="calc__keys">
+            <button type="button" class="operations">C</button>
+            <button type="button" class="operations">E</button>
+            <button type="button" class="operations">=</button>
+            <button type="button" class="operations">*</button>
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button" class="operations">/</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button" class="operations">-</button>
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button" class="operations plusBtn">+</button>
+            <button type="button" class="zeroBtn">0</button>
+            <button type="button" class="operations">.</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!--Tic-Tac-Toe Game Modal Section-->
 
       <div id="tictactoeModal" class="tictactoe__modal">
         <div class="titleBar">
@@ -344,6 +372,7 @@
           src="/assets/icons/icons8-question-mark-30.png"
           alt=""
           style="width: 18px"
+          title="Learn more"
         />
       </button>
       <div class="learnMore__modal" id="learnMoreModal">
@@ -379,7 +408,7 @@
           </p>
         </div>
       </div>
-
+<!--TODO:create popup for brightness range -->
       <!--Taskbar Section-->
       <!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
       <div class="taskbar" id="taskbar">
@@ -389,6 +418,10 @@
 
         <button id="projectsTaskbar" class="projects__taskbar">
           <p>Projects</p>
+        </button>
+
+        <button id="calculatorTaskbar" class="calculator__taskbar">
+          <p>Calculator</p>
         </button>
 
         <button class="tictactoe__taskbar" id="tictactoeTaskbar">

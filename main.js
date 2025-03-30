@@ -147,6 +147,7 @@ const modals = {
   tictactoeModal: document.getElementById("tictactoeModal"),
   learnMoreModal: document.getElementById("learnMoreModal"),
   terminalModal: document.getElementById("terminalModal"),
+  calculatorModal: document.getElementById("calculatorModal")
 };
 
 
@@ -155,6 +156,7 @@ const taskbars = {
   projectsTaskbar: document.getElementById("projectsTaskbar"),
   tictactoeTaskbar: document.getElementById("tictactoeTaskbar"),
   terminalTaskbar: document.getElementById("terminalTaskbar"),
+  calculatorTaskbar: document.getElementById("calculatorTaskbar")
 }
 
 const buttons = {
@@ -172,6 +174,9 @@ const buttons = {
   terminalBtn: document.getElementById("terminalBtn"),
   terminalCloseBtn:document.getElementById("terminalCloseBtn"),
   terminalMinBtn: document.getElementById("terminalMinBtn"),
+  calcBtn: document.getElementById("calcBtn"),
+  calcCloseBtn: document.getElementById("calcCloseBtn"),
+  calcMinBtn: document.getElementById("calcMinBtn")
 }
 
 
@@ -199,7 +204,7 @@ function minimizeModal(modal){
 
 // Utility function to set z-index for active modal
 function setZIndex(activeModal){
-  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal, terminalModal];
+  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal, terminalModal, calculatorModal];
   modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
 }
 
@@ -228,10 +233,14 @@ buttons.learnMoreBtn.onclick = () => {
 }
 buttons.terminalBtn.onclick = () => {
   openModal(modals.terminalModal, taskbars.terminalTaskbar);
-  dragModal(modals.terminalModal, taskbars.terminalTaskbar);
+  dragModal(modals.terminalModal);
   document.getElementById('terminalInput').focus(); // fixes input typing issue by setting the input focus when terminal opens
 }
+buttons.calcBtn.onclick = () => {
+  openModal(modals.calculatorModal, taskbars.calculatorTaskbar);
+  dragModal(modals.calculatorModal);
 
+}
 
 // Close Modals
 
@@ -240,7 +249,7 @@ buttons.projectsCloseBtn.onclick = () => closeModal(modals.projectsModal, taskba
 buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
 buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal);
 buttons.terminalCloseBtn.onclick = () => closeModal(modals.terminalModal, taskbars.terminalTaskbar);
-
+buttons.calcCloseBtn.onclick = () => closeModal(modals.calculatorModal, taskbars.calculatorTaskbar);
 
 
 // Minimize modals
@@ -248,8 +257,8 @@ buttons.terminalCloseBtn.onclick = () => closeModal(modals.terminalModal, taskba
 buttons.compMinBtn.onclick = () => minimizeModal(modals.compModal);
 buttons.projectsMinBtn.onclick = () => minimizeModal(modals.projectsModal);
 buttons.tictactoeMinBtn.onclick = () => minimizeModal(modals.tictactoeModal);
-buttons.terminalMinBtn.onclick = () => minimizeModal(modals.terminalModal, taskbars.terminalTaskbar);
-
+buttons.terminalMinBtn.onclick = () => minimizeModal(modals.terminalModal);
+buttons.calcMinBtn.onclick = () => minimizeModal(modals.calculatorModal);
 
 // Click on taskbar to open modal
 
@@ -258,6 +267,7 @@ taskbars.compTaskbar.onclick = () => openModal(modals.compModal, taskbars.compTa
 taskbars.projectsTaskbar.onclick = () => openModal(modals.projectsModal, taskbars.projectsTaskbar);
 taskbars.tictactoeTaskbar.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
 taskbars.terminalTaskbar.onclick = () => openModal(modals.terminalModal, taskbars.terminalTaskbar);
+taskbars.calculatorTaskbar.onclick = () => openModal(modals.calculatorModal, taskbars.calculatorTaskbar);
 
 // Modal overlap handling 
 
