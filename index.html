@@ -52,7 +52,6 @@
             <li id="cpuWidget"></li>
             <li><img src="/assets/icons/icons8-battery-30.png" alt="" /></li>
             <li>
-              <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" id="sunIcon"/>
               <img
               src="/assets//icons/icons8-arrow-down-24.png"
               alt=""
@@ -66,12 +65,13 @@
       </header>
       
       <!--Navbar popup Section-->
-
+      
       <!--brightness range popup-->
       <div class="brightness__popup" id="brightnessPopup">
-          <input
-            type="range"
-            id="range"
+        <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" id="sunIcon"/>
+        <input
+        type="range"
+        id="range"
             class="range"
             min="50"
             max="100"
@@ -81,11 +81,17 @@
       </div>
 
       <div class="nav__popup" id="navPopup">
-        <button id="pinkTheme">Pink Theme</button>
-        <button>Brightness</button>
-        <button id="defaultTheme">Themes</button>
+        <button id="themes"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Themes</button>
+        <button id="brightnessBtn"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Brightness</button>
+        <!-- <button id="defaultTheme">Themes</button> -->
         <button>Resume</button>
         <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
+      </div>
+
+      <div class="themes__popup" id="themesPopup">
+        <button class="pinkThemeBtn" id="pinkTheme">pink</button>
+        <button>cyber</button>
+        <button id="defaultThemeBtn" class="defaultThemeBtn">default</button>
       </div>
 
       <!--Slide-in Msg Section-->
@@ -174,6 +180,12 @@
             <p>Terminal</p>
           </button>
         </div>
+        <div class="portfolio">
+          <button class="portfolio__btn" id="portfolioBtn">
+            <img src="./assets/icons/icons8-portfolio-48.png" alt="" style="width: 55px;">
+            <p>Portfolio</p>
+          </button>
+        </div>
       </div>
 
       <!-- Modals Section-->
@@ -188,7 +200,7 @@
         </div>
         <div class="comp__content">
           <div class="comp__intro">
-            <img src="/assets/images/IMG_0393.jpg" alt="" id="profilePic" />
+            <img src="/assets/images/IMG_0393 (2).jpg" alt="" id="profilePic" />
             <div class="comp__name">
               <p>Faye Sanders</p>
               <hr />

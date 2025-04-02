@@ -192,21 +192,32 @@ nav {
   right: 0;
   border-style: solid;
   border-width: 1px;
-  border-radius: 5px;
-  width: 120px;
-  height: 120px;
+  
+  width: 110px;
+  height: 100px;
   background-color: var(--primary-clr);
-  margin: 10px;
+  margin: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 
+/* FIXME: fix mouseout popup on icon*/
+
 .nav__popup button {
   font-size: 14px;
   width: 100%;
-  height: 20px;
+  height: 25px;
+  border: none;
+  padding: 0px 5px;
+  text-align: right;
+ 
 }
+
+.nav__popup button:hover {
+  background-color: var(--border-clr);
+}
+
 .navTime {
   padding: 4px;
   height: 25px;
@@ -218,16 +229,42 @@ nav {
   background-color: rgb(54, 55, 54);
   color: white;
 }
+
+.shutDownBtn:hover {
+  color: rgb(54, 55, 54);
+}
+
+
+.themes__popup {
+  background-color: var(--primary-clr);
+  display: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 115px;
+  z-index: 1500;
+  border: 1px solid;
+  outline: none;
+  width: 100px;
+  
+}
+
+.pinkThemeBtn, .defaultThemeBtn {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid;
+}
 /* brightness range */
 
 .brightness__popup {
   margin: 10px;
   padding: 5px 10px;
-  right: 40px;
+  top: 50px;
+  right: 100px;
   background-color: var(--primary-clr);
   position: absolute;
   z-index: 1500;
-  border-radius: 50px;
 }
 
 .range {
@@ -282,7 +319,7 @@ nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   margin-top: 30px;
   width: 30%;
   height: 500px;
@@ -298,7 +335,8 @@ nav {
 .calculator,
 .github,
 .tictactoe,
-.terminal {
+.terminal,
+.portfolio {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -769,18 +807,19 @@ nav {
 .calc__btn,
 .github__btn,
 .tictactoe__btn,
-.shutDownBtn{
+.shutDownBtn,
+.portfolio__btn{
   cursor: pointer;
 }
 .closeBtn {
-  /* background-color: rgb(177, 41, 41); */
-  background-color: rgb(54, 55, 54);
+  background-color: rgb(177, 41, 41);
+  /* background-color: rgb(54, 55, 54); */
   border-color: black;
 }
 
 .minBtn {
-  /* background-color: rgb(216, 198, 138); */
-  background-color: grey;
+  background-color: rgb(216, 198, 138);
+  /* background-color: grey; */
   border-color: black;
 }
 
@@ -789,7 +828,8 @@ nav {
 .calc__btn,
 .github__btn,
 .tictactoe__btn,
-.terminal__btn {
+.terminal__btn,
+.portfolio__btn {
   display: flex;
   flex-direction: column;
   align-items: center;

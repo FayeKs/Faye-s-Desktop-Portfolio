@@ -107,30 +107,28 @@ startBtn.onclick = () => {
 
 
 //Navbar brightness popup
-
-const sunIcon = document.getElementById("sunIcon");
+const brightnessBtn = document.getElementById("brightnessBtn");
 const brightnessPopup = document.getElementById("brightnessPopup")
 
 brightnessPopup.style.display = "none";
 
 //show/hide range popup on hover (click function for mobile)
-sunIcon.addEventListener("mouseover", () => brightnessPopup.style.display = "block")
+brightnessBtn.addEventListener("mouseover", () => brightnessPopup.style.display = "block")
 brightnessPopup.addEventListener("mouseover", () => brightnessPopup.style.display = "block");
-brightnessPopup.addEventListener("mouseout", () => brightnessPopup.style.display = "none")
+brightnessPopup.addEventListener("mouseout", () => brightnessPopup.style.display = "none");
+// sunIcon.addEventListener("mouseout",() => brightnessPopup.style.display = "none")
 
-sunIcon.addEventListener("click", () => {
-  if (brightnessPopup.style.display === "none" || brightnessPopup.style.display === "" ) {
-    brightnessPopup.style.display = "block"
-  } else { 
-    brightnessPopup.style.display = "none"
-  }
+brightnessBtn.addEventListener("click", () => {
+ brightnessPopup.style.display = brightnessPopup.style.display === "none" || brightnessPopup.style.display === "" ? "block" : "none"
 });
+  
 
 desktop.addEventListener("click", function() {
   if (brightnessPopup.style.display === "block") {
     brightnessPopup.style.display = "none";
   }
 })
+
 
 //Navbar down arrow popup
 const navPopup = document.getElementById("navPopup");
@@ -142,13 +140,10 @@ navPopup.style.display = "none"; //ensures popup in hidden initially//
 navArrow.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseover", () => navPopup.style.display = "block");
 navPopup.addEventListener("mouseout", () => navPopup.style.display = "none");
+// navArrow.addEventListener("mouseout", () => navPopup.style.display = "none")
 
 navArrow.addEventListener("click", () => {
-  if (navPopup.style.display === "none" || navPopup.style.display === "" ) {
-    navPopup.style.display = "block"
-  } else { 
-    navPopup.style.display = "none"
-  }
+  navPopup.style.display = navPopup.style.display === "none" || navPopup.style.display === "" ? "block" : "none";
 });
 
 
@@ -159,7 +154,15 @@ desktop.addEventListener("click", function() {
   }
 })
 
+const themes = document.getElementById("themes")
+const themesPopup = document.getElementById("themesPopup");
 
+themes.addEventListener("mouseover", () => themesPopup.style.display = "block");
+themesPopup.addEventListener("mouseover", () => navPopup.style.display = "block")
+themesPopup.addEventListener("mouseover", () => themesPopup.style.display = "block");
+themesPopup.addEventListener("mouseout", () => themesPopup.style.display = "none")
+themesPopup.addEventListener("mouseout", () => navPopup.style.display = "none");
+navPopup.addEventListener("mouseout", () => themesPopup.style.display ="none")
 
 // Modal and taskbar elements
 const modals = {
@@ -311,6 +314,7 @@ window.addEventListener('DOMContentLoaded', function() {
 function dragModal(modal) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   
+  
   if (modal) {
     // if present, the header is where you move the DIV from:
     modal.onmousedown = dragMouseDown;
@@ -374,7 +378,7 @@ function dragModal(modal) {
 // pink mode/default mode desktop theme function //
 
 const pinkThemeBtn = document.getElementById("pinkTheme");
-const defaultThemeBtn = document.getElementById("defaultTheme");
+const defaultThemeBtn = document.getElementById("defaultThemeBtn");
 const body = document.body;
 const myCompTheme = document.getElementById("myCompTheme");
 const projectsTheme = document.getElementById("projectsTheme");
@@ -384,11 +388,11 @@ const profilePic = document.getElementById("profilePic");
 const tictactoeTheme = document.getElementById("tictactoeTheme");
 const terminalTheme = document.getElementById("terminalTheme");
 
-defaultThemeBtn.style.display = "none";
+// defaultThemeBtn.style.display = "none";
 
 function activatePinkTheme() {
-  pinkThemeBtn.style.display = "none";
-  defaultThemeBtn.style.display = "block";
+  // pinkThemeBtn.style.display = "none";
+  // defaultThemeBtn.style.display = "block";
   body.classList.add("pink-theme");
   body.classList.remove("default-theme");
   myCompTheme.src = "/assets/icons/icons8-old-computer-80 (2).png";
@@ -401,8 +405,8 @@ function activatePinkTheme() {
 }
 
 function activateDefaultTheme() {
-  defaultThemeBtn.style.display = "none";
-  pinkThemeBtn.style.display = "block";
+  // defaultThemeBtn.style.display = "none";
+  // pinkThemeBtn.style.display = "block";
   body.classList.add("default-theme");
   body.classList.remove("pink-theme");
   myCompTheme.src = "/assets/icons//icons8-old-computer-80 (3).png";
@@ -410,7 +414,7 @@ function activateDefaultTheme() {
   calcTheme.src = "/assets/icons/icons8-calculator-64.png";
   githubTheme.src = "/assets/icons/icons8-github-80.png";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
-  profilePic.src = "/assets/images/IMG_0393.jpg";
+  profilePic.src = "/assets/images/IMG_0393 (2).jpg";
   terminalTheme.src = "/assets/icons/icons8-console-40.png"
 }
 
