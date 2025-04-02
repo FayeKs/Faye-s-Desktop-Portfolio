@@ -307,15 +307,15 @@ nav {
 
 /* Desktop Left Section */
 
-.desktop__left img {
+.desktopLeft img {
   width: 50px;
 }
 
-.desktop__left img {
+.desktopLeft img {
   filter: drop-shadow(3px 4px 0px rgba(86, 86, 86, 1));
 }
 
-.desktop__left {
+.desktopLeft {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -324,7 +324,7 @@ nav {
   width: 30%;
   height: 500px;
 }
-.desktop__left p {
+.desktopLeft p {
   margin: 7px;
   text-align: center;
   font-size: 9px;
@@ -528,7 +528,7 @@ nav {
   overflow-y: auto;
 }
 
-.projectFolders{
+.project__folders{
   list-style: none;
   font-size: 10px;
   display: grid;
@@ -538,7 +538,7 @@ nav {
   padding: 10px;
 }
 
-.projectFolders img {
+.project__folders img {
   width: 50px;
 }
 
@@ -808,6 +808,7 @@ nav {
 .github__btn,
 .tictactoe__btn,
 .shutDownBtn,
+.terminal__btn,
 .portfolio__btn{
   cursor: pointer;
 }
@@ -913,7 +914,7 @@ button {
 }
 
 
-.pink-theme .desktop__left img {
+.pink-theme .desktopLeft img {
   filter: drop-shadow(3px 4px 0px purple);
 }
 
@@ -963,11 +964,12 @@ button {
   border-color: #00ff26;
 }
 
-.cyber-theme .desktop__left img {
+.cyber-theme .desktopLeft img {
   filter: none;
   box-shadow: none;
 }
-.cyber-theme .desktop__left p, 
+
+.cyber-theme .desktopLeft p, 
 .cyber-theme .terminal__modal li,
 .cyber-theme .terminal__modal p
 {

@@ -13,7 +13,7 @@
     <title>Faye's Desktop</title>
   </head>
   <body id="body">
-    <!--Splash Screen Section-->
+    <!--Splash Screen/Sign in section-->
     <div id="splashScreen" class="splashScreen">
       <div class="signIn">
         <div class="signIn__welcome">
@@ -38,19 +38,23 @@
         <button id="startButton" class="btn">Sign In</button>
       </div>
     </div>
+
+
     <!--TODO: mobile design/ media queries-->
 
     <main class="desktop" id="desktop">
+
+
       <!--Navbar Section-->
 
       <header>
         <nav id="nav">
-          <ul class="nav__left">
-            <li id="navTime" class="navTime"></li>
-          </ul>
+          <div class="nav__left">
+            <div id="navTime" class="navTime"></div>
+          </div>
           <ul class="nav__right">
             <li id="cpuWidget"></li>
-            <li><img src="/assets/icons/icons8-battery-30.png" alt="" /></li>
+            <li><img src="/assets/icons/icons8-battery-30.png" alt="" id="batteryTheme"/></li>
             <li>
               <img
               src="/assets//icons/icons8-arrow-down-24.png"
@@ -66,7 +70,22 @@
       
       <!--Navbar popup Section-->
       
-      <!--brightness range popup-->
+      <div class="nav__popup" id="navPopup">
+        <button id="themes"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Themes</button>
+        <button id="brightnessBtn"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Brightness</button>
+        <button>Resume</button>
+        <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
+      </div>
+
+      <!--themes popup section-->
+      
+      <div class="themes__popup" id="themesPopup">
+        <button class="pinkThemeBtn" id="pinkThemeBtn">pink</button>
+        <button id="cyberThemeBtn" id="cyberThemeBtn">cyber-green</button>
+        <button id="defaultThemeBtn" class="defaultThemeBtn">default</button>
+      </div>
+      
+      <!--brightness range popup section -->
       <div class="brightness__popup" id="brightnessPopup">
         <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" id="sunIcon"/>
         <input
@@ -78,20 +97,6 @@
             value="100"
           />
         
-      </div>
-
-      <div class="nav__popup" id="navPopup">
-        <button id="themes"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Themes</button>
-        <button id="brightnessBtn"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Brightness</button>
-        <!-- <button id="defaultTheme">Themes</button> -->
-        <button>Resume</button>
-        <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
-      </div>
-
-      <div class="themes__popup" id="themesPopup">
-        <button class="pinkThemeBtn" id="pinkTheme">pink</button>
-        <button id="cyberThemeBtn" id="cyberThemeBtn">cyber-green</button>
-        <button id="defaultThemeBtn" class="defaultThemeBtn">default</button>
       </div>
 
       <!--Slide-in Msg Section-->
@@ -108,9 +113,11 @@
         </div>
       </div>
 
+
+
       <!--Desktop Left Section-->
 
-      <div class="desktop__left">
+      <div class="desktopLeft">
         <div class="computer">
           <button id="compBtn" class="comp__btn">
             <img
@@ -182,7 +189,7 @@
         </div>
         <div class="portfolio">
           <button class="portfolio__btn" id="portfolioBtn">
-            <img src="./assets/icons/icons8-portfolio-48.png" alt="" style="width: 55px;">
+            <img src="./assets/icons/icons8-portfolio-48.png" alt="" style="width: 55px;" id="portfolioTheme">
             <p>Portfolio</p>
           </button>
         </div>
@@ -190,7 +197,7 @@
 
       <!-- Modals Section-->
 
-      <!--My Commputer Modal Section-->
+      <!--My Computer Modal Section-->
 
       <div id="compModal" class="comp__modal">
         <div class="titleBar" id="compTitlebar">
@@ -265,7 +272,7 @@
             <button class="minBtn" id="projectMinBtn"></button>
             <p>/Projects</p>
           </div>
-          <ul class="projectFolders">
+          <ul class="project__folders">
             <li>
               <img src="/assets/icons/icons8-folder-40.png" alt="" />
               <p>FilmForecast</p>
@@ -343,9 +350,8 @@
           <button id="reset" class="reset">Reset</button>
         </div>
       </div>
-      <!-- </div> -->
 
-      <!--Terminal modal-->
+      <!--Terminal modal section-->
 
       <div class="terminal__modal" id="terminalModal">
         <div class="titleBar">
@@ -390,6 +396,7 @@
           alt=""
           style="width: 18px"
           title="Learn more"
+          id="questionTheme"
         />
       </button>
       <div class="learnMore__modal" id="learnMoreModal">
@@ -425,7 +432,7 @@
           </p>
         </div>
       </div>
-<!--TODO:create popup for brightness range -->
+
       <!--Taskbar Section-->
       <!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
       <div class="taskbar" id="taskbar">

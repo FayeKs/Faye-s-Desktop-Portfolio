@@ -377,7 +377,7 @@ function dragModal(modal) {
 
 // pink mode/default mode desktop theme function //
 
-const pinkThemeBtn = document.getElementById("pinkTheme");
+const pinkThemeBtn = document.getElementById("pinkThemeBtn");
 const defaultThemeBtn = document.getElementById("defaultThemeBtn");
 const cyberThemeBtn = document.getElementById("cyberThemeBtn");
 const body = document.body;
@@ -388,6 +388,9 @@ const githubTheme = document.getElementById("githubTheme");
 const profilePic = document.getElementById("profilePic");
 const tictactoeTheme = document.getElementById("tictactoeTheme");
 const terminalTheme = document.getElementById("terminalTheme");
+const portfolioTheme = document.getElementById("portfolioTheme");
+const batteryTheme = document.getElementById("batteryTheme");
+const questionTheme = document.getElementById("questionTheme");
 
 // defaultThemeBtn.style.display = "none";
 
@@ -402,8 +405,12 @@ function activatePinkTheme() {
   calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png";
   githubTheme.src = "/assets/icons/icons8-github-40.png";
   profilePic.src = "/assets/images/IMG_0393 (2).jpg";
-  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png"
-  terminalTheme.src = "/assets/icons/icons8-terminal-80.png"
+  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png";
+  terminalTheme.src = "/assets/icons/icons8-terminal-80.png";
+  portfolioTheme.src = "/assets/icons/icons8-portfolio-48 (2).png";
+  navArrow.src = "/assets/icons/icons8-arrow-down-24.png";
+  batteryTheme.src = "/assets/icons/icons8-battery-30.png";
+  questionTheme.src = "/assets/icons/icons8-question-mark-30.png";
 }
 
 function activateDefaultTheme() {
@@ -418,7 +425,11 @@ function activateDefaultTheme() {
   githubTheme.src = "/assets/icons/icons8-github-80.png";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
   profilePic.src = "/assets/images/IMG_0393 (2).jpg";
-  terminalTheme.src = "/assets/icons/icons8-console-40.png"
+  terminalTheme.src = "/assets/icons/icons8-console-40.png";
+  portfolioTheme.src = "/assets/icons/icons8-portfolio-48.png";
+  navArrow.src = "/assets/icons/icons8-arrow-down-24.png"
+  batteryTheme.src = "/assets/icons/icons8-battery-30.png";
+  questionTheme.src = "/assets/icons/icons8-question-mark-30.png";
 }
 
 function activateCyberTheme() {
@@ -431,6 +442,10 @@ function activateCyberTheme() {
   githubTheme.src = "/assets/icons/icons8-github-40 (1).png";
   tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (2).png";
   terminalTheme.src = "/assets/icons/icons8-terminal-40.png";
+  portfolioTheme.src = "/assets/icons/icons8-portfolio-48 (1).png";
+  navArrow.src = "/assets/icons/icons8-sort-down-24.png";
+  batteryTheme.src = "/assets/icons/icons8-battery-30 (1).png"
+  questionTheme.src = "/assets/icons/icons8-question-mark-30 (1).png"
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
