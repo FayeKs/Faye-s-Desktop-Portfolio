@@ -853,7 +853,10 @@ button {
 }
 
 /* Pink mode and Default mode styles */
-
+#cyberTheme {
+  border-color: #00ff26;
+  cursor: pointer;
+}
 #pinkTheme {
   border-color: pink;
   cursor: pointer;
@@ -920,6 +923,56 @@ button {
   color: purple;
 }
 
+
+/* cyber theme */
+.cyber-theme {
+  background-color: black;
+}
+
+.cyber-theme nav,
+.cyber-theme .titleBar,
+.cyber-theme .taskbar,
+.cyber-theme .nav__popup,
+.cyber-theme .learnMoreBtn,
+.cyber-theme .navTime,
+.cyber-theme .taskbar button,
+.cyber-theme{
+  background-color: black;
+  border-color: #00ff26;
+  color: #00ff26;
+}
+
+.cyber-theme .comp__modal,
+.cyber-theme .projects__modal,
+.cyber-theme .calculator__modal,
+.cyber-theme .terminal__modal,
+.cyber-theme .tictactoe__modal,
+.cyber-theme .learnMore__modal{
+  background-color: black;
+  box-shadow: none;
+  scrollbar-color: #00ff26 black;
+}
+
+.cyber-theme .closeBtn {
+  background-color: #00ff26;
+  border-color: black;
+}
+
+.cyber-theme .minBtn {
+  background-color: black;
+  border-color: #00ff26;
+}
+
+.cyber-theme .desktop__left img {
+  filter: none;
+  box-shadow: none;
+}
+.cyber-theme .desktop__left p, 
+.cyber-theme .terminal__modal li,
+.cyber-theme .terminal__modal p
+{
+  color: #00ff26;
+}
 
 .default-theme nav,
 .default-theme .titleBar,
