@@ -14,7 +14,7 @@
   </head>
   <body id="body">
     <!--Splash Screen/Sign in section-->
-    <div id="splashScreen" class="splashScreen">
+    <section id="splashScreen" class="splashScreen">
       <div class="signIn">
         <div class="signIn__welcome">
           <p>Welcome to Faye's Desktop Portfolio</p>
@@ -35,9 +35,9 @@
             readonly
           />
         </div>
-        <button id="startButton" class="btn">Sign In</button>
+        <button id="startButton" class="btn" aria-label="Start button">Sign In</button>
       </div>
-    </div>
+    </section>
 
 
     <!--TODO: mobile design/ media queries-->
@@ -47,48 +47,50 @@
 
       <!--Navbar Section-->
 
-      <header>
+      <section>
         <nav id="nav">
           <div class="nav__left">
             <div id="navTime" class="navTime"></div>
           </div>
           <ul class="nav__right">
-            <li id="cpuWidget"></li>
-            <li><img src="/assets/icons/icons8-battery-30.png" alt="" id="batteryTheme"/></li>
+            <li id="cpuWidget" aria-label="CPU status"></li>
+            <li><img src="/assets/icons/icons8-battery-30.png" alt="Battery Icon" id="batteryTheme"/></li>
             <li>
               <img
               src="/assets//icons/icons8-arrow-down-24.png"
-              alt=""
+              alt="Down Arrow"
               class="nav__arrow"
               id="navArrow"
               style="width: 20px"
+              aria-label="Open navbar menu"
               />
             </li>
           </ul>
         </nav>
-      </header>
+      </section>
       
-      <!--Navbar popup Section-->
+      <!--Navbar arrow down popup -->
       
       <div class="nav__popup" id="navPopup">
-        <button id="themes"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Themes</button>
-        <button id="brightnessBtn"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Brightness</button>
+        <button id="themes" aria-label="Open themes menu"><img src="./assets/icons/icons8-arrow-left-24.png" alt="" style="width: 12px;">Themes</button>
+        <button id="brightnessBtn" aria-label="Open brightness adjustment"><img src="./assets/icons/icons8-arrow-left-24.png" alt="Left Arrow" style="width: 12px;">Brightness</button>
         <button>Resume</button>
-        <button id="shutDownBtn" class="shutDownBtn">Shut Down</button>
+        <button id="shutDownBtn" class="shutDownBtn" aria-label="Shut Down">Shut Down</button>
       </div>
 
-      <!--themes popup section-->
+      <!--themes popup -->
       
       <div class="themes__popup" id="themesPopup">
-        <button class="pinkThemeBtn" id="pinkThemeBtn">pink</button>
-        <button id="cyberThemeBtn" id="cyberThemeBtn">cyber-green</button>
-        <button id="defaultThemeBtn" class="defaultThemeBtn">default</button>
+        <button class="pinkThemeBtn" id="pinkThemeBtn" aria-label="Pink theme" >pink</button>
+        <button id="cyberThemeBtn" id="cyberThemeBtn" aria-label="Cyber-green theme">cyber-green</button>
+        <button id="defaultThemeBtn" class="defaultThemeBtn" aria-label="Default theme">default</button>
       </div>
       
-      <!--brightness range popup section -->
+      <!--brightness range popup -->
       <div class="brightness__popup" id="brightnessPopup">
-        <img src="/assets/icons/icons8-sun-30.png" alt="" style="width: 20px" id="sunIcon"/>
+        <img src="/assets/icons/icons8-sun-30.png" alt="Sun Icon" style="width: 20px" id="sunIcon"/>
         <input
+        aria-label="Adjust Brightness"
         type="range"
         id="range"
             class="range"
@@ -99,14 +101,14 @@
         
       </div>
 
-      <!--Slide-in Msg Section-->
+      <!--Slide-in Msg-->
       <div class="slideIn" id="slideIn">
         <div class="slideIn__content">
           <p>
             Tip! Change the color theme
             <img
               src="/assets/icons/icons8-arrow-up-30.png"
-              alt=""
+              alt="Up Arrow"
               style="width: 15px"
             />
           </p>
@@ -117,12 +119,12 @@
 
       <!--Desktop Left Section-->
 
-      <div class="desktopLeft">
+      <section class="desktopLeft">
         <div class="computer">
-          <button id="compBtn" class="comp__btn">
+          <button id="compBtn" class="comp__btn" aria-label="Open My Computer">
             <img
               src="/assets/icons/icons8-old-computer-80 (3).png"
-              alt=""
+              alt="Computer Icon"
               id="myCompTheme"
             />
             <p>My Computer</p>
@@ -130,10 +132,10 @@
         </div>
 
         <div class="projects">
-          <button id="projectsBtn" class="projects__btn">
+          <button id="projectsBtn" class="projects__btn" aria-label="Open Projects Folder">
             <img
               src="/assets/icons/icons8-folder-40.png"
-              alt=""
+              alt="Project Folder Icon"
               id="projectsTheme"
             />
             <p>Projects</p>
@@ -141,10 +143,10 @@
         </div>
 
         <div class="calculator">
-          <button id="calcBtn" class="calc__btn">
+          <button id="calcBtn" class="calc__btn" aria-label="Open Calculator">
             <img
               src="/assets/icons/icons8-calculator-64.png"
-              alt=""
+              alt="Calculator Icon"
               id="calcTheme"
             />
             <p>Calculator</p>
@@ -159,7 +161,7 @@
           >
             <img
               src="/assets/icons/icons8-github-80.png"
-              alt=""
+              alt="Github Icon"
               id="githubTheme"
             />
             <p>Github</p>
@@ -167,10 +169,10 @@
         </div>
 
         <div class="tictactoe">
-          <button id="tictactoeBtn" class="tictactoe__btn">
+          <button id="tictactoeBtn" class="tictactoe__btn" aria-label="Play tic-tac-toe">
             <img
               src="/assets/icons/icons8-tic-tac-toe-53.png"
-              alt=""
+              alt="Tic-Tac-Toe Icon"
               id="tictactoeTheme"
             />
             <p>Tic-Tac-Toe</p>
@@ -178,43 +180,43 @@
         </div>
 
         <div class="terminal">
-          <button class="terminal__btn" id="terminalBtn">
+          <button class="terminal__btn" id="terminalBtn" aria-label="Open Terminal">
             <img
               src="/assets/icons/icons8-console-40.png"
-              alt=""
+              alt="Terminal Icon"
               id="terminalTheme"
             />
             <p>Terminal</p>
           </button>
         </div>
         <div class="portfolio">
-          <button class="portfolio__btn" id="portfolioBtn">
-            <img src="./assets/icons/icons8-portfolio-48.png" alt="" style="width: 55px;" id="portfolioTheme">
+          <button class="portfolio__btn" id="portfolioBtn" aria-label="Open Portfolio">
+            <img src="./assets/icons/icons8-portfolio-48.png" alt="Portfolio Icon" style="width: 55px;" id="portfolioTheme">
             <p>Portfolio</p>
           </button>
         </div>
-      </div>
+      </section>
 
       <!-- Modals Section-->
 
       <!--My Computer Modal Section-->
 
-      <div id="compModal" class="comp__modal">
+      <section id="compModal" class="comp__modal">
         <div class="titleBar" id="compTitlebar">
-          <button class="closeBtn" id="compCloseBtn"></button>
-          <button class="minBtn" id="minBtn"></button>
+          <button class="closeBtn" id="compCloseBtn" aria-label="Close My Computer"></button>
+          <button class="minBtn" id="minBtn" aria-label="Minimize My Computer"></button>
           <p>My Computer</p>
         </div>
         <div class="comp__content">
           <div class="comp__intro">
-            <img src="/assets/images/IMG_0393 (2).jpg" alt="" id="profilePic" />
+            <img src="/assets/images/IMG_0393 (2).jpg" alt="" aria-label="Profile Picture of Faye Sanders" id="profilePic" />
             <div class="comp__name">
               <p>Faye Sanders</p>
               <hr />
               <small
                 ><img
                   src="/assets/icons/icons8-location-pin-24.png"
-                  alt=""
+                  alt="Location Pin Icon"
                   style="width: 12px; border: none; margin: 0"
                 />Florida/NYC</small
               >
@@ -252,6 +254,7 @@
               <br />
               Ultimately, i aim to become the best developer i can be and to
               make a meaningful contribution to the tech industry.
+              to see more projects please got to projects folder on desktop
             </p>
           </div>
           <br />
@@ -261,39 +264,39 @@
           <li>Github</li>
           <li>Facebook</li>
         </div>
-      </div>
+      </section>
 
       <!--Projects Folder Modal Section-->
 
-      <div id="projectsModal" class="projects__modal">
+      <section id="projectsModal" class="projects__modal">
         <div class="projects__content">
           <div class="titleBar">
-            <button class="closeBtn" id="projectsCloseBtn"></button>
-            <button class="minBtn" id="projectMinBtn"></button>
+            <button class="closeBtn" id="projectsCloseBtn" aria-label="Close Projects Folder"></button>
+            <button class="minBtn" id="projectMinBtn" aria-label="Minimize Projects Folder"></button>
             <p>/Projects</p>
           </div>
           <ul class="project__folders">
             <li>
-              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <img src="/assets/icons/icons8-folder-40.png" alt="Folder Icon" />
               <p>FilmForecast</p>
             </li>
             <li>
-              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <img src="/assets/icons/icons8-folder-40.png" alt="Folder Icon" />
               <p>The Paradox Exchange</p>
             </li>
             <li>
-              <img src="/assets/icons/icons8-folder-40.png" alt="" />
+              <img src="/assets/icons/icons8-folder-40.png" alt="Folder Icon" />
               <p>E-Commerce Store</p>
             </li>
           </ul>
         </div>
-      </div>
+      </section>
 
       <!--Calculator Modal section-->
-      <div id="calculatorModal" class="calculator__modal">
+      <section id="calculatorModal" class="calculator__modal">
         <div class="titleBar">
-          <button class="closeBtn" id="calcCloseBtn"></button>
-          <button class="minBtn" id="calcMinBtn"></button>
+          <button class="closeBtn" id="calcCloseBtn" aria-label="Close Calculator"></button>
+          <button class="minBtn" id="calcMinBtn" aria-label="Minimize Calculator"></button>
           <p>Calculator</p>
         </div>
         <div class="calc__content">
@@ -321,14 +324,14 @@
           </div>
 
         </div>
-      </div>
+      </section>
 
       <!--Tic-Tac-Toe Game Modal Section-->
 
-      <div id="tictactoeModal" class="tictactoe__modal">
+      <section id="tictactoeModal" class="tictactoe__modal">
         <div class="titleBar">
-          <button class="closeBtn" id="tictactoeCloseBtn"></button>
-          <button class="minBtn" id="tictactoeMinBtn"></button>
+          <button class="closeBtn" id="tictactoeCloseBtn" aria-label="Close Tic-Tac-Toe"></button>
+          <button class="minBtn" id="tictactoeMinBtn" aria-label="Minimize Tic-Tac-Toe"></button>
           <p>Tic-Tac-Toe Game</p>
         </div>
         <div class="tictactoe__content">
@@ -349,14 +352,14 @@
           <div class="display annoncer hide"></div>
           <button id="reset" class="reset">Reset</button>
         </div>
-      </div>
+      </section>
 
       <!--Terminal modal section-->
 
-      <div class="terminal__modal" id="terminalModal">
+      <section class="terminal__modal" id="terminalModal">
         <div class="titleBar">
-          <button class="closeBtn" id="terminalCloseBtn"></button>
-          <button class="minBtn" id="terminalMinBtn"></button>
+          <button class="closeBtn" id="terminalCloseBtn" aria-label="Close Terminal"></button>
+          <button class="minBtn" id="terminalMinBtn" aria-label="Minimize Terminal"></button>
           <p>Terminal</p>
         </div>
         <div class="terminal-commands">
@@ -386,22 +389,22 @@
             autofocus
           />
         </div>
-      </div>
+      </section>
 
       <!-- Learn More Section-->
 
-      <button class="learnMoreBtn" id="learnMoreBtn">
+      <button class="learnMoreBtn" id="learnMoreBtn" aria-label="Open Learn More"> 
         <img
           src="/assets/icons/icons8-question-mark-30.png"
-          alt=""
+          alt="Learn More Icon"
           style="width: 18px"
           title="Learn more"
           id="questionTheme"
         />
       </button>
-      <div class="learnMore__modal" id="learnMoreModal">
+      <section class="learnMore__modal" id="learnMoreModal">
         <div class="titleBar">
-          <button class="closeBtn" id="learnMoreCloseBtn"></button>
+          <button class="closeBtn" id="learnMoreCloseBtn" aria-label="Close Learn More"></button>
           <p>Learn More</p>
         </div>
         <div class="learnMore__content">
@@ -431,11 +434,11 @@
             email <b>@fk44pm@gmail.com</b>.
           </p>
         </div>
-      </div>
+      </section>
 
       <!--Taskbar Section-->
       <!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
-      <div class="taskbar" id="taskbar">
+      <section class="taskbar" id="taskbar">
         <button id="compTaskbar" class="comp__taskbar">
           <p>My Computer</p>
         </button>
@@ -455,11 +458,11 @@
         <button class="terminal__taskbar" id="terminalTaskbar">
           <p>Terminal</p>
         </button>
-      </div>
+      </section>
     </main>
     <!--Shut Down Section-->
     <div id="shutDownScreen" class="shutDownScreen">
-      <button id="rebootBtn">Reboot</button>
+      <button id="rebootBtn" aria-label="Reboot button">Reboot</button>
     </div>
 
     <script src="/main.js"></script>

@@ -14,7 +14,7 @@ const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("pwd");
 
 const usernameText = "FayeS";
-const passwordText = "******";
+const passwordText = "****";
 
 let usernameIndex= 0;
 let passwordIndex = 0;
