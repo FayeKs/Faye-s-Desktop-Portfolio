@@ -400,17 +400,17 @@ function activatePinkTheme() {
   body.classList.add("pink-theme");
   body.classList.remove("default-theme");
   body.classList.remove("cyber-theme");
-  myCompTheme.src = "/assets/icons/icons8-old-computer-80 (2).png";
-  projectsTheme.src = "/assets/icons/icons8-folder-40 (1).png";
-  calcTheme.src = "/assets/icons/icons8-calculator-64 (1).png";
-  githubTheme.src = "/assets/icons/icons8-github-40.png";
-  profilePic.src = "/assets/images/IMG_0393 (2).jpg";
-  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (1).png";
-  terminalTheme.src = "/assets/icons/icons8-terminal-80.png";
-  portfolioTheme.src = "/assets/icons/icons8-portfolio-48 (2).png";
-  navArrow.src = "/assets/icons/icons8-arrow-down-24.png";
-  batteryTheme.src = "/assets/icons/icons8-battery-30.png";
-  questionTheme.src = "/assets/icons/icons8-question-mark-30.png";
+  myCompTheme.src = "assets/icons/icons8-old-computer-80 (2).png";
+  projectsTheme.src = "assets/icons/icons8-folder-40 (1).png";
+  calcTheme.src = "assets/icons/icons8-calculator-64 (1).png";
+  githubTheme.src = "assets/icons/icons8-github-40.png";
+  profilePic.src = "assets/images/IMG_0393 (2).jpg";
+  tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53 (1).png";
+  terminalTheme.src = "assets/icons/icons8-terminal-80.png";
+  portfolioTheme.src = "assets/icons/icons8-portfolio-48 (2).png";
+  navArrow.src = "assets/icons/icons8-arrow-down-24.png";
+  batteryTheme.src = "assets/icons/icons8-battery-30.png";
+  questionTheme.src = "assets/icons/icons8-question-mark-30.png";
 }
 
 function activateDefaultTheme() {
@@ -419,33 +419,33 @@ function activateDefaultTheme() {
   body.classList.add("default-theme");
   body.classList.remove("pink-theme");
   body.classList.remove("cyber-theme");
-  myCompTheme.src = "/assets/icons//icons8-old-computer-80 (3).png";
-  projectsTheme.src = "/assets/icons/icons8-folder-40.png";
-  calcTheme.src = "/assets/icons/icons8-calculator-64.png";
-  githubTheme.src = "/assets/icons/icons8-github-80.png";
-  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53.png";
-  profilePic.src = "/assets/images/IMG_0393 (2).jpg";
-  terminalTheme.src = "/assets/icons/icons8-console-40.png";
-  portfolioTheme.src = "/assets/icons/icons8-portfolio-48.png";
-  navArrow.src = "/assets/icons/icons8-arrow-down-24.png"
-  batteryTheme.src = "/assets/icons/icons8-battery-30.png";
-  questionTheme.src = "/assets/icons/icons8-question-mark-30.png";
+  myCompTheme.src = "assets/icons//icons8-old-computer-80 (3).png";
+  projectsTheme.src = "assets/icons/icons8-folder-40.png";
+  calcTheme.src = "assets/icons/icons8-calculator-64.png";
+  githubTheme.src = "assets/icons/icons8-github-80.png";
+  tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53.png";
+  profilePic.src = "assets/images/IMG_0393 (2).jpg";
+  terminalTheme.src = "assets/icons/icons8-console-40.png";
+  portfolioTheme.src = "assets/icons/icons8-portfolio-48.png";
+  navArrow.src = "assets/icons/icons8-arrow-down-24.png"
+  batteryTheme.src = "assets/icons/icons8-battery-30.png";
+  questionTheme.src = "assets/icons/icons8-question-mark-30.png";
 }
 
 function activateCyberTheme() {
   body.classList.add("cyber-theme");
   body.classList.remove("pink-theme");
   body.classList.remove("default-theme");
-  myCompTheme.src = "/assets/icons/icons8-old-computer-40.png";
-  projectsTheme.src = "/assets/icons/icons8-folder-40 (2).png";
-  calcTheme.src = "/assets/icons/icons8-calculator-64 (2).png";
-  githubTheme.src = "/assets/icons/icons8-github-40 (1).png";
-  tictactoeTheme.src = "/assets/icons/icons8-tic-tac-toe-53 (2).png";
-  terminalTheme.src = "/assets/icons/icons8-terminal-40.png";
-  portfolioTheme.src = "/assets/icons/icons8-portfolio-48 (1).png";
-  navArrow.src = "/assets/icons/icons8-sort-down-24.png";
-  batteryTheme.src = "/assets/icons/icons8-battery-30 (1).png"
-  questionTheme.src = "/assets/icons/icons8-question-mark-30 (1).png"
+  myCompTheme.src = "assets/icons/icons8-old-computer-40.png";
+  projectsTheme.src = "assets/icons/icons8-folder-40 (2).png";
+  calcTheme.src = "assets/icons/icons8-calculator-64 (2).png";
+  githubTheme.src = "assets/icons/icons8-github-40 (1).png";
+  tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53 (2).png";
+  terminalTheme.src = "assets/icons/icons8-terminal-40.png";
+  portfolioTheme.src = "assets/icons/icons8-portfolio-48 (1).png";
+  navArrow.src = "assets/icons/icons8-sort-down-24.png";
+  batteryTheme.src = "assets/icons/icons8-battery-30 (1).png"
+  questionTheme.src = "assets/icons/icons8-question-mark-30 (1).png"
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
