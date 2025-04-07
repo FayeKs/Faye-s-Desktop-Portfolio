@@ -86,7 +86,7 @@ const slideIn = document.getElementById("slideIn")
     slideIn.style.right = "-300px";
     setTimeout(() => {
       slideIn.style.display = "none"
-    }, 500) // wait for the slide-out animation to finsish
+    }, 300) // wait for the slide-out animation to finsish
   }
   
  
@@ -102,7 +102,7 @@ startBtn.onclick = () => {
   
   setTimeout(() => {
     slideOutModal();
-  }, 8000) // modal stays open for a few seconds before sliding out
+  }, 6000) // modal stays open for a few seconds before sliding out
 }
 
 
