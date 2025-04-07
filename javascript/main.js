@@ -400,6 +400,7 @@ function activatePinkTheme() {
   body.classList.add("pink-theme");
   body.classList.remove("default-theme");
   body.classList.remove("cyber-theme");
+  body.style.backgroundImage = "url(assets/images/kawaii.png)";
   myCompTheme.src = "assets/icons/icons8-old-computer-80 (2).png";
   projectsTheme.src = "assets/icons/icons8-folder-40 (1).png";
   calcTheme.src = "assets/icons/icons8-calculator-64 (1).png";
