@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,6 +41,9 @@
 
 
     <!--TODO: mobile design/ media queries-->
+    <!--TODO: add calcultaor functions-->
+    <!--TODO:Add terminal command functions-->
+    <!--TODO: add portfolio nad project links-->
 
     <main class="desktop" id="desktop">
 
@@ -53,8 +56,8 @@
             <div id="navTime" class="navTime"></div>
           </div>
           <ul class="nav__right">
-            <li id="cpuWidget" aria-label="CPU status"></li>
-            <li><img src="/assets/icons/icons8-battery-30.png" alt="Battery Icon" id="batteryTheme"/></li>
+            <li id="cpuWidget" aria-label="CPU status" ></li>
+            <li><img src="/assets/icons/icons8-battery-30.png" alt="Battery Icon" id="batteryTheme" title="Battery at 46%" /></li>
             <li>
               <img
               src="/assets//icons/icons8-arrow-down-24.png"
@@ -300,26 +303,26 @@
           <p>Calculator</p>
         </div>
         <div class="calc__content">
-          <input type="text">
+          <input type="text" id="calcInput">
           <div class="calc__keys">
             <button type="button" class="operations">C</button>
             <button type="button" class="operations">E</button>
             <button type="button" class="operations">=</button>
             <button type="button" class="operations">*</button>
-            <button type="button">7</button>
-            <button type="button">8</button>
-            <button type="button">9</button>
+            <button type="button" class="numbers">7</button>
+            <button type="button" class="numbers">8</button>
+            <button type="button" class="numbers">9</button>
             <button type="button" class="operations">/</button>
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">6</button>
+            <button type="button" class="numbers">4</button>
+            <button type="button" class="numbers">5</button>
+            <button type="button" class="numberes">6</button>
             <button type="button" class="operations">-</button>
-            <button type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
+            <button type="button" class="numbers">1</button>
+            <button type="button" class="numbers">2</button>
+            <button type="button" class="numbers">3</button>
             <button type="button" class="operations plusBtn">+</button>
-            <button type="button" class="zeroBtn">0</button>
-            <button type="button" class="operations">.</button>
+            <button type="button" class="zeroBtn numbers">0</button>
+            <button type="button" class="operations numbers">.</button>
 
           </div>
 
@@ -370,7 +373,7 @@
             <li>echo</li>
             <li>pink</li>
             <li>default</li>
-            <li>fortune</li>
+            <li>cybergreen</li>
             <li>projects</li>
             <li>skills</li>
             <li>rmrf</li>
@@ -439,23 +442,23 @@
       <!--Taskbar Section-->
       <!--TODO: responsive design for  multiple taskbars open on mobile (positioning)-->
       <section class="taskbar" id="taskbar">
-        <button id="compTaskbar" class="comp__taskbar">
+        <button id="compTaskbar" class="comp__taskbar" aria-label="Open My Computer">
           <p>My Computer</p>
         </button>
 
-        <button id="projectsTaskbar" class="projects__taskbar">
+        <button id="projectsTaskbar" class="projects__taskbar" aria-label="Open Projects folder">
           <p>Projects</p>
         </button>
 
-        <button id="calculatorTaskbar" class="calculator__taskbar">
+        <button id="calculatorTaskbar" class="calculator__taskbar" aria-label="Open Calculator">
           <p>Calculator</p>
         </button>
 
-        <button class="tictactoe__taskbar" id="tictactoeTaskbar">
+        <button class="tictactoe__taskbar" id="tictactoeTaskbar" aria-label="Open Tic-Tac-Toe">
           <p>Tic-Tac-Toe</p>
         </button>
 
-        <button class="terminal__taskbar" id="terminalTaskbar">
+        <button class="terminal__taskbar" id="terminalTaskbar" aria-label="Open Terminal">
           <p>Terminal</p>
         </button>
       </section>

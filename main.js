@@ -470,6 +470,44 @@ document.getElementById("rebootBtn").addEventListener('click', function(){
 })
   
 
+// Calculator function 
+const calcInput = document.getElementById("calcInput");
+
+document.querySelectorAll(".numbers").forEach(function (item){
+  item.addEventListener("click", function (e) {
+    if (isNaN(calcInput.innerText) || calcInput.innerText === "0") {
+      calcInput.innerText = "";
+    }
+    calcInput.innerText += e.target.innerHTML.trim();
+  })
+})
+
+document.querySelectorAll(".operations").forEach(function (item) {
+  item.addEventListener("click", function (e) {
+    let lastValue = calcInput.innerText.slice(-1);
+    if (e.target.innerHTML === "=") {
+      if (!isNaN(lastValue)) {
+        try {
+          calcInput.innerText = eval(calcInput.innerText);
+        } catch (err) {
+          calcInput.innerText = "Error"
+        }
+      }
+    } else if (e.target.innerHTML === "C") {
+      calcInput.innerText = "0";
+    } else if (e.target.innerHTML === "DEL") {
+      calcInput.innerText = calcInput.innerText.slice(0, -1);
+      if (calcInput.innerText.length === 0) {
+        calcInput.innerText = "0";
+      }
+    } else {
+      if (!isNaN(lastValue)) {
+        calcInput.innerText += e.target.innerHTML;
+      }
+    }
+  })
+})
+
 
 
 
@@ -632,6 +670,8 @@ document.addEventListener("DOMContentLoaded", function() {
       activatePinkTheme();
     } else if (command === "default"){
       activateDefaultTheme();
+    } else if (command === "cybergreen"){
+      activateCyberTheme();
     }
     else {
       output = `command not found: ${command}.`;
@@ -648,3 +688,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+const portfolioBtn = document.getElementById("portfolioBtn");
+
+portfolioBtn.onclick = () => {
+  alert("Sorry! Main portfolio is under maintainence")
+}
