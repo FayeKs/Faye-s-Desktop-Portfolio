@@ -86,7 +86,7 @@ const slideIn = document.getElementById("slideIn")
     slideIn.style.right = "-300px";
     setTimeout(() => {
       slideIn.style.display = "none"
-    }, 300) // wait for the slide-out animation to finsish
+    }, 500) // wait for the slide-out animation to finsish
   }
   
  
