@@ -102,7 +102,7 @@ startBtn.onclick = () => {
   
   setTimeout(() => {
     slideOutModal();
-  }, 15000) // modal stays open for a few seconds before sliding out
+  }, 8000) // modal stays open for a few seconds before sliding out
 }
 
 
