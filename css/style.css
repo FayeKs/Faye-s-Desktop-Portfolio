@@ -875,8 +875,9 @@ button {
 }
 
 .pink-theme {
-  /* background: url("assets/images/kawaii.png"); */
-}
+   background-color: #FFE5F6;
+  }
+  
 
 .pink-theme nav,
 .pink-theme .titleBar,
