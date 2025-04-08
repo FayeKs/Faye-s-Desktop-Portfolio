@@ -20,11 +20,6 @@ Faye's Desktop Portfolio is an interactive, desktop environment-styled portfolio
 * Calculator: A simple calculator app available on the desktop.
 * Shutdown/Reboot Buttons: Fun buttons to simulate shutting down or rebooting the desktop.
 
-  
-# Faye's Desktop Portfolio
-
-Faye's Desktop Portfolio is an interactive, desktop environment-styled portfolio designed to showcase my work in a fun and dynamic way. It includes various desktop features like modals, draggable windows, a tic-tac-toe game, taskbars, widgets, and more.
-
 
 ## Technology used
 
