@@ -9,8 +9,8 @@ Faye's Desktop Portfolio is an interactive, desktop environment-styled portfolio
 
 * Modal Windows & Popups: Interactive windows that pop up when clicked.
 * Draggable Windows: Move around windows on the desktop environment.
-* About Me Section: A personal introduction and details about the creator.
-* Projects Folder: Displays your key projects and showcases.
+* About Me Section: A personal introduction and details Faye.
+* Projects Folder: Displays Faye's projects and showcases.
 * Tic-Tac-Toe Game: A classic game embedded within the desktop.
 * Taskbars: Mimics a typical desktop environment with a taskbar.
 * Current Time: Real-time clock on the desktop.
@@ -39,7 +39,7 @@ Simply open the project in a web browser to interact with the desktop portfolio.
 
 - Inspired by desktop interfaces and custom widgets.
 
-- Thanks to the open-source community for the tools and libraries that made this project possible.
+- Thank you to the open-source community for the tools and libraries that made this project possible.
 
 
 
