@@ -116,6 +116,8 @@ brightnessPopup.style.display = "none";
 brightnessBtn.addEventListener("mouseover", () => brightnessPopup.style.display = "block")
 brightnessPopup.addEventListener("mouseover", () => brightnessPopup.style.display = "block");
 brightnessPopup.addEventListener("mouseout", () => brightnessPopup.style.display = "none");
+brightnessBtn.addEventListener('mouseout', () => brightnessPopup.style.display = "none")
+brightnessPopup.addEventListener('mouseover', () => navPopup.style.display = "block")
 // sunIcon.addEventListener("mouseout",() => brightnessPopup.style.display = "none")
 
 brightnessBtn.addEventListener("click", () => {
@@ -156,6 +158,8 @@ desktop.addEventListener("click", function() {
 
 const themes = document.getElementById("themes")
 const themesPopup = document.getElementById("themesPopup");
+
+themesPopup.style.display = "none";
 
 themes.addEventListener("mouseover", () => themesPopup.style.display = "block");
 themesPopup.addEventListener("mouseover", () => navPopup.style.display = "block")

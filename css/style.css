@@ -249,14 +249,13 @@ nav {
   position: absolute;
   top: 40px;
   right: 115px;
-  z-index: 1500;
+  z-index: 9999;
   border: 1px solid;
   outline: none;
   width: 100px;
-  
 }
 
-.pinkThemeBtn, .defaultThemeBtn {
+.pinkThemeBtn, .defaultThemeBtn, .cyberThemeBtn {
   width: 100%;
   font-size: 14px;
   border: 1px solid;
@@ -304,7 +303,7 @@ nav {
   border-width: 1px;
   z-index: 1000;
   padding: 5px;
-  transition: right 0.5s ease-in-out; /* slide effect */
+  transition: right 0.7s ease-in-out; /* slide effect */
   color: var(--primary-clr);
 }
 
