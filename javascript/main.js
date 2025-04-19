@@ -476,6 +476,7 @@ document.getElementById("rebootBtn").addEventListener('click', function(){
 
 
 
+// Calculator functions
 
 function dis(val) {
   document.getElementById("result").value += val
