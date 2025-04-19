@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -213,7 +214,7 @@
         </div>
         <div class="comp__content">
           <div class="comp__intro">
-            <img src="assets/images/IMG_0393 (2).jpg" alt="" aria-label="Profile Picture of Faye Sanders" id="profilePic" />
+            <img src="assets/images/IMG_0645.JPG" alt="" aria-label="Profile Picture of Faye Sanders" id="profilePic" />
             <div class="comp__name">
               <p>Faye Sanders</p>
               <hr />
@@ -301,31 +302,34 @@
           <button class="minBtn" id="calcMinBtn" aria-label="Minimize Calculator"></button>
           <p>Calculator</p>
         </div>
-        <div class="calc__content">
-          <input type="text" id="calcInput">
-          <div class="calc__keys">
-            <button type="button" class="operations">C</button>
-            <button type="button" class="operations">E</button>
-            <button type="button" class="operations">=</button>
-            <button type="button" class="operations">*</button>
-            <button type="button" class="numbers">7</button>
-            <button type="button" class="numbers">8</button>
-            <button type="button" class="numbers">9</button>
-            <button type="button" class="operations">/</button>
-            <button type="button" class="numbers">4</button>
-            <button type="button" class="numbers">5</button>
-            <button type="button" class="numberes">6</button>
-            <button type="button" class="operations">-</button>
-            <button type="button" class="numbers">1</button>
-            <button type="button" class="numbers">2</button>
-            <button type="button" class="numbers">3</button>
-            <button type="button" class="operations plusBtn">+</button>
-            <button type="button" class="zeroBtn numbers">0</button>
-            <button type="button" class="operations numbers">.</button>
-
+        <div id="calcu"> 
+          <div class="calc__display">
+              <input type="text" name="display" id="result">
           </div>
-
-        </div>
+  
+          <div class="calc__keys" >
+            
+                <input type="button" value="C" class="topCalc" onclick="clr()">
+                <input type="button" value="CE" class="topCalc">
+                <input type="button" value="+" class="leftCalc" onclick="dis('+')" onkeydown="myFunction(event)">
+                <input type="button" value="*"class="leftCalc" onclick="dis('*')" onkeydown="myFunction(event)">
+                <input type="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)" >
+                <input type="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)">
+                <input type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)">
+                <input type="button" value="/" class="leftCalc" onclick="dis('/')" onkeydown="myFunction(event)" >
+                <input type="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)">
+                <input type="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)">
+                <input type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)">
+                <input type="button" value="-"class="leftCalc" onclick="dis('-')"onkeydown="myFunction(event)" >
+                  <input type="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)">
+                  <input type="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)">
+                  <input type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)">
+                  <input type="button" value=" = "class="leftCalc equalBtn" onclick="solve()">
+                  <input type="button" value="0" class="zeroBtn" onclick="dis('0')" onkeydown="myFunction(event)">
+                  <input type="button" value="." onclick="dis('.')" onkeydown="myFunction(event)">
+              
+          </div> 
+        </div>  
       </section>
 
       <!--Tic-Tac-Toe Game Modal Section-->

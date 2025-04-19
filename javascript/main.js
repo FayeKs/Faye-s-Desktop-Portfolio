@@ -474,46 +474,58 @@ document.getElementById("rebootBtn").addEventListener('click', function(){
 })
   
 
-// Calculator function 
-const calcInput = document.getElementById("calcInput");
-
-document.querySelectorAll(".numbers").forEach(function (item){
-  item.addEventListener("click", function (e) {
-    if (isNaN(calcInput.innerText) || calcInput.innerText === "0") {
-      calcInput.innerText = "";
-    }
-    calcInput.innerText += e.target.innerHTML.trim();
-  })
-})
-
-document.querySelectorAll(".operations").forEach(function (item) {
-  item.addEventListener("click", function (e) {
-    let lastValue = calcInput.innerText.slice(-1);
-    if (e.target.innerHTML === "=") {
-      if (!isNaN(lastValue)) {
-        try {
-          calcInput.innerText = eval(calcInput.innerText);
-        } catch (err) {
-          calcInput.innerText = "Error"
-        }
-      }
-    } else if (e.target.innerHTML === "C") {
-      calcInput.innerText = "0";
-    } else if (e.target.innerHTML === "DEL") {
-      calcInput.innerText = calcInput.innerText.slice(0, -1);
-      if (calcInput.innerText.length === 0) {
-        calcInput.innerText = "0";
-      }
-    } else {
-      if (!isNaN(lastValue)) {
-        calcInput.innerText += e.target.innerHTML;
-      }
-    }
-  })
-})
 
 
 
+function dis(val) {
+  document.getElementById("result").value += val
+}
+
+function myFunction(event) {
+  if (event.key == '0' || event.key == '1'
+      || event.key == '2' || event.key == '3'
+      || event.key == '4' || event.key == '5'
+      || event.key == '6' || event.key == '7'
+      || event.key == '8' || event.key == '9'
+      || event.key == '+' || event.key == '-'
+      || event.key == '*' || event.key == '/'
+      || event.key == '%')
+      document.getElementById("result").value += event.key;
+}
+const cal = document.getElementById("calcu");
+
+cal.onkeydown= myFunction;
+cal.onkeyup = function (event) {
+  if (event.keyCode === 13) {
+      console.log("Enter");
+      let x = document.getElementById("result").value;
+      console.log(x);
+      solve();
+  }
+}
+
+// function that evaluates the digit and return result(added math.js library)
+
+function solve() {
+let x = document.getElementById("result").value
+let y = math.evaluate(x)
+document.getElementById("result").value = y
+}
+
+//function that clears the display
+
+function clr() {
+  document.getElementById("result").value = ""
+}
+
+// function that handles the backspace
+
+function backspace() {
+  let currentValue = document.getElementById("result").value;
+  let newValue = currentValue.slice(0, -1);
+
+  document.getElementById("result").value = newValue;
+}
 
 
 
