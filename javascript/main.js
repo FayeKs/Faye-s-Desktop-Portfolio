@@ -51,7 +51,7 @@ document.getElementById("navTime").textContent = `${currenTime}`;
 //CPU usage widget function //
 
 function updateCPUUsage() {
-  const cpuUsage = (Math.random() * (6 - 0) + 0).toFixed(1); //  radnom number between 5% and 10%//
+  const cpuUsage = (Math.random() * (6 - 0) + 0).toFixed(1); //  radnom number between 0% and 6%//
   document.getElementById("cpuWidget").textContent = `CPU: ${cpuUsage}%`;
 }
 
@@ -360,15 +360,6 @@ function dragModal(modal) {
 
 
 
-// //project under maintenence alert function //
-// const projectButtons = document.querySelectorAll(".project");
-
-// projectButtons.forEach(function (button) {
-//   button.addEventListener("click", function () {
-//     alert("Sorry! This project is under maintenence.");
-//   });
-// });
-
 
 
 
@@ -408,7 +399,7 @@ function activatePinkTheme() {
   projectsTheme.src = "assets/icons/icons8-folder-40 (1).png";
   calcTheme.src = "assets/icons/icons8-calculator-64 (1).png";
   githubTheme.src = "assets/icons/icons8-github-40.png";
-  profilePic.src = "assets/images/IMG_0393 (2).jpg";
+  profilePic.src = "assets/images/IMG_0645.JPG";
   tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53 (1).png";
   terminalTheme.src = "assets/icons/icons8-terminal-80.png";
   portfolioTheme.src = "assets/icons/icons8-portfolio-48 (2).png";
@@ -428,7 +419,7 @@ function activateDefaultTheme() {
   calcTheme.src = "assets/icons/icons8-calculator-64.png";
   githubTheme.src = "assets/icons/icons8-github-80.png";
   tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53.png";
-  profilePic.src = "assets/images/IMG_0393 (2).jpg";
+  profilePic.src = "assets/images/IMG_0645.JPG";
   terminalTheme.src = "assets/icons/icons8-console-40.png";
   portfolioTheme.src = "assets/icons/icons8-portfolio-48.png";
   navArrow.src = "assets/icons/icons8-arrow-down-24.png"
