@@ -478,6 +478,7 @@ nav {
   font-size: 12px;
   height: auto;
   text-align: left;
+  padding: 15px;
 }
 .comp__name hr {
   width: 50px;
@@ -526,7 +527,7 @@ nav {
 .comp__aboutme {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
 }
 
 
