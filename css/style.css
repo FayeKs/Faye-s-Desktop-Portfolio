@@ -349,6 +349,8 @@ nav {
   margin: 7px;
   text-align: center;
   font-size: 9px;
+  text-decoration: none;
+  color: black;
 }
 
 .computer,
@@ -502,7 +504,9 @@ nav {
   justify-content: center;
   flex-direction: column;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 25px;
+  text-align: center;
+  padding: 15px 7px;
 }
 
 .comp__skills ul{
