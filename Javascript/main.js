@@ -697,8 +697,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-const portfolioBtn = document.getElementById("portfolioBtn");
+const notepadBtn = document.getElementById("notepadBtn");
 
-portfolioBtn.onclick = () => {
-  alert("Sorry! Main portfolio is under maintainence")
+notepadBtn.onclick = () => {
+  alert("Sorry! Notepad is under maintenence.")
 }

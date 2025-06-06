@@ -365,7 +365,8 @@ nav {
 .github,
 .tictactoe,
 .terminal,
-.portfolio {
+.portfolio,
+.notepad {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -862,7 +863,9 @@ nav {
 .tictactoe__btn,
 .shutDownBtn,
 .terminal__btn,
-.portfolio__btn{
+.portfolio__btn,
+.reboot__btn,
+.notepad__btn{
   cursor: pointer;
 }
 .closeBtn {
@@ -883,7 +886,8 @@ nav {
 .github__btn,
 .tictactoe__btn,
 .terminal__btn,
-.portfolio__btn {
+.portfolio__btn,
+.notepad__btn {
   display: flex;
   flex-direction: column;
   align-items: center;
