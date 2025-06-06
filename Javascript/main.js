@@ -582,7 +582,7 @@ function playerMove(index) {
       }, 1000)
       setTimeout(() => {
         compuerMove();
-      }, 3000); // 3 second delay before computer's move
+      }, 2000); // 2 second delay before computer's move
     }
   }
 }
