@@ -437,7 +437,7 @@ function activateDefaultTheme() {
   navArrow.src = "assets/icons/icons8-arrow-down-24.png"
   batteryTheme.src = "assets/icons/icons8-battery-30.png";
   questionTheme.src = "assets/icons/icons8-question-mark-30.png";
-  notepadTheme.src = "/assets/icons/icons8-notepad-48.png"
+  notepadTheme.src = "assets/icons/icons8-notepad-48.png"
 }
 
 function activateCyberTheme() {
@@ -454,7 +454,7 @@ function activateCyberTheme() {
   navArrow.src = "assets/icons/icons8-sort-down-24.png";
   batteryTheme.src = "assets/icons/icons8-battery-30 (1).png"
   questionTheme.src = "assets/icons/icons8-question-mark-30 (1).png"
-  notepadTheme.src = "/assets/icons/icons8-notepad-48 (2).png";
+  notepadTheme.src = "assets/icons/icons8-notepad-48 (2).png";
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
