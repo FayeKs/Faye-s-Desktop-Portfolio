@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+/* TODO: change px to rem, em */
 
 :root {
   /* --primary-clr:rgba(198, 156, 247, 0.995); */
@@ -211,6 +212,11 @@ nav {
   border: none;
   padding: 0px 5px;
   text-align: right;
+}
+
+.nav__popup a {
+  text-decoration: none;
+  color: black;
 }
 
 .nav__popup button img {
@@ -981,6 +987,8 @@ button {
 .cyber-theme .titleBar,
 .cyber-theme .taskbar,
 .cyber-theme .nav__popup,
+.cyber-theme .nav__popup button,
+.cyber-theme .nav__popup a,
 .cyber-theme .learnMoreBtn,
 .cyber-theme .navTime,
 .cyber-theme .taskbar button,

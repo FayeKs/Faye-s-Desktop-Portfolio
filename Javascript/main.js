@@ -672,7 +672,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (command === "clear") {
       terminalOutput.innerHTML = "";
       return;
-    } else if (command === "reboot"){ 
+    } else if (command === "reboot") { 
       location.reload();
     } else if (command === "pink"){
       activatePinkTheme();
