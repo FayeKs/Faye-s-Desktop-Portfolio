@@ -1,4 +1,4 @@
-// Splash screen and desktop functions
+// Splash screen and desktop functions //
 
 const splashScreen = document.getElementById("splashScreen");
 const desktop = document.getElementById("desktop");
@@ -175,7 +175,8 @@ const modals = {
   tictactoeModal: document.getElementById("tictactoeModal"),
   learnMoreModal: document.getElementById("learnMoreModal"),
   terminalModal: document.getElementById("terminalModal"),
-  calculatorModal: document.getElementById("calculatorModal")
+  calculatorModal: document.getElementById("calculatorModal"),
+  notepadModal: document.getElementById("notepadModal")
 };
 
 
@@ -204,7 +205,11 @@ const buttons = {
   terminalMinBtn: document.getElementById("terminalMinBtn"),
   calcBtn: document.getElementById("calcBtn"),
   calcCloseBtn: document.getElementById("calcCloseBtn"),
-  calcMinBtn: document.getElementById("calcMinBtn")
+  calcMinBtn: document.getElementById("calcMinBtn"),
+  notepadBtn: document.getElementById("notepadBtn"),
+  notepadCloseBtn: document.getElementById("notepadCloseBtn"),
+  notepadMinBtn: document.getElementById("notepadMinBtn")
+
 }
 
 
@@ -232,7 +237,7 @@ function minimizeModal(modal){
 
 // Utility function to set z-index for active modal
 function setZIndex(activeModal){
-  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal, terminalModal, calculatorModal];
+  const modals = [compModal, projectsModal, tictactoeModal, learnMoreModal, terminalModal, calculatorModal, notepadModal];
   modals.forEach(modal => modal.style.zIndex = modal === activeModal ? 9999 : 1);
 }
 
@@ -269,7 +274,12 @@ buttons.calcBtn.onclick = () => {
   dragModal(modals.calculatorModal);
 
 }
-
+buttons.notepadBtn.onclick = () => {
+  alert("Notepad is currently under maintenance")
+  openModal(modals.notepadModal);
+  dragModal(modals.notepadModal);
+  
+}
 // Close Modals
 
 buttons.compCloseBtn.onclick = () => closeModal(modals.compModal, taskbars.compTaskbar);
@@ -278,7 +288,7 @@ buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, task
 buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal);
 buttons.terminalCloseBtn.onclick = () => closeModal(modals.terminalModal, taskbars.terminalTaskbar);
 buttons.calcCloseBtn.onclick = () => closeModal(modals.calculatorModal, taskbars.calculatorTaskbar);
-
+buttons.notepadCloseBtn.onclick = () => closeModal(modals.notepadModal)
 
 // Minimize modals
 
@@ -287,7 +297,7 @@ buttons.projectsMinBtn.onclick = () => minimizeModal(modals.projectsModal);
 buttons.tictactoeMinBtn.onclick = () => minimizeModal(modals.tictactoeModal);
 buttons.terminalMinBtn.onclick = () => minimizeModal(modals.terminalModal);
 buttons.calcMinBtn.onclick = () => minimizeModal(modals.calculatorModal);
-
+buttons.notepadMinBtn.onclick = () => minimizeModal(modals.notepadModal);
 // Click on taskbar to open modal
 
 
@@ -386,6 +396,7 @@ const terminalTheme = document.getElementById("terminalTheme");
 const portfolioTheme = document.getElementById("portfolioTheme");
 const batteryTheme = document.getElementById("batteryTheme");
 const questionTheme = document.getElementById("questionTheme");
+const notepadTheme = document.getElementById("notepadTheme");
 
 // defaultThemeBtn.style.display = "none";
 
@@ -402,10 +413,11 @@ function activatePinkTheme() {
   profilePic.src = "assets/images/IMG_0645.JPG";
   tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53 (1).png";
   terminalTheme.src = "assets/icons/icons8-terminal-80.png";
-  portfolioTheme.src = "assets/icons/icons8-portfolio-48 (2).png";
+  // portfolioTheme.src = "assets/icons/icons8-portfolio-48 (2).png";
   navArrow.src = "assets/icons/icons8-arrow-down-24.png";
   batteryTheme.src = "assets/icons/icons8-battery-30.png";
   questionTheme.src = "assets/icons/icons8-question-mark-30.png";
+  notepadTheme.src = "assets/icons/icons8-notepad-48 (1).png";
 }
 
 function activateDefaultTheme() {
@@ -421,10 +433,11 @@ function activateDefaultTheme() {
   tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53.png";
   profilePic.src = "assets/images/IMG_0645.JPG";
   terminalTheme.src = "assets/icons/icons8-console-40.png";
-  portfolioTheme.src = "assets/icons/icons8-portfolio-48.png";
+  // portfolioTheme.src = "assets/icons/icons8-portfolio-48.png";
   navArrow.src = "assets/icons/icons8-arrow-down-24.png"
   batteryTheme.src = "assets/icons/icons8-battery-30.png";
   questionTheme.src = "assets/icons/icons8-question-mark-30.png";
+  notepadTheme.src = "/assets/icons/icons8-notepad-48.png"
 }
 
 function activateCyberTheme() {
@@ -437,10 +450,11 @@ function activateCyberTheme() {
   githubTheme.src = "assets/icons/icons8-github-40 (1).png";
   tictactoeTheme.src = "assets/icons/icons8-tic-tac-toe-53 (2).png";
   terminalTheme.src = "assets/icons/icons8-terminal-40.png";
-  portfolioTheme.src = "assets/icons/icons8-portfolio-48 (1).png";
+  // portfolioTheme.src = "assets/icons/icons8-portfolio-48 (1).png";
   navArrow.src = "assets/icons/icons8-sort-down-24.png";
   batteryTheme.src = "assets/icons/icons8-battery-30 (1).png"
   questionTheme.src = "assets/icons/icons8-question-mark-30 (1).png"
+  notepadTheme.src = "/assets/icons/icons8-notepad-48 (2).png";
 }
 
 pinkThemeBtn.onclick = activatePinkTheme;
@@ -697,8 +711,65 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-const notepadBtn = document.getElementById("notepadBtn");
 
-notepadBtn.onclick = () => {
-  alert("Sorry! Notepad is under maintenance.")
+// Notepad function
+let notes = [];
+let editingIndex = null;
+
+document.getElementById('saveNoteBtn').onclick = () => {
+  const content = document.getElementById('noteContent').value;
+
+  if (editingIndex !== null){
+    notes[editingIndex] = {content};
+    editingIndex = null;
+  } else {
+    notes.push({content})
+  }
+
+  renderNotes();
+  clearEditor();
+};
+
+function renderNotes() {
+  const container = document.getElementById('notesContainer');
+  container.innerHTML = '';
+  notes.forEach((note, index) =>{
+    const li = document.createElement('li');
+    li.innerHTML = `
+    <p>${note.content}</p>
+    <button onclick="editNote(${index})">Edit</button>
+    <button onclick="deleteNote(${index})">delete</button>`;
+    container.appendChild(li);
+  });
 }
+
+function editNote(index) {
+  const note = notes[index];
+  document.getElementById('noteContent').value = note.content;
+  editingIndex
+}
+
+function deleteNote(index) {
+  notes.splice(index, 1);
+  renderNotes();
+}
+
+function clearEditor(){
+  document.getElementById('noteContent').value = '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// notepadBtn.onclick = () => {
+//   alert("Sorry! Notepad is under maintenance.")
+// }

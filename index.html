@@ -197,12 +197,12 @@
             <p>Portfolio</p>
           </button> --> 
         </div>
-        <!-- <div class="notepad">
+        <div class="notepad">
           <button class="notepad__btn" id="notepadBtn">
             <img src="assets/icons/icons8-notepad-48.png" alt="Notepad Icon" id="notepadTheme" >
             <p>Notepad</p>
           </button>
-        </div> -->
+        </div>
       </section>
 
       <!-- Modals Section-->
@@ -399,6 +399,24 @@
             value=""
             autofocus
           />
+        </div>
+      </section>
+
+
+      <!--Notepad Section-->
+      <section class="notepad__modal" id="notepadModal">
+        <div class="titleBar">
+          <button class="closeBtn" id="notepadCloseBtn"></button>
+          <button class="minBtn" id="notepadMinBtn"></button>
+          <p>Notepad</p>
+        </div>
+        <div class="note__editor">
+          <textarea name="" id="noteContent" placeholder="write your note here"></textarea>
+          <button id="saveNoteBtn">Save</button>
+        </div>
+        <div class="note__list">
+          <h3>Saved Notes</h3>
+          <ul id="notesContainer"></ul>
         </div>
       </section>
 
