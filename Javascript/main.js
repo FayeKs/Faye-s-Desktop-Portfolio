@@ -700,5 +700,5 @@ document.addEventListener("DOMContentLoaded", function() {
 const notepadBtn = document.getElementById("notepadBtn");
 
 notepadBtn.onclick = () => {
-  alert("Sorry! Notepad is under maintenence.")
+  alert("Sorry! Notepad is under maintenance.")
 }
