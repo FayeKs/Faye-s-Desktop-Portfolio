@@ -751,15 +751,18 @@ function renderNotes() {
 }
 
 const noteContent = document.getElementById("noteContent");
-noteContent.addEventListener("keydown", function(e) {
+noteContent.addEventListener("keyup", function(e) {
   if (e.key === "Enter") {
     const input = noteContent.value.trim();
     if (input) processCommand(input);
     noteContent.value = "";
-    noteContent.focus();
   }
 });
 
+noteContent.onclick = () => {
+  noteContent.focus();
+
+}
 
 // function editNote(index) {
 //   const note = notes[index];
