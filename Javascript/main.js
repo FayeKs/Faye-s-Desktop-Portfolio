@@ -737,17 +737,17 @@ function renderNotes() {
     const li = document.createElement('li');
     li.innerHTML = `
     <p>${note.content}</p>
-    <button onclick="editNote(${index})">Edit</button>
-    <button onclick="deleteNote(${index})">delete</button>`;
+     
+    <button onclick="deleteNote(${index})">X</button>`;
     container.appendChild(li);
   });
 }
 
-function editNote(index) {
-  const note = notes[index];
-  document.getElementById('noteContent').value = note.content;
-  editingIndex
-}
+// function editNote(index) {
+//   const note = notes[index];
+//   document.getElementById('noteContent').value = note.content;
+//   editingIndex
+// }
 
 function deleteNote(index) {
   notes.splice(index, 1);

@@ -797,11 +797,6 @@ nav {
   border-radius: 5px;
 }
 
-.notepad__nav {
-  border: 1px solid black;
-  display: flex;
-  gap: 20px;
-}
 .note__editor {
   display: flex;
   flex-direction: column;
@@ -813,14 +808,23 @@ nav {
 .notesContainer li{
   display: flex;
   border: 1px solid black;
-  width: 80%;
-  
+  width: 100%;
+  justify-content: space-between;
+}
+
+.notesContainer ul{
+  width: 100%;
+  overflow: hidden;
 }
 
 .notesContainer p{
-  border: 1px solid red;
-  width: 100%;
+  max-width: fit-content;
+  width: 80%;
   word-wrap: break-word;
+}
+
+.notesContainer button {
+  padding: 5px;
 }
 
 /* Learn More Section */
