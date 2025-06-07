@@ -761,6 +761,10 @@ noteContent.addEventListener("keyup", function(e) {
   }
 });
 
+noteContent.onclick = () => {
+  noteContent.focus();
+}
+
 
 
 // function editNote(index) {
