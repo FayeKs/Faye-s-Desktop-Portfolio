@@ -745,6 +745,15 @@ function renderNotes() {
   });
 }
 
+noteContent.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const input = terminalInput.value.trim();
+    if (input) processCommand(input);
+    terminalInput.value = "";
+  }
+});
+
+
 // function editNote(index) {
 //   const note = notes[index];
 //   document.getElementById('noteContent').value = note.content;
