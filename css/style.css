@@ -792,7 +792,7 @@ nav {
   z-index: 9999;
   right: 50%;
   top: 50%;
-  transform: translate(60%, -50%);
+  transform: translate(50%, -50%);
   overflow-y: auto;
   border-radius: 5px;
 }
@@ -806,7 +806,7 @@ nav {
 .note__editor textarea {
   resize: none;
   padding: 10px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 .note__list h3 {
   margin: 20px 10px;
