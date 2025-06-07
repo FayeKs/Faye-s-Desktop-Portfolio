@@ -750,7 +750,7 @@ noteContent.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
     const input = noteContent.value.trim();
     if (input) processCommand(input);
-    terminalInput.value = "";
+    noteContent.value = "";
   }
 });
 
