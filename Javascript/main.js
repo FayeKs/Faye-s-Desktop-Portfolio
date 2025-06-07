@@ -707,8 +707,9 @@ document.addEventListener("DOMContentLoaded", function() {
   terminalInput.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
       const input = terminalInput.value.trim();
-      if (input) processCommand(input);
-      terminalInput.value = "";
+      if (input) {
+        processCommand(input);
+      }
     }
   });
 });
@@ -744,7 +745,6 @@ function renderNotes() {
     const li = document.createElement('li');
     li.innerHTML = `
     <p>${note.content}</p>
-     
     <button onclick="deleteNote(${index})">X</button>`;
     container.appendChild(li);
   });
@@ -757,7 +757,6 @@ noteContent.addEventListener("keyup", function(e) {
     if (input) {
       processCommand(input);
     }
-    
   }
 });
 
