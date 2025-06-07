@@ -709,6 +709,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const input = terminalInput.value.trim();
       if (input) {
         processCommand(input);
+        terminalInput.value = "";
       }
     }
   });
