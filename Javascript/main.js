@@ -745,7 +745,7 @@ function renderNotes() {
   });
 }
 
-noteContent.addEventListener("keypress", function(e) {
+noteContent.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
     const input = terminalInput.value.trim();
     if (input) processCommand(input);
