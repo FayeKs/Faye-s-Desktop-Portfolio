@@ -279,7 +279,7 @@ buttons.notepadBtn.onclick = () => {
   alert("Notepad is currently under maintenance")
   openModal(modals.notepadModal, taskbars.notepadTaskbar);
   dragModal(modals.notepadModal);
-  
+  document.getElementById('noteContent').focus();
 }
 // Close Modals
 
