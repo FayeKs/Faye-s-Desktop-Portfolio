@@ -796,14 +796,32 @@ nav {
   overflow-y: auto;
   border-radius: 5px;
 }
+
+.notepad__nav {
+  border: 1px solid black;
+  display: flex;
+  gap: 20px;
+}
 .note__editor {
-display: flex;
+  display: flex;
+  flex-direction: column;
 }
 
 .note__editor textarea {
   resize: none;
 }
+.notesContainer li{
+  display: flex;
+  border: 1px solid black;
+  width: 80%;
+  
+}
 
+.notesContainer p{
+  border: 1px solid red;
+  width: 100%;
+  word-wrap: break-word;
+}
 
 /* Learn More Section */
 
