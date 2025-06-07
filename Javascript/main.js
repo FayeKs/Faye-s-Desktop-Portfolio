@@ -721,16 +721,21 @@ let editingIndex = null;
 document.getElementById('saveNoteBtn').onclick = () => {
   const content = document.getElementById('noteContent').value;
 
+  if (content === '') {
+    notes.style.display = "none"
+  }
+
   if (editingIndex !== null){
     notes[editingIndex] = {content};
     editingIndex = null;
   } else {
     notes.push({content})
-  }
+  } 
 
   renderNotes();
   clearEditor();
 };
+
 
 function renderNotes() {
   const container = document.getElementById('notesContainer');
