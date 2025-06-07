@@ -754,8 +754,10 @@ const noteContent = document.getElementById("noteContent");
 noteContent.addEventListener("keyup", function(e) {
   if (e.key === "Enter") {
     const input = noteContent.value.trim();
-    if (input) processCommand(input);
-    noteContent.value = "";
+    if (input) {
+      processCommand(input);
+    }
+    
   }
 });
 
