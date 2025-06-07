@@ -751,6 +751,7 @@ noteContent.addEventListener("keydown", function(e) {
     const input = noteContent.value.trim();
     if (input) processCommand(input);
     noteContent.value = "";
+    noteContent.focus();
   }
 });
 
