@@ -806,6 +806,7 @@ nav {
 .note__editor textarea {
   resize: none;
   padding: 10px;
+  margin-bottom: 3px;
 }
 .note__list h3 {
   margin: 20px 10px;
@@ -825,9 +826,8 @@ nav {
 
 .notesContainer {
   padding: 5px;
-}.note__editor caret-color{
-  margin-left: 10px;
 }
+
 
 .notesContainer ul{
   width: 100%;
