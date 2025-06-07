@@ -409,7 +409,7 @@ nav {
 .comp__taskbar,
 .projects__taskbar,
 .tictactoe__taskbar,
-.terminal__taskbar, .calculator__taskbar{
+.terminal__taskbar, .calculator__taskbar, .notepad__taskbar{
   /* display: none; */ /* off: keeps computer taskbar icon showing on refresh */
   background-color: transparent;
   text-align: left;

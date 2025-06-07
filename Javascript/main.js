@@ -185,7 +185,8 @@ const taskbars = {
   projectsTaskbar: document.getElementById("projectsTaskbar"),
   tictactoeTaskbar: document.getElementById("tictactoeTaskbar"),
   terminalTaskbar: document.getElementById("terminalTaskbar"),
-  calculatorTaskbar: document.getElementById("calculatorTaskbar")
+  calculatorTaskbar: document.getElementById("calculatorTaskbar"),
+  notepadTaskbar: document.getElementById("notepadTaskbar")
 }
 
 const buttons = {
@@ -276,7 +277,7 @@ buttons.calcBtn.onclick = () => {
 }
 buttons.notepadBtn.onclick = () => {
   alert("Notepad is currently under maintenance")
-  openModal(modals.notepadModal);
+  openModal(modals.notepadModal, taskbars.notepadTaskbar);
   dragModal(modals.notepadModal);
   
 }
@@ -288,7 +289,7 @@ buttons.tictactoeCloseBtn.onclick = () => closeModal(modals.tictactoeModal, task
 buttons.learnMoreCloseBtn.onclick = () => closeModal(modals.learnMoreModal);
 buttons.terminalCloseBtn.onclick = () => closeModal(modals.terminalModal, taskbars.terminalTaskbar);
 buttons.calcCloseBtn.onclick = () => closeModal(modals.calculatorModal, taskbars.calculatorTaskbar);
-buttons.notepadCloseBtn.onclick = () => closeModal(modals.notepadModal)
+buttons.notepadCloseBtn.onclick = () => closeModal(modals.notepadModal, taskbars.notepadTaskbar)
 
 // Minimize modals
 
@@ -306,6 +307,7 @@ taskbars.projectsTaskbar.onclick = () => openModal(modals.projectsModal, taskbar
 taskbars.tictactoeTaskbar.onclick = () => openModal(modals.tictactoeModal, taskbars.tictactoeTaskbar);
 taskbars.terminalTaskbar.onclick = () => openModal(modals.terminalModal, taskbars.terminalTaskbar);
 taskbars.calculatorTaskbar.onclick = () => openModal(modals.calculatorModal, taskbars.calculatorTaskbar);
+taskbars.notepadTaskbar.onclick = () => openModal(modals.notepadModal, taskbars.notepadTaskbar);
 
 // Modal overlap handling 
 
