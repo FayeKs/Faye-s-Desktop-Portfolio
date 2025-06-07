@@ -704,7 +704,7 @@ document.addEventListener("DOMContentLoaded", function() {
     terminalOutput.innerHTML += `<div>${output}</div>`;
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
   }
-  terminalInput.addEventListener("keypress", function(e) {
+  terminalInput.addEventListener("keyup", function(e) {
     if (e.key === "Enter") {
       const input = terminalInput.value.trim();
       if (input) {
