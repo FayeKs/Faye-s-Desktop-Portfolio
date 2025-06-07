@@ -800,16 +800,33 @@ nav {
 .note__editor {
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 .note__editor textarea {
   resize: none;
+  padding: 10px;
 }
+.note__list h3 {
+  margin: 20px 10px;
+  text-decoration: underline;
+}
+.note__editor textarea::placeholder{
+  padding: 5px;
+}
+
 .notesContainer li{
   display: flex;
   border: 1px solid black;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.notesContainer {
+  padding: 5px;
+}.note__editor caret-color{
+  margin-left: 10px;
 }
 
 .notesContainer ul{
@@ -826,7 +843,16 @@ nav {
 .notesContainer button {
   padding: 5px;
 }
+.saveNoteBtn, .notesContainer button{
+  border-style: 3px solid;
+  padding: 5px;
+  border: outset;
+  border-color: var(--primary-clr);
+}
 
+.saveNoteBtn:active, .notesContainer button:active{
+  border: inset;
+}
 /* Learn More Section */
 
 .learnMoreBtn {
