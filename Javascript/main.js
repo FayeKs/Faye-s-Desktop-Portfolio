@@ -90,7 +90,7 @@ const slideIn = document.getElementById("slideIn")
   }
   
  
-// show modal on desktop load
+// show popup on desktop load
 
 startBtn.onclick = () => {
   slideIn.style.display = "block"
@@ -118,7 +118,7 @@ brightnessPopup.addEventListener("mouseover", () => brightnessPopup.style.displa
 brightnessPopup.addEventListener("mouseout", () => brightnessPopup.style.display = "none");
 brightnessBtn.addEventListener('mouseout', () => brightnessPopup.style.display = "none")
 brightnessPopup.addEventListener('mouseover', () => navPopup.style.display = "block")
-// sunIcon.addEventListener("mouseout",() => brightnessPopup.style.display = "none")
+
 
 brightnessBtn.addEventListener("click", () => {
  brightnessPopup.style.display = brightnessPopup.style.display === "none" || brightnessPopup.style.display === "" ? "block" : "none"
@@ -276,7 +276,6 @@ buttons.calcBtn.onclick = () => {
 
 }
 buttons.notepadBtn.onclick = () => {
-  alert("Notepad is currently under maintenance")
   openModal(modals.notepadModal, taskbars.notepadTaskbar);
   dragModal(modals.notepadModal);
   document.getElementById('noteContent').focus();
@@ -704,13 +703,11 @@ document.addEventListener("DOMContentLoaded", function() {
     terminalOutput.innerHTML += `<div>${output}</div>`;
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
   }
-  terminalInput.addEventListener("keyup", function(e) {
+  terminalInput.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
       const input = terminalInput.value.trim();
-      if (input) {
-        processCommand(input);
-        terminalInput.value = "";
-      }
+      if (input) processCommand(input);
+      terminalInput.value = "";
     }
   });
 });
@@ -746,6 +743,7 @@ function renderNotes() {
     const li = document.createElement('li');
     li.innerHTML = `
     <p>${note.content}</p>
+     
     <button onclick="deleteNote(${index})">X</button>`;
     container.appendChild(li);
   });
@@ -758,14 +756,13 @@ noteContent.addEventListener("keyup", function(e) {
     if (input) {
       processCommand(input);
     }
+    
   }
 });
 
 noteContent.onclick = () => {
   noteContent.focus();
 }
-
-
 
 // function editNote(index) {
 //   const note = notes[index];
@@ -785,10 +782,41 @@ function clearEditor(){
 
 
 
+// Projects folder function display
+
+const filmforecastBtn = document.getElementById("filmforecastBtn");
+const filmforecastInfo = document.getElementById("filmforecastInfo");
+const projectFolders = document.getElementById("projectFolders");
+const travloInfo = document.getElementById("travloInfo");
+const travloBtn = document.getElementById("travloBtn");
+const backBtn = document.querySelectorAll(".backBtn")
+
+projectsBtn.addEventListener('click', function(){
+  filmforecastInfo.style.display = "none"
+  projectFolders.style.display = "block"
+  travloInfo.style.display = "none"
+})
 
 
+filmforecastBtn.addEventListener('click', function(){
+  projectFolders.style.display = "none";
+  filmforecastInfo.style.display = "block";
+})
+
+travloBtn.addEventListener('click', function(){
+  travloInfo.style.display = "block"
+  projectFolders.style.display = "none"
+})
 
 
+backBtn.forEach(button => {
+  button.addEventListener('click', function(){
+    projectFolders.style.display = "block";
+    travloInfo.style.display = "none";
+    filmforecastInfo.style.display = "none"
+  })
+})
+  
 
 
 

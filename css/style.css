@@ -553,38 +553,74 @@ nav {
   border-style: solid;
   border-radius: 5px;
   z-index: 9999;
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   left: 40%;
   top: 30%;
   transform: translate(-20%, -20%);
   overflow-y: auto;
 }
 
-.project__folders{
+.project__folders li{
   list-style: none;
   font-size: 10px;
   display: grid;
   grid-template-rows: 40% 40%;
   grid-template-columns: 40% 40%;
-  gap: 20px;
+  gap: 15px;
   padding: 10px;
 }
 .project__folders a {
   text-decoration: none;
   color: black;
 }
+.project__folders li p{
+  font-size: 10px;
+}
+
 .project__folders p:hover {
   text-decoration: underline;
 }
 .project__folders img {
-  width: 50px;
+  width: 80px;
+}
+
+.project__folders button{
+  width: 100%;
+  background: transparent;
+  border: none;
+
 }
 
 .project__folders img:hover {
   cursor: pointer;
 }
-
+.filmforecastInfo, .travloInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.filmforecastInfo a, .travloInfo a {
+  font-size: 20px;
+  text-decoration: underline;
+  color: inherit;
+  margin: 10px;
+}
+.filmforecastInfo img{
+  width: 200px;
+  margin: 10px;
+}
+.backBtnContainer{
+  width: 100%;
+  display: flex;
+}
+.backBtn{
+  float: left;
+  margin: 10px;
+}
 /* Calculato Modal */
 
 .calculator__modal {
@@ -843,14 +879,14 @@ nav {
 .notesContainer button {
   padding: 5px;
 }
-.saveNoteBtn, .notesContainer button{
+.saveNoteBtn, .notesContainer button, .backBtn{
   border-style: 3px solid;
   padding: 5px;
   border: outset;
   border-color: var(--primary-clr);
 }
 
-.saveNoteBtn:active, .notesContainer button:active{
+.saveNoteBtn:active, .notesContainer button:active, .backBtn:active{
   border: inset;
 }
 /* Learn More Section */
@@ -941,7 +977,8 @@ nav {
 .terminal__btn,
 .portfolio__btn,
 .reboot__btn,
-.notepad__btn{
+.notepad__btn,
+.backBtn{
   cursor: pointer;
 }
 .closeBtn {
@@ -1033,7 +1070,8 @@ button {
 .pink-theme .comp__modal,
 .pink-theme .projects__modal, 
 .pink-theme .tictactoe__modal,
-.pink-theme .learnMore__modal {
+.pink-theme .learnMore__modal,
+.pink-theme .notepad__modal {
   background-color: rgb(237, 223, 234);
   border-color: #ac42d7;
   color: purple;
@@ -1041,7 +1079,7 @@ button {
   scrollbar-color: #fd87d7 #f1bff4;
 }
 
-.pink-theme .taskbar button {
+.pink-theme .taskbar button, .pink-theme .backBtn {
   border-color: #ac42d7;
   background-color: rgb(237, 223, 234);
   color: purple;
@@ -1072,8 +1110,9 @@ button {
 .cyber-theme .nav__popup a,
 .cyber-theme .learnMoreBtn,
 .cyber-theme .navTime,
-.cyber-theme .taskbar button,
-.cyber-theme{
+.cyber-theme .taskbar button, 
+.cyber-theme,
+.cyber-theme .backBtn {
   background-color: black;
   border-color: #00ff26;
   color: #00ff26;
@@ -1086,7 +1125,8 @@ button {
 .cyber-theme .calculator__modal,
 .cyber-theme .terminal__modal,
 .cyber-theme .tictactoe__modal,
-.cyber-theme .learnMore__modal{
+.cyber-theme .learnMore__modal,
+.cyber-theme .notepad__modal{
   background-color: black;
   box-shadow: none;
   scrollbar-color: #00ff26 black;
@@ -1097,7 +1137,7 @@ button {
   border-color: black;
 }
 
-.cyber-theme .minBtn {
+.cyber-theme .minBtn{
   background-color: black;
   border-color: #00ff26;
 }
@@ -1118,13 +1158,23 @@ button {
 .default-theme .titleBar,
 .default-theme .nav__popup,
 .default-theme .taskbar,
-.default-theme .projects__modal{
+.default-theme .projects__modal
+{
     background-color: var(--primary-clr);
     border-color: black;
     color: black;
 }
-
-
+.default-theme .backBtn {
+   border-style: 3px solid;
+  padding: 5px;
+  border: outset;
+  border-color: var(--primary-clr);
+  background-color: var(--primary-clr);
+  color: var(--border-clr);
+}
+.default-theme .backBtn:active{
+  border: inset;
+}
 
 
 /* Media Queries */
